@@ -1,0 +1,311 @@
+{% extends 'GeolidJobBundle::layout.fr.html.twig' %}
+
+{% block title %}{{ parent() }} - Métiers{% endblock %}
+
+{% block content %}
+
+<section class="section-title notch-padding">
+    <h1>Nos métiers</h1>
+</section>
+
+<div class="notch">
+    <div class="trapeze-left-white"></div>
+    <div class="trapeze-right-white"></div>
+</div>
+
+<section id="jobs" class="section-white notch-padding">
+
+    <div class="row">
+        <div class="small-12 columns">
+            {{ cnerta_breadcrumb_render('breadcrumb') }}
+        </div>
+    </div>
+
+    <div class="separator">
+    </div>
+
+    <div class="row">
+        <div class="small-12 columns">
+            <p>
+                Tous les métiers de Geolid participent à la satisfaction des clients et à
+                l'innovation, donc à la croissance de l'entreprise.
+            </p>
+            <p>
+                Le professionnalisme de chacun s'exprime dans son métier mais aussi dans
+                les projets collaboratifs. Geolid a mis en place un learning lab
+                qui favorise le partage et le développement des compétences.
+                Nous réussissons réellement ensemble.
+            </p>
+        </div>
+    </div>
+
+    <div class="separator hide-for-large-up ">
+    </div>
+
+    <div class="row job-sector" data-equalizer>
+        <div class="small-12 medium-6 large-3 columns" data-equalizer-watch>
+            <div class="vertical-align">
+                <div class="align-middle">
+                    <p>Vendre des produits d'exception</p>
+                </div>
+            </div>
+        </div>
+        <div class="small-12 medium-6 large-3 columns" data-equalizer-watch>
+            <h2>Vente</h2>
+            <div class="big-padding">
+                <p>Conseillez à nos clients la solution la mieux adaptée</p>
+                <ul>
+                {% for job in jobs %}
+                    {% if job.category.name == 'Vente' %}
+                    <li>
+                        <a href="{{ path('job_job', {'slug': job.slug}) }}">
+                            {{ job.title }}
+                        </a>
+                    </li>
+                    {% endif %}
+                {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="small-12 medium-6 large-3 columns" data-equalizer-watch>
+            <h2>Téléprospection</h2>
+            <div class="big-padding">
+                <p>Captez l'attention de nos futurs clients</p>
+                <ul>
+                {% for job in jobs %}
+                    {% if job.category.name == 'Téléprospection' %}
+                    <li>
+                        <a href="{{ path('job_job', {'slug': job.slug}) }}">
+                            {{ job.title }}
+                        </a>
+                    </li>
+                    {% endif %}
+                {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="small-12 medium-6 large-3 columns" data-equalizer-watch>
+            <h2>Service client</h2>
+            <div class="big-padding">
+                <p>Restez à l'écoute des besoins de nos clients</p>
+                <ul>
+                {% for job in jobs %}
+                    {% if job.category.name == 'Service client' %}
+                    <li>
+                        <a href="{{ path('job_job', {'slug': job.slug}) }}">
+                            {{ job.title }}
+                        </a>
+                    </li>
+                    {% endif %}
+                {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="separator hide-for-large-up ">
+        </div>
+    </div>
+
+    <div class="row job-sector" data-equalizer>
+        <div class="small-12 medium-6 large-3 columns" data-equalizer-watch>
+            <div class="vertical-align">
+                <div class="align-middle">
+                    <p>Aider les entreprises à communiquer efficacement</p>
+                </div>
+            </div>
+        </div>
+        <div class="small-12 medium-6 large-3 columns" data-equalizer-watch>
+            <h2>Gestion de projets</h2>
+            <div class="big-padding">
+                <p>Concrétisez les attentes du client</p>
+                <ul>
+                {% for job in jobs %}
+                    {% if job.category.name == 'Gestion de projets' %}
+                    <li>
+                        <a href="{{ path('job_job', {'slug': job.slug}) }}">
+                            {{ job.title }}
+                        </a>
+                    </li>
+                    {% endif %}
+                {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="small-12 medium-6 large-3 columns" data-equalizer-watch>
+            <h2>Créa et édito</h2>
+            <div class="big-padding">
+                <p>Exprimez l'univers du client</p>
+                <ul>
+                {% for job in jobs %}
+                    {% if job.category.name == 'Créa et édito' %}
+                    <li>
+                        <a href="{{ path('job_job', {'slug': job.slug}) }}">
+                            {{ job.title }}
+                        </a>
+                    </li>
+                    {% endif %}
+                {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="small-12 medium-6 large-3 columns" data-equalizer-watch>
+            <h2>Traffic management</h2>
+            <div class="big-padding">
+                <p>Générez le traffic rentable</p>
+                <ul>
+                {% for job in jobs %}
+                    {% if job.category.name == 'Traffic Management' %}
+                    <li>
+                        <a href="{{ path('job_job', {'slug': job.slug}) }}">
+                            {{ job.title }}
+                        </a>
+                    </li>
+                    {% endif %}
+                {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="separator hide-for-large-up ">
+        </div>
+    </div>
+
+    <div class="row job-sector" data-equalizer>
+        <div class="small-12 medium-6 large-3 columns" data-equalizer-watch>
+            <div class="vertical-align">
+                <div class="align-middle">
+                    <p>Réaliser des produits exceptionnels</p>
+                </div>
+            </div>
+        </div>
+        <div class="small-12 medium-6 large-3 columns" data-equalizer-watch>
+            <h2>Marketing</h2>
+            <div class="big-padding">
+                <p>Restez à l'écoute du marché, innovez, et orientez les forces commerciales</p>
+                <ul>
+                {% for job in jobs %}
+                    {% if job.category.name == 'Marketing' %}
+                    <li>
+                        <a href="{{ path('job_job', {'slug': job.slug}) }}">
+                            {{ job.title }}
+                        </a>
+                    </li>
+                    {% endif %}
+                {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="small-12 medium-6 large-3 columns" data-equalizer-watch>
+            <h2>R&D</h2>
+            <div class="big-padding">
+                <p>Concevez et réalisez les innovations pour nos clients</p>
+                <ul>
+                {% for job in jobs %}
+                    {% if job.category.name == 'R&D' %}
+                    <li>
+                        <a href="{{ path('job_job', {'slug': job.slug}) }}">
+                            {{ job.title }}
+                        </a>
+                    </li>
+                    {% endif %}
+                {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="small-12 medium-6 large-3 columns" data-equalizer-watch>
+        </div>
+        <div class="separator hide-for-large-up ">
+        </div>
+   </div>
+
+    <div class="row job-sector" data-equalizer>
+        <div class="small-12 medium-6 large-3 columns" data-equalizer-watch>
+            <div class="vertical-align">
+                <div class="align-middle">
+                    <p>Faire un travail utile et passionnant</p>
+                </div>
+            </div>
+        </div>
+        <div class="small-12 medium-6 large-3 columns" data-equalizer-watch>
+            <h2>Administration</h2>
+            <div class="big-padding">
+                <p>Soyez le moteur qui assure notre bon fonctionnement</p>
+                <ul>
+                {% for job in jobs %}
+                    {% if job.category.name == 'Administration' %}
+                    <li>
+                        <a href="{{ path('job_job', {'slug': job.slug}) }}">
+                            {{ job.title }}
+                        </a>
+                    </li>
+                    {% endif %}
+                {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="small-12 medium-6 large-3 columns" data-equalizer-watch>
+            <h2>Ressources humaines</h2>
+            <div class="big-padding">
+                <p>Soyez les champions de la culture Geolid</p>
+                <ul>
+                {% for job in jobs %}
+                    {% if job.category.name == 'Ressources humaines' %}
+                    <li>
+                        <a href="{{ path('job_job', {'slug': job.slug}) }}">
+                            {{ job.title }}
+                        </a>
+                    </li>
+                    {% endif %}
+                {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="small-12 medium-6 large-3 columns" data-equalizer-watch>
+        </div>
+    </div>
+
+    <div class="separator">
+    </div>
+
+    <div class="row text-center">
+        <div class="small-12 columns">
+            <a href="{{ path('job_offers') }}">Voir toutes nos offres</a>
+        </div>
+    </div>
+
+    <div class="separator">
+    </div>
+    <div class="separator">
+    </div>
+
+</section><!-- jobs -->
+
+<div class="notch">
+    <div class="trapeze-left-primary"></div>
+    <div class="trapeze-right-primary"></div>
+</div>
+
+<section id="jobs-backstage" class="section-primary notch-padding">
+    <div class="row">
+        <div class="small-12 columns text-center">
+            <h2>La vie en coulisses</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="small-12 columns text-center">
+            <ul id="backstage-diaporama" class="small-block-grid-1 medium-block-grid-3 large-block-grid-4">
+                {% for i in 1..8 %}
+                    <li>
+                        <div>
+                            <img src="{{ asset('bundles/geolidjob/img/backstage/galerie-'~i~'.jpg')}}">
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div class="separator">
+    </div>
+    <div class="separator">
+    </div>
+</section><!-- jobs-backstage -->
+
+{% endblock content %}

@@ -1,0 +1,110 @@
+/**
+ * Offers.
+ */
+
+#offers {
+}
+
+#offers-table {
+    width: 100%;
+}
+
+/**
+ * Offer.
+ */
+
+#offer {
+}
+
+#offer h1 {
+    margin: rem-calc(5) 0 rem-calc(5);
+}
+
+#offer-meta {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#offer-meta li {
+    display: inline-block;
+    padding-right: rem-calc(20);
+}
+
+#offer-meta img {
+    height: rem-calc(40);
+    margin-right: rem-calc(6);
+    width: rem-calc(40);
+}
+
+#offer-content h2 {
+    color: $primary-color;
+    font-size: rem-calc(22);
+    font-weight: bold;
+    margin: rem-calc(16) 0;
+    text-transform: uppercase;
+}
+
+#offer-content h3 {
+    color: $primary-color;
+    font-size: rem-calc(16);
+    font-weight: bold;
+    margin: rem-calc(16) 0;
+    text-transform: none;
+}
+
+#offer-main .button {
+    background-color: #ffffff;
+    border: rem-calc(1) solid $secondary-color;
+    color: $secondary-color;
+    display: inline-block;
+    font-size: rem-calc(32);
+    padding: rem-calc(10) rem-calc(32);
+    transition: $button-transition-speed;
+}
+
+#offer-main .button:hover {
+    background-color: $secondary-color;
+    color: white;
+}
+
+/**
+ * Offer nav.
+ */
+
+#offer-nav {
+    height: rem-calc(580);
+}
+
+#offer-nav-woman {
+    position: absolute;
+    top: rem-calc(30);
+}
+
+#offer-nav-apply {
+    background-color: $secondary-color;
+    border: rem-calc(1) solid $secondary-color;
+    color: white;
+    font-size: $h2-font-size;
+    padding: rem-calc(12) rem-calc(36);
+    margin-left: rem-calc(140);
+    transition: $button-transition-speed;
+}
+
+#offer-nav-apply:hover {
+    background-color: white;
+    color: $secondary-color;
+}
+
+#offer-nav-share {
+    margin-left: rem-calc(220);
+    margin-bottom: rem-calc(20);
+}
+
+#offer-nav-share  a {
+    text-decoration: none;
+}
+
+#offer-nav-back {
+    margin-left: rem-calc(220);
+}

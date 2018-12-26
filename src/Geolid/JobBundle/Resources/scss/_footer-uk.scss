@@ -1,0 +1,56 @@
+/**
+ * Footer uk.
+ */
+
+#footer-uk {
+}
+
+#footer-uk h3 {
+    color: $secondary-color;
+    font-weight: bold;
+    margin: rem-calc(16) auto;
+    text-transform: uppercase;
+}
+
+#footer-uk-adwords div {
+    max-width: rem-calc(280);
+}
+
+#footer-uk-adwords p {
+    font-size: rem-calc(14);
+    text-align: left;
+}
+
+#footer-uk-adwords img {
+    padding-left: rem-calc(10);
+}
+
+#footer-uk-social {
+    padding: 0 rem-calc(20);
+}
+
+#footer-uk-apply .button {
+    background-color: $middle-gray;
+    border: rem-calc(1) solid white;
+    color: white;
+    font-size: rem-calc(20);
+    padding: rem-calc(10) rem-calc(32);
+    text-transform: uppercase;
+    transition: $button-transition-speed;
+}
+
+#footer-uk-apply a.button:hover {
+    background-color: white;
+    color: $middle-gray;
+}
+
+@media #{$medium-up} {
+    #footer-uk .vertical-separators > div:not(:last-of-type) {
+        background-image:
+        linear-gradient(to top, #ccc, rgba(204, 204, 204, 0)),
+        linear-gradient(to bottom, #ccc, rgba(204, 204, 204, 0));
+        background-size: 1px 35%, 1px 35%;
+        background-position: 100% 36%, 100% 88%;
+        background-repeat: no-repeat;
+    }
+}

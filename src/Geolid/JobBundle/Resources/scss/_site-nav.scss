@@ -1,0 +1,109 @@
+/**
+ * Site nav.
+ */
+
+#site-nav-container {
+    /* Site nav shadow. */
+    box-shadow: 0 0 2em 0.4em rgba(0, 0, 0, 0.3);
+    /* Site nav and box-shadow over all content. */
+    z-index: 10;
+    /* Z-index only works with positioned elements. */
+    position: relative;
+}
+
+#site-nav ul {
+    background-color: white;
+    height: 100%;
+}
+
+@media #{$medium-up} {
+    .top-bar .title-area {
+        display: inline-block;
+    }
+    .top-bar-section {
+        display: inline-block;
+    }
+    .top-bar-section ul li:not(.active) > a {
+        text-decoration: none;
+    }
+    .title-area li a {
+        line-height: $topbar-height;
+    }
+    .top-bar-section .has-form {
+        line-height: $topbar-height;
+    }
+    .top-bar-section li a:not(.button) .menu-label {
+    }
+    .top-bar-section li a:hover {
+    }
+    .top-bar-section ul li.active > a {
+        text-decoration: none;
+    }
+    .top-bar-section ul li.active > a:not(.button) .menu-label {
+        border-bottom: 1px solid $black;
+        padding-bottom: 0.3rem;
+    }
+    .top-bar-section ul li.active:not(.has-form) > a:hover .menu-label {
+        border-bottom: 1px solid white;
+        color: white;
+    }
+    .top-bar-section ul li > a.button {
+        background-color: white;
+        border: rem-calc(1) solid $primary-color;
+        border-radius: 2px;
+        color: $primary-color;
+        display: inline-block;
+        padding: rem-calc(6) rem-calc(12);
+    }
+    .top-bar-section ul li > a.button:hover {
+        background-color: $primary-color;
+    }
+}
+
+@media #{$medium-only} {
+    #site-nav .name {
+        margin: 0 rem-calc(10) 0 rem-calc(10);
+    }
+    #site-nav .name img {
+        height: 32px;
+    }
+    .top-bar-section ul li:not(.has-form) > a:not(.button),
+    .top-bar-section ul li.active:not(.has-form) > a:not(.button),
+    .top-bar-section ul li:not(.has-form) > a:hover:not(.button),
+    .top-bar-section ul li.has-form {
+        padding: 0 rem-calc(16);
+    }
+}
+
+@media #{$large-up} {
+    #site-nav .name {
+        margin: 0 rem-calc(30);
+        min-width: 220px;
+    }
+}
+
+/**
+ * Mobile site nav.
+ */
+
+.tab-bar .menu-icon {
+    text-indent: rem-calc(42);
+}
+
+#site-nav-mobile-social a {
+    margin: auto;
+}
+
+#site-nav-mobile-social img {
+    height: 40px;
+    margin: 0 rem-calc(15);
+    width: 40px;
+}
+
+.off-canvas-list li a {
+    text-decoration: none;
+}
+
+.off-canvas-list li a.button {
+    color: white;
+}

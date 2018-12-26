@@ -1,0 +1,304 @@
+{% extends 'GeolidJobBundle::layout.fr.html.twig' %}
+
+{% block title %}Développeur web Symfony et Angular à Lyon - {{ parent() }}{% endblock %}
+{% block description %}Geolid est à la recherche de développeurs web orientés Symfony et Angular dans la région de Lyon{% endblock %}
+
+{% block content %}
+    <!-- On affiche pas certains éléments communs à toutes les pages -->
+    <style>
+        #help-notch, #help, #customers-notch, #customers {
+            display: none;
+        }
+    </style>
+
+    <section class="section-title notch-padding">
+        <h1>Développeur web Symfony et Angular</h1>
+    </section>
+
+    <div class="notch">
+        <div class="trapeze-right-white"></div>
+        <div class="trapeze-left-white"></div>
+    </div>
+
+    <section id="job" class="section-white">
+
+        <div class="row">
+            <div class="small-12 columns">
+                {{ cnerta_breadcrumb_render('breadcrumb') }}
+            </div>
+        </div>
+
+        <div class="separator">
+        </div>
+
+        <div id="job-baseline">
+            <div class="row">
+                <div class="small-12 columns">
+                    <div class="vertical-align">
+                        <div class="align-middle">
+                            <div id="job-pin"></div>
+                        </div>
+                        <div>
+                            <h2 id="job-baseline">Relever de réels challenges techniques (Symfony et Angular) et travailler en proximité des utilisateurs internes</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- job-baseline -->
+
+        <div class="separator"></div>
+        <div class="separator"></div>
+
+        <div class="row" data-equalizer>
+            <div id="job-description" class="small-12 large-8 columns user-content" data-equalizer-watch>
+                <div class="separator">
+                    <p>Être développeur web chez Geolid, à Lyon, c'est travailler sur des missions à <b>forte valeur ajoutée</b> dans une ambiance de travail simple, professionnelle et conviviale.</p>
+                </div>
+                <div class="separator"></div>
+                <div class="media service-box">
+                    <div class="pull-left">
+                        <i class="fa fa-cubes"></i>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Des projets innovants, variés et formateurs</h4>
+                        <p>Concevoir et développer de nouvelles applications en relation avec les équipes des différents pôles de l'entreprise.</p>
+                    </div>
+                </div>
+                <div class="media service-box">
+                    <div class="pull-left">
+                        <i class="fa fa-line-chart"></i>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Partager l'effervescence d'une entreprise en forte croissance</h4>
+                        <p>Être au coeur des échanges avec les différents pôles de l'entreprise sur les multiples améliorations à apporter à notre Geolid Engine.</p>
+                    </div>
+                </div>
+                <div class="media service-box">
+                    <div class="pull-left">
+                        <i class="fa fa-briefcase"></i>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Enrichir ses compétences</h4>
+                        <p>Avoir un goût prononcé pour la veille technologique et le partage de votre expertise avec l'équipe de développement.</p>
+                    </div>
+                </div>
+                <div class="media service-box">
+                    <div class="pull-left">
+                        <i class="fa fa-users"></i>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Rejoindre une équipe aux expertises diverses</h4>
+                        <p>Contribuer à la réflexion ainsi qu'à la mise en place de la transition de nos interfaces sous Symfony.</p>
+                    </div>
+                </div>
+                <div class="separator hide-for-large-up">
+                </div>
+            </div>
+            <div id="job-more" class="small-12 large-4 columns" data-equalizer-watch>
+                <div class="separator"></div>
+                <h3>Les autres métiers</h3>
+                <div class="separator"></div>
+                <ul>
+                    {% for job2 in starred %}
+                        {% if job2.id != job.id %}
+                            <li>
+                                <a href="{{ path('job_job', {'slug': job2.slug}) }}">{{ job2.title }}</a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+                <div class="separator">
+                </div>
+                <div class="separator hide-for-small">
+                </div>
+                <div class="separator hide-for-small hide-for-medium">
+                </div>
+                <div id="job-more-links">
+                    <a href="{{ path('job_jobs') }}">S'informer sur nos métiers</a> >>
+                    <br>
+                    <br>
+                    <a href="{{ path('job_offers') }}">Voir toutes nos offres d'emploi</a> >>
+                </div>
+            </div>
+        </div><!-- row -->
+        <div class="separator"></div>
+        <div class="separator"></div>
+    </section><!-- job -->
+
+    <!-- Bandeau bleu -->
+    <div class="notch">
+        <div class="trapeze-left-primary"></div>
+        <div class="trapeze-right-primary"></div>
+    </div>
+    <section class="section-primary notch-padding hide-for-print">
+        <div class="row">
+            <div class="small-12 columns text-center">
+                <h2>Des projets innovants et des expertises diverses</h2>
+            </div>
+        </div>
+    </section>
+    <div class="notch">
+        <div class="trapeze-left-white"></div>
+        <div class="trapeze-right-white"></div>
+    </div>
+
+    <div class="separator"></div>
+    <div class="separator"></div>
+
+    <!-- Projets -->
+    <div class="row">
+        <div class="large-12">
+            <div class="separator">
+                <p class="highlights">En tant que développeur à vocation Symfony et/ou Angular, vous travaillez sur des projets à haute valeur ajoutée, utilisants de nombreuses API (Google My Business, Google Adwords, Google Analytics, Sendgrid, etc.) :</p>
+            </div>
+            <div class="separator"></div>
+        </div>
+    </div><!-- row -->
+    <div class="row" data-equalizer>
+        <div class="large-4 columns">
+            <div class="media service-box">
+                <div class="pull-left">
+                    <i class="fa fa-google"></i>
+                </div>
+                <div class="media-body" data-equalizer-watch>
+                    <h4 class="media-heading">Outil de priorisation</h4>
+                    <p>Reporting des données Adwords et Facebook de l'ensemble des campagnes de nos Traffics managers afin d'améliorer la gestion de leurs portefeuilles.</p>
+                </div>
+            </div><!-- service-box -->
+        </div><!-- columns -->
+        <div class="large-4 columns">
+            <div class="media service-box">
+                <div class="pull-left">
+                    <i class="fa fa-google-wallet"></i>
+                </div>
+                <div class="media-body" data-equalizer-watch>
+                    <h4 class="media-heading">Inscription automatisée GMB</h4>
+                    <p>Mise en place automatisée de l'inscription de nos clients sous Google My Business, en collaboration avec Google.</p>
+                </div>
+            </div><!-- service-box -->
+        </div><!-- columns -->
+        <div class="large-4 columns">
+            <div class="media service-box">
+                <div class="pull-left">
+                    <i class="fa fa-area-chart"></i>
+                </div>
+                <div class="media-body" data-equalizer-watch>
+                    <h4 class="media-heading">Solution de Tracking</h4>
+                    <p>Suivi simplifié des leads générés par nos solutions sur un site géré en externe.</p>
+                </div>
+            </div><!-- service-box -->
+        </div><!-- columns -->
+    </div><!-- row -->
+    <div class="row" data-equalizer>
+        <div class="large-4 columns">
+            <div class="media service-box">
+                <div class="pull-left">
+                    <i class="fa fa-briefcase"></i>
+                </div>
+                <div class="media-body" data-equalizer-watch>
+                    <h4 class="media-heading">Aide à la vente</h4>
+                    <p>Réalisation d'une interface avec des Service workers à destination de nos commerciaux.</p>
+                </div>
+            </div><!-- service-box -->
+        </div><!-- columns -->
+        <div class="large-4 columns">
+            <div class="media service-box">
+                <div class="pull-left">
+                    <i class="fa fa-code-fork"></i>
+                </div>
+                <div class="media-body" data-equalizer-watch>
+                    <h4 class="media-heading">Symfony / Angular</h4>
+                    <p>Migration de notre ERP sur Symfony ainsi que de notre espace client sur Angular et Cordova/Ionic.</p>
+                </div>
+            </div><!-- service-box -->
+        </div><!-- columns -->
+        <div class="large-4 columns">
+            <div class="media service-box">
+                <div class="pull-left">
+                    <i class="fa fa-code"></i>
+                </div>
+                <div class="media-body" data-equalizer-watch>
+                    <h4 class="media-heading">PV3</h4>
+                    <p>Notre CMS maison réalisé sous Backbone qui permet de concevoir des sites directement en drag & drop.</p>
+                </div>
+            </div><!-- service-box -->
+        </div><!-- columns -->
+    </div><!-- row -->
+    <div class="row">
+        <div class="large-12">
+            <div class="separator"></div>
+            <div class="separator">
+                <p class="highlights">Rejoignez une équipe aux expertises diverses travaillant en méthode Agile (SCRUM et KANBAN).</p>
+            </div>
+            <div class="separator"></div>
+        </div>
+    </div><!-- row -->
+    <div class="separator"></div>
+
+    {% if job.testimonial1 or job.testimonial2 or job.testimonial3 %}
+        <div class="salience absolute">
+            <div class="triangle triangle-white"></div>
+        </div>
+    {% endif %}
+
+    <section id="job-testimonials" class="section-white testimonials">
+        {% if job.testimonial1 %}
+            {% include('GeolidJobBundle:Testimonial:testimonial.html.twig')
+            with { 'testimonial': job.testimonial1 } %}
+        {% endif %}
+        {% if job.testimonial2 %}
+            {% include('GeolidJobBundle:Testimonial:testimonial.html.twig')
+            with { 'testimonial': job.testimonial2 } %}
+        {% endif %}
+        {% if job.testimonial3 %}
+            {% include('GeolidJobBundle:Testimonial:testimonial.html.twig')
+            with { 'testimonial': job.testimonial3 } %}
+        {% endif %}
+    </section><!-- job-testimonials -->
+
+    <!-- La vie en coulisses -->
+    <div class="notch">
+        <div class="trapeze-left-secondary"></div>
+        <div class="trapeze-right-secondary"></div>
+    </div>
+    <section id="jobs-backstage" class="section-secondary notch-padding">
+        <div class="row">
+            <div class="small-12 columns text-center">
+                <h2>La vie en coulisses</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="small-12 columns text-center">
+                <ul id="backstage-diaporama" class="small-block-grid-1 medium-block-grid-3 large-block-grid-4"></ul>
+            </div>
+        </div>
+        <div class="separator">
+        </div>
+        <div class="separator">
+        </div>
+    </section><!-- jobs-backstage -->
+
+    <!-- Stack -->
+    <section class="section-primary notch-padding hide-for-print">
+        <div class="row">
+            <div class="small-12 columns text-center">
+                <h2>Découvrez notre stack</h2>
+            </div>
+        </div>
+    </section>
+    <div class="notch">
+        <div class="trapeze-left-white"></div>
+        <div class="trapeze-right-white"></div>
+    </div>
+    <section class="section-white notch-padding hide-for-print">
+        <div class="separator"></div>
+        <div class="row">
+            <div class="small-12 columns">
+                {{ sonata_block_render({ 'type': 'job.block.stack.cards'}, {}) }}
+            </div>
+        </div>
+        <div class="separator">
+        </div>
+    </section>
+
+{% endblock %}

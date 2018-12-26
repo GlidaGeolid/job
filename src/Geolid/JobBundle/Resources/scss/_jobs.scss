@@ -1,0 +1,205 @@
+/**
+ * Jobs.
+ */
+
+#jobs {
+}
+
+#jobs .job-sector {
+    margin-bottom: rem-calc(20);
+}
+
+#jobs .job-sector > div:first-of-type {
+    padding-right: rem-calc(20);
+}
+
+#jobs .job-sector > div:first-of-type p {
+    font-size: rem-calc(26);
+    font-weight: bold;
+    line-height: 1.1;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#jobs .job-sector > div {
+    min-height: rem-calc(140);
+    padding: rem-calc(5);
+}
+
+#jobs .job-sector h2 {
+    color: white;
+    font-size: $h3-font-size;
+    font-weight: bold;
+    padding: rem-calc(8);
+    margin: 0;
+    margin-bottom: rem-calc(5);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#jobs .job-sector ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#jobs .job-sector li {
+}
+
+#jobs .job-sector:nth-of-type(2n+1) h2 {
+    background-color: $primary-color;
+}
+
+#jobs .job-sector:nth-of-type(2n+0) h2 {
+    background-color: $secondary-color;
+}
+
+#jobs .big-padding {
+    padding-top: rem-calc(5);
+}
+
+/**
+ * Backstage.
+ */
+
+#jobs-backstage {
+}
+
+/**
+ * Job.
+ */
+
+#job {
+}
+
+#job-baseline {
+    background-color: $primary-color;
+    padding: rem-calc(20) 0;
+}
+
+#job-pin {
+    background: url(../img/fiche-metier/baseline-metier.png);
+    height: 90px;
+    width: 90px;
+    margin-right: 2em;
+}
+
+h2#job-baseline{
+    color: white;
+    margin: 0;
+}
+
+#job h3 {
+    font-size: rem-calc(24);
+    text-transform: none;
+}
+
+#job ol {
+    counter-reset: li-counter;
+    list-style-type: none;
+    margin: 0;
+    margin-left: 2em;
+    padding: 0;
+}
+
+#job ol > li{
+    margin-bottom: 0.5em;
+    min-height: 2em;
+    position: relative;
+    padding-left: 0.5em;
+}
+
+#job ol > li:before {
+    background-color: $light-gray;
+    border: 0 solid $light-gray;
+    border-radius: 50%;
+    color: $lighter-gray;
+    content: counter(li-counter);
+    counter-increment: li-counter;
+    height: 2em;
+    left: -2em;
+    line-height: 2em;
+    position: absolute;
+    text-align: center;
+    top: -0.3em;
+    width: 2em;
+}
+
+#job-more h3 {
+    background-color: $light-gray;
+    color: $lighter-gray;
+    font-size: rem-calc(17);
+    margin: 0;
+    padding: 1em;
+    text-transform: uppercase;
+}
+
+#job-more ul {
+    margin: 0 0 0 rem-calc(40);
+}
+
+#job-more-links {
+}
+
+.media.service-box {
+    margin: 28px 0;
+}
+.media.service-box .pull-left {
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+.media.service-box .pull-left > i {
+    font-size: 24px;
+    height: 64px;
+    line-height: 64px;
+    text-align: center;
+    width: 64px;
+    border-radius: 100%;
+    color: #0066cc;
+    box-shadow: inset 0 0 0 1px #d7d7d7;
+    -webkit-box-shadow: inset 0 0 0 1px #d7d7d7;
+    transition: background-color 400ms, background-color 400ms;
+    position: relative;
+}
+.media.service-box .pull-left > i:after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    margin-top: -10px;
+    right: -10px;
+    border: 4px solid #fff;
+    border-radius: 20px;
+    background: #ff9900;
+}
+.media.service-box:hover .pull-left > i {
+    background-image: -moz-linear-gradient(90deg, #0066cc 0%, #0066cc 100%);
+    background-image: -webkit-linear-gradient(90deg, #0066cc 0%, #0066cc 100%);
+    background-image: -ms-linear-gradient(90deg, #0066cc 0%, #0066cc 100%);
+    color: #fff;
+    box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.8);
+    -webkit-box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.8);
+}
+.media-heading {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.media-body h4 {
+    font-weight: 600;
+    color: #272727;
+    font-size: 20px;
+}
+.media-body p {
+    color: #86898d;
+    font-size: 15px;
+}
+.highlights {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.top-bar .has-form>.button, .top-bar .has-form>button {
+    top: 0;
+}

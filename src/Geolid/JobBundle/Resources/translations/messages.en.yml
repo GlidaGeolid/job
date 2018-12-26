@@ -1,0 +1,11 @@
+customers:
+    revenues:
+        generated: We have generated more than
+        revenues: € Revenues for our
+        customers: Clients
+
+jobs:
+    title: Geolid careers
+
+menu:
+    apply: Apply

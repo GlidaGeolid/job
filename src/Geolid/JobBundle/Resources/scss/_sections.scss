@@ -1,0 +1,103 @@
+/**
+ * Sections.
+ */
+
+.section-title {
+    background-attachment: fixed;
+    background-image: url('../img/common/photobooth-alt.jpg');
+    background-position: center rem-calc(-10);
+    background-repeat: no-repeat;
+}
+
+.section-title h1 {
+    padding: rem-calc(40) 0;
+    margin: 0 !important;
+}
+
+.section-white {
+    background-color: #ffffff;
+    color: $dark-gray;
+    margin-top: -1px; /* Try to solve a display bug on safari. */
+}
+
+.section-white h1,
+.section-white h2,
+.section-white h3,
+.section-white a,
+.section-white p {
+    color: $dark-gray;
+}
+
+.section-white a:hover {
+    color: scale-color($dark-gray, $lightness: +33%);
+}
+
+.section-primary {
+    background-color: $primary-color;
+    color: white;
+    margin-top: -1px; /* Try to solve a display bug on safari. */
+}
+
+.section-primary h1,
+.section-primary h2,
+.section-primary h3,
+.section-primary a,
+.section-primary p {
+    color: white;
+}
+
+.section-primary a:hover {
+    color: scale-color(white, $lightness: -33%);
+}
+
+.section-primary ::selection {
+    background: white;
+    color: $primary-color;
+}
+
+.section-primary ::-moz-selection {
+    background: white;
+    color: $primary-color;
+}
+
+.section-secondary {
+    background-color: $secondary-color;
+    color: white;
+    margin-top: -1px; /* Try to solve a display bug on safari. */
+}
+
+.section-secondary h1,
+.section-secondary h2,
+.section-secondary h3,
+.section-secondary a,
+.section-secondary p {
+    color: white;
+}
+
+.section-secondary a:hover {
+    color: scale-color($primary-color, $lightness: -33%);
+}
+
+.section-middle-gray {
+    background-color: $middle-gray;
+    color: white;
+    margin-top: -1px; /* Try to solve a display bug on safari. */
+}
+
+.section-middle-gray h1,
+.section-middle-gray h2,
+.section-middle-gray h3,
+.section-middle-gray a,
+.section-middle-gray p {
+    color: white;
+}
+
+.section-middle-gray a:hover {
+    color: $lighter-gray;
+}
+
+.section-black {
+    background-color: $black;
+    color: white;
+    margin-top: -1px; /* Try to solve a display bug on safari. */
+}

@@ -1,0 +1,32 @@
+# Desc: /conseils
+job_advice: /tipps
+
+# Desc: /candidater/
+job_apply: /bewerben
+
+# Desc: /candidater/merci
+job_apply_thanks: /bewerben/danke
+
+# Desc: /entreprise
+job_enterprise: /unternehmen
+
+# Desc: /
+job_home: /
+
+# Desc: /metiers/{slug}
+job_job: '/beruf/{slug}'
+
+# Desc: /metiers/
+job_jobs: /metiers/
+
+# Desc: /offres-emplois/{agency}/{slug}
+job_offer: '/stellenangebote/{agency}/{slug}'
+
+# Desc: /offres-emplois/
+job_offers: /stellenangebote/
+
+# Desc: /vie-privee
+job_privacy: /datenschutz
+
+# Desc: /stagiaires
+job_trainee: /praktikum

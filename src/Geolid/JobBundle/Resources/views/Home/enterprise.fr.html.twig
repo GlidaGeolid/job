@@ -1,0 +1,211 @@
+{% extends 'GeolidJobBundle::layout.fr.html.twig' %}
+
+{% block title %}{{ parent() }} - Enterprise{% endblock %}
+
+{% block content %}
+
+<section class="section-title notch-padding">
+    <h1>Entreprise</h1>
+</section>
+
+<div class="notch">
+    <div class="trapeze-right-white"></div>
+    <div class="trapeze-left-white"></div>
+</div>
+
+<section id="enterprise-overview" class="section-white">
+    <div class="row">
+        <div class="small-12 columns">
+            {{ cnerta_breadcrumb_render('breadcrumb') }}
+        </div>
+    </div>
+    <div class="separator">
+    </div>
+    <div class="row">
+        <div class="small-12 columns user-content">
+            {{ config.enterprise.overview|default('')|raw }}
+        </div>
+    </div>
+    <div class="separator">
+    </div>
+    <div class="row">
+        <div class="small-12 columns">
+            <h2 class="text-left">Les talents que nous cherchons</h2>
+        </div>
+    </div>
+    <div class="separator">
+    </div>
+    <div class="row text-center">
+        <div class="talent small-12 columns">
+            <div id="GautierCassagnauModal" class="reveal-modal medium" data-reveal>
+                <div class="flex-video">
+                    <iframe width="640" height="360" src="//www.youtube.com/embed/m2gCZk2YzRw?vq=hd1080&rel=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <a class="close-reveal-modal">&#215;</a>
+            </div>
+            <a href="#" data-reveal-id="GautierCassagnauModal">
+                <img class="play-hover" src="{{ asset('bundles/geolidjob/img/common/play-white.png')}}">
+                <img class="play" src="{{ asset('bundles/geolidjob/img/common/play-light-gray.png')}}">
+                <img  class="person-photo" src="{{ asset('bundles/geolidjob/img/enterprise/gautier-president.png')}}">
+            </a>
+            <span class="person-name">Gautier Cassagnau</span>
+            <span class="person-title">Président</span>
+            <div class="separator hide-for-medium-up ">
+            </div>
+        </div>
+{#        <div class="talent small-12 medium-6 columns">
+            <div id="GuillaumeDeNeuvierModal" class="reveal-modal medium" data-reveal>
+                <div class="flex-video">
+                    <iframe width="640" height="360" src="//www.youtube.com/embed/m2gCZk2YzRw?vq=hd1080&rel=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <a class="close-reveal-modal">&#215;</a>
+            </div>
+            <a href="#" data-reveal-id="GuillaumeDeNeuvierModal">
+                <img class="play-hover" src="{{ asset('bundles/geolidjob/img/common/play-white.png')}}">
+                <img class="play" src="{{ asset('bundles/geolidjob/img/common/play-light-gray.png')}}">
+                <img  class="person-photo" src="{{ asset('bundles/geolidjob/img/enterprise/guillaume-directeur-technique.png')}}">
+            </a>
+            <span class="person-name">Guillaume de Neuvier</span>
+            <span class="person-title">DG - CTO</span>
+            <div class="separator hide-for-medium-up ">
+            </div>
+        </div>#}
+    </div>
+    <div class="separator">
+    </div>
+</section><!-- enterprise-overview -->
+
+<div class="salience absolute">
+    <div class="triangle triangle-white"></div>
+</div>
+
+<a name="agences"></a>
+<section id="enterprise-coverage" class="section-primary salience-padding notch-padding">
+    <div class="row" data-equalizer>
+        <div class="small-12 medium-9 columns" data-equalizer-watch>
+            <div class="vertical-align">
+                <div class="align-middle">
+                    <h2>
+                        Geolid couvre le territoire national tout en assurant à ses clients
+                        un service de proximité.
+                    </h2>
+                    <div class="separator">
+                    </div>
+                    <div class="separator">
+                    </div>
+                    <a href="{{ path('job_offers') }}">Voir toutes les offres nationales</a>
+                    <div class="separator">
+                    </div>
+                    {#<a href="{{ offers_europe_pdf_url }}" target="_blank">Voir toutes les offres européennes</a>#}
+                    <div class="separator">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="small-12 medium-3 columns" data-equalizer-watch>
+            <div class="vertical-align">
+                <div class="align-middle">
+                    <img id="enterprise-coverage-map" src="{{ asset('bundles/geolidjob/img/enterprise/carte-france-geolid.png')}}" width="337" height="346" border="0" usemap="#Carte France Geolid">
+                    <map name="Carte France Geolid">
+                        <area shape="circle" coords="108,232,16" href="{{ path('job_offers', {'agency': 'bordeaux'}) }}" title="Bordeaux">
+                        <!--area shape="circle" coords="198,204,7" title="Clermont-ferrand"/-->
+                        <!--area shape="circle" coords="254,175,7" title="Dijon"/-->
+                        <!--area shape="circle" coords="297,212,8" title="Grenoble"/-->
+                        <area shape="circle" coords="193,20,15" href="{{ path('job_offers', {'agency': 'lille'}) }}" title="Lille">
+                        <area shape="circle" coords="248,217,22" href="{{ path('job_offers', {'agency': 'lyon'}) }}" title="Lyon">
+                        <area shape="circle" coords="282,300,15" href="{{ path('job_offers', {'agency': 'marseille'}) }}" title="Marseille">
+                        <area shape="circle" coords="242,304,7" href="{{ path('job_offers', {'agency': 'montpellier'}) }}" title="Montpellier">
+                        <area shape="circle" coords="76,143,14" href="{{ path('job_offers', {'agency': 'nantes'}) }}" title="Nantes">
+                        <!--area shape="circle" coords="325,279,8" title="Nice"/-->
+                        <area shape="circle" coords="255,279,7" href="{{ path('job_offers', {'agency': 'nimes'}) }}" title="Nimes">
+                        <area shape="circle" coords="180,92,22" href="{{ path('job_offers', {'agency': 'paris'}) }}" title="Paris">
+                        <area shape="circle" coords="87,300,8" href="{{ path('job_offers', {'agency': 'pau'}) }}" title="Pau"">
+                        <!--area shape="circle" coords="213,320,7" title="Perpignan"/-->
+                        <area shape="circle" coords="317,100,15" href="{{ path('job_offers', {'agency': 'strasbourg'}) }}" title="Strasbourg">
+                        <!--area shape="circle" coords="311,292,8" title="Toulon"-->
+                        <area shape="circle" coords="153,290,14" href="{{ path('job_offers', {'agency': 'toulouse'}) }}" title="Toulouse"">
+               </div>
+            </div>
+        </div>
+    </div>
+    <div class="separator">
+    </div>
+</section>
+
+<div class="notch">
+    <div class="trapeze-right-white"></div>
+    <div class="trapeze-left-white"></div>
+</div>
+
+<section id="enterprise-ambassadors" class="section-white notch-padding">
+    <div class="separator">
+    </div>
+    <div class="row">
+        <div class="small-12 columns">
+            <h2>Nos ambassadeurs partout en France</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="small-12 medium-4 columns">
+            <div class="ambassador">
+                <div id="HediKacemModal" class="reveal-modal medium" data-reveal>
+                    <div class="flex-video">
+                        <iframe width="640" height="360" src="//www.youtube.com/embed/6zDmkGa8D20?vq=hd1080&rel=0" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <a class="close-reveal-modal">&#215;</a>
+                </div>
+                <a href="#" class="person-interview" data-reveal-id="HediKacemModal">
+                    <img class="play-hover" src="{{ asset('bundles/geolidjob/img/common/play-light-gray.png')}}">
+                    <img class="play" src="{{ asset('bundles/geolidjob/img/common/play-white.png')}}">
+                    <img class="person-photo" src="{{ asset('bundles/geolidjob/img/fr/youtube/Hédi-Kacem_mini2.png')}}">
+                </a>
+                <span class="person-name">Hédi Kacem</span>
+                <span class="person-title">Commercial</span>
+                <p>
+                </p>
+            </div>
+        </div>
+        <div class="small-12 medium-4 columns">
+            <div class="ambassador">
+                <div id="AliGuihiaModal" class="reveal-modal medium" data-reveal>
+                    <div class="flex-video">
+                        <iframe width="640" height="360" src="//www.youtube.com/embed/ANAFz4j3-Gk?vq=hd1080&rel=0" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <a class="close-reveal-modal">&#215;</a>
+                </div>
+                <a href="#" class="person-interview" data-reveal-id="AliGuihiaModal">
+                    <img class="play-hover" src="{{ asset('bundles/geolidjob/img/common/play-light-gray.png')}}">
+                    <img class="play" src="{{ asset('bundles/geolidjob/img/common/play-white.png')}}">
+                    <img class="person-photo" src="{{ asset('bundles/geolidjob/img/fr/youtube/Ali-Guihia_mini2.png')}}">
+                </a>
+                <span class="person-name">Ali Guihia</span>
+                <span class="person-title">Traffic manager</span>
+                <p>
+                </p>
+            </div>
+        </div>
+        <div class="small-12 medium-4 columns">
+            <div class="ambassador">
+                <div id="AlexandreMicheauxModal" class="reveal-modal medium" data-reveal>
+                    <div class="flex-video">
+                        <iframe width="640" height="360" src="//www.youtube.com/embed/ssK0tFC9P44?vq=hd1080&rel=0" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <a class="close-reveal-modal">&#215;</a>
+                </div>
+                <a href="#" class="person-interview" data-reveal-id="AlexandreMicheauxModal">
+                    <img class="play-hover" src="{{ asset('bundles/geolidjob/img/common/play-light-gray.png')}}">
+                    <img class="play" src="{{ asset('bundles/geolidjob/img/common/play-white.png')}}">
+                    <img class="person-photo" src="{{ asset('bundles/geolidjob/img/fr/youtube/Alexandre-Micheaux_mini2.png')}}">
+                </a>
+                <span class="person-name">Alexandre Micheaux</span>
+                <span class="person-title">Directeur de Région Sud</span>
+                <p>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="separator">
+    </div>
+</section><!-- enterprise-ambassadors -->
+
+{% endblock content %}

@@ -1,0 +1,43 @@
+/**
+ * Home.
+ */
+
+/**
+ * Title.
+ */
+
+#home-title {
+    color: rgba(255, 255, 255, 0.6);
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+#home-title ul {
+    list-style: none outside none;
+    margin: 0;
+    width: 300%;
+}
+
+#home-title ul li {
+    box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.1) inset;
+    display: block;
+    float: left;
+    min-height: 393px;
+    padding: 160px 0 110px;
+    width: 33%;
+    background-position: center center;
+}
+
+@media #{$small-only} {
+    #home-title ul li {
+        min-height: 200px;
+    }
+}
+
+@media #{$medium-only} {
+    #home-title ul li {
+        min-height: 250px;
+    }
+}

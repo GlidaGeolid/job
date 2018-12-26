@@ -1,0 +1,165 @@
+{% extends 'GeolidJobBundle::layout.de.html.twig' %}
+
+  {% block title %}{{ parent() }} - Home{% endblock %}
+
+  {% block content %}
+
+  <section id="home-title">
+    <div id="home-slider">
+      <ul>
+        <li style="background-image: url({{ asset('bundles/geolidjob/img/home-slider/photobooth.jpg')}})">
+        </li>
+        <li style="background-image: url({{ asset('bundles/geolidjob/img/home-slider/salle-de-reunion.jpg')}})">
+        </li>
+        <li style="background-image: url({{ asset('bundles/geolidjob/img/home-slider/univers-A.jpg')}})">
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="notch">
+    <div class="trapeze-right-white"></div>
+    <div class="trapeze-left-white"></div>
+  </div>
+
+  <section id="home-de-overview" class="section-white">
+    <div class="separator">
+    </div>
+    <div class="row">
+      <div class="small-12 medium-4 columns text-center">
+        <img src="{{ asset('bundles/geolidjob/img/de/map-europe-de.jpg')}}">
+          <div class="separator">
+          </div>
+      </div>
+      <div class="small-12 medium-8 columns user-content">
+        {{ config.home.content|default('')|raw }}
+        <div class="separator">
+        </div>
+        <img src="{{ asset('bundles/geolidjob/img/de/learn-more-download.jpg')}}">
+          <a href="http://de.geolid.com">Über Geolid</a>
+      </div>
+    </div>
+    <div class="separator">
+    </div>
+    <div class="row">
+      <div class="small-12 medium-4 columns text-center">
+        <h2>Dein Traum-Job ist noch nicht dabei?</h2>
+        <a class="button" href="{{ path('job_apply', {'country': 'de'}) }}">Sende uns Deine Initiativbewerbung!</a>
+        <div class="separator">
+        </div>
+      </div>
+      <div id="home-de-opportunities" class="small-12 medium-8 columns small-padding">
+        <h3 class="bg-secondary">Stellenangebote Deutschland</h3>
+
+        <div class=" user-content">
+          <table id="offers-table">
+            <thead>
+            <tr class="text-center" >
+              <th class="hide-for-small text-center">{% trans %}offer.list.sector{% endtrans %}</th>
+              <th class="text-center">{% trans %}offer.list.job{% endtrans %}</th>
+              <th class="text-center">{% trans %}offer.list.agency{% endtrans %}</th>
+              <th class="hide-for-small text-center">{% trans %}offer.list.zone{% endtrans %}</th>
+              <th class="hide-for-small text-center">{% trans %}offer.list.date{% endtrans %}</th>
+            </tr>
+            </thead>
+            <tbody>
+              {% for offer in offers %}
+                <tr>
+                  <td class="hide-for-small">{{ ('offer.sector.' ~ offer.sector.name)|lower|replace({' ': '_'})|trans }}</td>
+                  <td>
+                    <a href="{{ path('job_offer', {'agency': offer.agency.slug, 'slug': offer.slug, 'country': 'de'}) }}">
+                      {{ offer.title }}
+                    </a>
+                  </td>
+                  <td>{{ offer.agency.name }}</td>
+                  <td class="hide-for-small">{{ offer.zone|trans }}</td>
+                  <td class="hide-for-small">{{ offer.date|date("d/m/Y") }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="separator">
+    </div>
+  </section><!-- home-de-overview -->
+
+  <div class="salience absolute">
+    <div class="triangle triangle-white"></div>
+  </div>
+
+  <section id="home-testimonials" class="section-white testimonials">
+    {% for testimonial in testimonials %}
+    {% include('GeolidJobBundle:Testimonial:testimonial.html.twig')
+    with { 'testimonial': testimonial } %}
+    {% endfor %}
+  </section><!-- home-testimonials -->
+
+  <div class="notch">
+    <div class="trapeze-left-primary"></div>
+    <div class="trapeze-right-primary"></div>
+  </div>
+
+  <section id="home-de-backstage" class="section-primary notch-padding">
+    <div class="separator">
+    </div>
+    <div class="row">
+      <div class="small-12 columns text-center">
+        <h2>Professionell, innovativ und Spaß dabei!</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-12 columns text-center">
+        <ul id="backstage-diaporama" class="small-block-grid-1 medium-block-grid-3 large-block-grid-4">
+          <li>
+            <div>
+              <img src="{{ asset('bundles/geolidjob/img/backstage/lucie-responsable-traffic-management.jpg')}}">
+            </div>
+          </li>
+          <li>
+            <div>
+              <img src="{{ asset('bundles/geolidjob/img/backstage/gautier-seminaire.jpg')}}">
+            </div>
+          </li>
+          <li>
+            <div>
+              <img src="{{ asset('bundles/geolidjob/img/backstage/terrasse-lyon-geolid.jpg')}}">
+            </div>
+          </li>
+          <li>
+            <div>
+              <img src="{{ asset('bundles/geolidjob/img/backstage/gautier-julie-reunion.jpg')}}">
+            </div>
+          </li>
+          <li>
+            <div>
+              <img src="{{ asset('bundles/geolidjob/img/backstage/vivien-melissa-chefs-de-projet.jpg')}}">
+            </div>
+          </li>
+          <li>
+            <div>
+              <img src="{{ asset('bundles/geolidjob/img/backstage/guillaume-leila-seminaire-geolid.jpg')}}">
+            </div>
+          </li>
+          <li>
+            <div>
+              <img src="{{ asset('bundles/geolidjob/img/backstage/seminaire-geolid-google.jpg')}}">
+            </div>
+          </li>
+          <li>
+            <div>
+              <img src="{{ asset('bundles/geolidjob/img/backstage/benjamin-chef-de-projet.jpg')}}">
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="separator">
+    </div>
+    <div class="separator">
+    </div>
+  </section><!-- home-de-backstage -->
+
+  {% endblock content %}

@@ -1,0 +1,66 @@
+#agency:
+#
+#contract:
+#    blank: Le contrat est requis.
+#
+#certificates:
+#    blank: Bitte füge Deine Zeugnisse hinzu.
+#    big: Die Datei ist zu groß (maximal 5 MB).
+#    invalid: Jetzt fehlen nur noch Deine Zeugnisse.
+#    mime: Die zulässigen Formate sind: .pdf, .odt, .doc, .docx, zip, .jpeg, .png.
+#
+#cl:
+#    blank: Das Anschreiben ist erforderlich.
+#    big: Die Datei ist zu groß(max. 2 MB).
+#    invalid: Das Anschreiben ist ungültig.
+#    mime: Die zulässigen Formate sind: .pdf, .odt, .doc, .docx, zip, .jpeg, .png.
+#
+#cv:
+#    blank: Bitte lade Deinen Lebenslauf hoch.
+#    big: Die Datei ist zu groß(max. 2 MB).
+#    invalid: Ohne Lebenslauf sind die Bewerbungsunterlagen nicht vollständig.
+#    mime: Die zulässigen Formate sind: .pdf, .odt, .doc, .docx, zip, .jpeg, .png.
+#
+#email:
+#    blank: Bitte gib Deine E-Mail Adresse an.
+#    email: Bitte gib eine gültige E-Mail Adresse an.
+#    invalid: Wir informieren Dich über den aktuellen Stand Deiner Bewerbung.
+#    long: "[-Inf,Inf]Die E-Mail Adresse ist zu lang."
+#    short: "[-Inf,Inf]Die E-Mail Adresse ist zu kurz."
+#
+#field:
+#    invalid: Angabe ungültig.
+#
+#firstname:
+#    blank: Bitte gib Deinen Vornamen an.
+#    chars: Der Vorname darf keine Sonderzeichen enthalten.
+#    invalid: Helene, bist du das?
+#    long: "[-Inf,Inf]Der Vorname ist zu lang."
+#    short: "[-Inf,Inf]Der Vorname ist zu kurz."
+#
+#gender:
+#
+#job:
+#    invalid: Bitte wähle einen Beruf.
+#
+#lastname:
+#    blank: Bitte gib Deinen Nachnamen an.
+#    chars: Der Nachname darf keine Sonderzeichen enthalten.
+#    invalid: Dringend erforderlich für die Aufnahme Deiner Bewerbung…
+#    long: "[-Inf,Inf]Der Nachname ist zu lang."
+#    short: "[-Inf,Inf]Der Nachname ist zu kurz."
+#
+#offer:
+#    invalid: Bitte wähle ein Stellenangebot.
+#
+#phone:
+#    blank: Bitte gib Deine Telefonnummer an.
+#    invalid: Wenn es schnell gehen soll, ist ein kurzer Anruf häufig besser.
+#    long: "[-Inf,Inf]Die Telefonnummer ist zu lang."
+#    short: "[-Inf,Inf]Die Telefonnummer ist zu kurz."
+#
+#privacy:
+#    invalid: Bitte gib uns Dein Okay.
+#    "true": Bitte gib uns Dein Okay.
+#
+#sector:

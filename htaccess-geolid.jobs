@@ -1,0 +1,11 @@
+AuthUserFile /var/www/vhosts/geolid.jobs/httpdocs/htpasswd-geolid.jobs
+AuthGroupFile /dev/null
+AuthName "Protected zone"
+AuthType Basic
+Require user geolid
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_URI} !^/web/
+    RewriteRule ^(.*)$ /web/$1
+</IfModule>

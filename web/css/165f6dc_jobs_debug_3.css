@@ -1,0 +1,9 @@
+
+#home-de-opportunities table thead tr th{
+    padding: 0.5rem 0.625rem 0.625rem;
+}
+
+#home-de-opportunities table {
+    width: 100%;
+    border: solid 1px #dddddd;
+}

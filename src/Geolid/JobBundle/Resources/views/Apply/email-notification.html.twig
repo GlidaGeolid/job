@@ -1,0 +1,30 @@
+{% block subject %}
+{{ 'apply_email.notification.subject'|trans|raw }}
+{% endblock subject %}
+
+{% block body %}
+{% if offer is not empty %}
+{% set title = offer.title %}
+{% else %}
+{% set title = 'apply_email.notification.spontaneous'|trans %}
+{% endif %}
+{{ 'apply_email.notification.intro'|trans({'%title%': title})|raw }}
+<p><b>{{ application.gender }} {{ application.firstname }} {{ application.lastname }}</b><br>
+<a href="{{ legacy_api_url }}jobs/redirect_to_job_file?rh_candidat_id={{ application.id }}&file=cv">
+{{ 'apply_email.notification.curriculum_vitae'|trans|raw }}
+</a>
+{% if application.clFilename %}
+<br>
+<a href="{{ legacy_api_url }}jobs/redirect_to_job_file?rh_candidat_id={{ application.id }}&file=motivation">
+{{ 'apply_email.notification.cover_letter'|trans|raw }}
+</a>
+{% endif %}
+{% if application.certificatesFilename %}
+<br>
+<a href="{{ legacy_api_url }}jobs/redirect_to_job_file?rh_candidat_id={{ application.id }}&file=certificates">
+{{ 'apply_email.notification.certificates'|trans|raw }}
+</a>
+{% endif %}
+</p>
+{{ 'apply_email.notification.ending'|trans({'%rh_manager_url%': rh_manager_url})|raw }}
+{% endblock body %}

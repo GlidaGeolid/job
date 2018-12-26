@@ -1,0 +1,168 @@
+imports:
+    - { resource: parameters.yml }
+    - { resource: security.yml }
+
+# Assetic Configuration
+assetic:
+    debug: "%kernel.debug%"
+    use_controller:
+        enabled: "%kernel.debug%"
+        profiler: false
+    bundles:
+        - GeolidJobBundle
+    #java: /usr/bin/java
+    filters:
+        cssrewrite: ~
+        #closure:
+        #    jar: "%kernel.root_dir%/Resources/java/compiler.jar"
+        #yui_css:
+        #    jar: "%kernel.root_dir%/Resources/java/yuicompressor-2.4.7.jar"
+
+#
+cnerta_breadcrumb:
+    twig:
+        template: GeolidJobBundle:Menu:breadcrumb.html.twig
+
+# Doctrine Configuration
+doctrine:
+    dbal:
+        driver:   "%database_driver%"
+        host:     "%database_host%"
+        port:     "%database_port%"
+        dbname:   "%database_name%"
+        user:     "%database_user%"
+        password: "%database_password%"
+        charset:  UTF8
+        # if using pdo_sqlite as your database driver, add the path in parameters.yml
+        # e.g. database_path: "%kernel.root_dir%/data/data.db3"
+        # path:     "%database_path%"
+        mapping_types:
+            enum: string
+    orm:
+        auto_generate_proxy_classes: "%kernel.debug%"
+        auto_mapping: true
+        dql:
+            string_functions:
+                FIELD: Geolid\JobBundle\Doctrine\FieldFunction
+                FIND_IN_SET: Geolid\JobBundle\Doctrine\FindInSetFunction
+
+# Remember to set vich_upload config accordingly.
+geolid_job:
+    applications_path: %kernel.root_dir%/../web/job/application
+    applications_url: %geolid_job.domain%/job/application
+    apply_uk_pdf_url: %geolid_job.geolid%/php/vitrine/jobs-asset/documents/apply_uk.pdf
+    countries: [de, fr]
+    domain: %geolid_job.domain%
+    from_email: contact@geolid.com
+    from_name: Geolid
+    news_base_url: %geolid_job.geolid%/actualites/
+    news_end_url: .htm
+    notifications:
+        de: %geolid_job.notifications.de%
+    offers_europe_pdf_url: %geolid_job.geolid%/php/vitrine/jobs-asset/documents/offers-europe.pdf
+    rh_manager_url: %geolid_job.geolid%/?url=equipe&tab=manager
+    testimonial_base_url: %geolid_job.geolid%/php/vitrine/jobs-asset/testimonials/
+    legacy_api_base_url: %geolid_job.geolid%/api/
+
+knp_menu:
+    twig:
+        template: GeolidJobBundle:Menu:menu.html.twig
+
+sonata_block:
+    default_contexts: [cms]
+    blocks:
+        job.block.customers.revenues: ~
+        job.block.customers.cards: ~
+        job.block.international: ~
+        job.block.news: ~
+        job.block.stack.cards: ~
+
+vich_uploader:
+    db_driver: orm
+    mappings:
+        job_cv:
+            uri_prefix: job/application
+            upload_destination: %kernel.root_dir%/../web/job/application
+            namer: job.namer.cv
+        job_cl:
+            uri_prefix: job/application
+            upload_destination: %kernel.root_dir%/../web/job/application
+            namer: job.namer.cv
+        job_certificates:
+            uri_prefix: job/application
+            upload_destination: %kernel.root_dir%/../web/job/application
+            namer: job.namer.cv
+
+framework:
+    #esi:             ~
+    translator:      { fallback: "%locale%" }
+    secret:          "%secret%"
+    router:
+        resource: "%kernel.root_dir%/config/routing.yml"
+        strict_requirements: ~
+    form:            ~
+    csrf_protection: ~
+    validation:      { enable_annotations: true }
+    templating:
+        engines: ['twig']
+        #assets_version: SomeVersionScheme
+    default_locale:  "%locale%"
+    trusted_hosts:   ~
+    trusted_proxies: ~
+    session:
+        # handler_id set to null will use default session handler from php.ini
+        handler_id:  ~
+    fragments:       ~
+    http_method_override: true
+
+jms_i18n_routing:
+    default_locale: fr
+    locales: [de, fr, en]
+    hosts:
+        de: de.%geolid_job.domain%
+        en: uk.%geolid_job.domain%
+        fr: fr.%geolid_job.domain%
+    redirect_to_host: true
+    strategy: custom
+
+# Twig Configuration
+twig:
+    debug: "%kernel.debug%"
+    exception_controller: job.controller.exception:showAction
+    globals:
+        geolid_facebook: https://www.facebook.com/geolid
+        geolid_twitter: https://twitter.com/geolid_com
+        geolid_googleplus: https://plus.google.com/+geolid
+        geolid_facebook_de: https://www.facebook.com/geolid.deutschland
+        geolid_googleplus_de: https://plus.google.com/113504634382002953610/posts
+    strict_variables: "%kernel.debug%"
+
+# Swiftmailer Configuration
+swiftmailer:
+    default_mailer: default
+    mailers:
+        default:
+            transport: "%mailer_transport%"
+            encryption: "%mailer_encryption%"
+            auth_mode: "%mailer_auth_mode%"
+            host: "%mailer_host%"
+            port: "%mailer_port%"
+            username: "%mailer_user%"
+            password: "%mailer_password%"
+            spool: { type: memory }
+        sendgrid:
+            transport: "%sendgrid_transport%"
+            encryption: "%sendgrid_encryption%"
+            auth_mode: "%sendgrid_auth_mode%"
+            host: "%sendgrid_host%"
+            port: "%sendgrid_port%"
+            username: "%sendgrid_user%"
+            password: "%sendgrid_password%"
+            spool: { type: memory }
+
+services:
+    twig.extension.intl:
+        class: Twig_Extensions_Extension_Intl
+        tags:
+            - { name: twig.extension }
+

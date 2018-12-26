@@ -1,0 +1,76 @@
+/**
+ * Utils.
+ */
+
+.absolute {
+    position: absolute;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.separator {
+    height: 2rem;
+}
+
+.vertical-align {
+    display: table;
+    height: 100%;
+}
+
+.horizontal-align {
+    width: 100%;
+}
+
+.align-middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.align-bottom {
+    display: table-cell;
+    vertical-align: bottom;
+}
+
+.small-padding {
+    padding: rem-calc(5);
+}
+
+.normal-padding {
+    padding: rem-calc(10);
+}
+
+.big-padding {
+    padding: rem-calc(15);
+}
+
+.padding-left {
+    padding-left: 5%;
+}
+
+.padding-right {
+    padding-right: 5%;
+}
+
+.margin-left {
+    margin-left: 5%;
+}
+
+.margin-right {
+    margin-right: 5%;
+}
+
+.no-wrap {
+    white-space: nowrap;
+}
+
+.scale-me {
+    transition: 0.3s ease;
+}
+
+.scale-me:hover {
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Chrome, Safari, Opera */
+    transform: scale(1.1);
+}

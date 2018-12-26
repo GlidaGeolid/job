@@ -1,0 +1,47 @@
+/**
+ * Apply.
+ */
+
+#apply-form {
+}
+
+#apply-form label {
+    display: inline-block;
+    padding: 0.5rem 0;
+}
+
+#apply-form input[type=file] {
+    padding: 0.5rem 0;
+}
+
+#apply-form input[type=radio] {
+    margin: rem-calc(10 0 24 0);
+}
+
+#apply-form input.button {
+    border: rem-calc(1) solid $primary-color;
+    border-radius: 2px;
+    font-size: rem-calc(20);
+    margin-top: rem-calc(16);
+    padding: 0.5rem;
+    padding: rem-calc(10 24);
+    transition: $button-transition-speed;
+}
+
+#apply-form input.button:hover,
+#apply-form input.button:focus {
+    background-color: white;
+    color: $primary-color;
+}
+
+#apply-form .help:not(empty) {
+    margin-bottom: 1rem;
+    display: block;
+}
+
+#apply-form .privacy-accept {
+    margin-bottom: 0;
+}
+
+#apply-thanks {
+}

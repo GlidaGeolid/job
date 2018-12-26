@@ -1,0 +1,116 @@
+apply:
+    intro: |
+        <p>Du suchst nach neuen Herausforderungen in einem schnell wachsenden, innovativen Unternehmen?
+        <br>Dann bist du bei Geolid genau richtig!</p>
+    form:
+        email: E-Mail
+        certificates: Anlagen (Zeugnisse etc.)
+        cl: Anschreiben
+        cv: Lebenslauf
+        empty:
+            job: Beruf
+            offer: Stellenangebot
+        firstname: Vorname
+        gender:
+            female: Frau
+            label: Anrede
+            male: Herr
+        help:
+            certificates: |
+                Bitte füge alle Anlagen zu einer Datei (max. 5 MB) zusammen.
+                Dateiformat pdf, doc, docx, odt, jpg, png
+        job: Beruf
+        lastname: Nachname
+        offer: Stellenangebot
+        phone: Telefonnr.
+        privacy: |
+            Ich bin mit der Verarbeitung meiner personenbezogenen Daten im Rahmen der genannten
+            <a href="%link%">Datenschutzrichtlinien</a> einverstanden.
+        source:
+            title: Art der Bewerbung
+            geolid: Stellenangebot
+            spontaneous: Initiativbewerbung
+    title: Jetzt bewerben
+    submit: Bewerbung senden
+
+apply_email:
+    confirmation:
+        subject: "[Geolid Jobs] Deine Bewerbung"
+        body: |
+            <p><b>Vielen Dank für Deine Bewerbung!</b></p>
+            <p>Wir werden Deine Unterlagen sorgfältig prüfen und
+            Dir schnellstmöglich eine Rückmeldung geben.
+            <br>Bei Fragen, sende uns einfach eine Nachricht an
+            <a href="mailto:recruiting@geolid.com">recruiting@geolid.com</a>.
+            <br>Bis dahin wünschen wir Dir einen schönen Tag und
+            verbleiben mit freundlichen Grüßen,</p>
+            <p>Dein Team von Geolid</p>
+    notification:
+        subject: "[Jobs] Neue Bewerbung"
+        intro: |
+            <p>Guten Tag,<br><br>für folgende Stellenausschreibung
+            ist eine neue Bewerbung eingegangen: %title%.</p>
+            <p>Folgende Bewerbungsunterlagen stehen zum
+            Abruf bereit:</p>
+        spontaneous: Initiativbewerbung
+        certificates: Zeugnisse anschauen
+        cover_letter: Anschreiben anschauen
+        curriculum_vitae: Lebenslauf anschauen
+        ending: |
+            <p>Hier geht es zum
+            <a href="%rh_manager_url%" target='_blank'>
+            HR-Manager</a> zur Verwaltung der Bewerbung.</p>
+
+apply_thanks:
+    text: |
+        <p>Wir haben Deine Bewerbung erhalten.<br> In Kürze senden
+        wir Dir eine Empfangsbestätigung an %email%.</p>
+    title: Vielen Dank für Deine Bewerbung !
+
+exception:
+    title: Error
+    error404:
+        title: Ooops, da ist bei der Suche wohl etwas schief gegangen.
+        description: |
+            <p>Die Seite scheint sich so schnell weiterentwickelt zu haben,
+            wie so viele talentierte und ambitionierte Seiten von Geolid.</p>
+    error: Oups, une erreur est survenue.
+
+jobs:
+    title: Geolid Karriere
+
+menu:
+    advice: Tipps
+    apply: Jetzt bewerben
+    apply_thanks: Danke
+    enterprise: Entreprise
+    home: Home
+    job: Job
+    jobs: Jobs
+    offer: Stellenangebot
+    offers: Stellenangebote
+    privacy: Datenschutz
+    trainee: Stagiaires
+
+offer:
+    apply: Jetzt bewerben
+    back: Zur Jobbörse
+    email: E-Mail
+    print: Drucken
+    sector:
+        administratif_et_finance: Administration & Finanzen
+        rh: HR
+        commercial: Vertrieb
+        relation_clients: Kundenservice
+        marketing: Marketing
+        production_et_innovation: Produktion & Entwicklung
+    title: Ein Team. Ein Ziel. Gemeinsam erfolgreich!
+    list:
+        agency: Region
+        job: Stelle
+        sector: Fachbereich
+        zone: Ort
+        date: Datum
+
+
+

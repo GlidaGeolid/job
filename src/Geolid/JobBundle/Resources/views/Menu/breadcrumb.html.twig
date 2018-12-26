@@ -1,0 +1,14 @@
+{% block root %}
+{% spaceless %}
+<ul class="breadcrumbs">
+{% for item in items %}
+    {% if loop.first %}
+    {% elseif loop.last %}
+        <li class="current">{{ item.label|trans }}</li>
+    {% else %}
+        <li><a href="{{ item.uri }}">{{ item.label|trans }}</a></li>
+    {% endif %}
+{% endfor %}
+</ul>
+{% endspaceless %}
+{% endblock root %}

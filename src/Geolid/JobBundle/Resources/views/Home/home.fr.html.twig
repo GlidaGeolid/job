@@ -1,0 +1,188 @@
+{% extends 'GeolidJobBundle::layout.fr.html.twig' %}
+
+{% block title %}{{ parent() }} - Accueil{% endblock %}
+
+{% block content %}
+<section id="home-title">
+    <div id="home-slider">
+        <ul>
+            <li style="background-image: url({{ asset('bundles/geolidjob/img/home-slider/salle-de-reunion.jpg')}})">
+            </li>
+            <li style="background-image: url({{ asset('bundles/geolidjob/img/home-slider/univers-A.jpg')}})">
+            </li>
+            <li style="background-image: url({{ asset('bundles/geolidjob/img/home-slider/photobooth.jpg')}})">
+            </li>
+        </ul>
+    </div>
+</section>
+
+<div class="notch">
+    <div class="trapeze-right-white"></div>
+    <div class="trapeze-left-white"></div>
+</div>
+
+<section id="home-overview" class="section-white notch-padding">
+
+<div class="row">
+<div class="small-12 columns">
+<h1>Nous prenons plaisir à travailler et réussir ensemble</h1>
+<p>
+    Labelisée Google Premier Partner,
+    Geolid est devenu en 6 ans un acteur incontournable de la communication web locale et
+    web to store des commerçants, artisans et PME. Le professionnalisme que nous accompagnons,
+    la simplicité et le plaisir au travail que nous cultivons ont fait notre réussite et
+    restent nos meilleurs atouts. Ces 3 mots vous parlent, rejoignez-nous !
+</p>
+</div>
+</div>
+
+<div class="separator">
+</div>
+<div class="separator">
+</div>
+
+<div class="row text-center">
+<div class="small-12 medium-4 columns fx-item">
+    <img src="{{ asset('bundles/geolidjob/img/home-fr/nos-agences.png')}}">
+    <h3>Nos directions régionales</h3>
+    <p>
+        Geolid est présent et recrute dans plus de 30 villes en France des commerciaux et directeurs de région.
+    </p>
+    <a href="{{ path('job_enterprise') }}#agences">Voir toutes nos régions</a>
+</div>
+<div class="small-12 medium-4 columns fx-item">
+    <img src="{{ asset('bundles/geolidjob/img/home-fr/nos-offres-d-emploi.png')}}">
+    <h3>Les offres d'emploi</h3>
+    <p>
+        {% for offer in offers %}
+            <a href="{{ path('job_offer', {'agency': offer.agency.slug, 'slug': offer.slug}) }}">
+                {{ offer.job.title }} -
+                {{ offer.agency.name }}
+            </a><br>
+        {% endfor %}
+    </p>
+    <a href="{{ path('job_offers') }}">En savoir plus</a>
+</div>
+<div class="small-12 medium-4 columns fx-item">
+    <img src="{{ asset('bundles/geolidjob/img/home-fr/nos-stages.png')}}">
+    <h3>Les stages</h3>
+    <p>
+        Nous prenons soin de nos stagiaires.<br>
+        Nous proposons des stages longs et pleinement professionnalisants.
+    </p>
+    <a href="{{ path('job_trainee') }}">En savoir plus</a>
+</div>
+</div><!-- row -->
+
+<div class="separator">
+</div>
+
+</section><!-- home-overview -->
+
+<div class="notch">
+    <div class="trapeze-left-primary"></div>
+    <div class="trapeze-right-primary"></div>
+</div>
+
+<section id="home-backstage" class="section-primary notch-padding">
+
+<div class="row">
+<div class="small-12 columns text-right">
+    <h2>Nos métiers en coulisses</h2>
+    <p>
+        Grâce à internet, nous mettons en relation<br>
+        les petites entreprises et leurs futurs clients.
+    </p>
+    <p>
+        Aujourd'hui nous avons la chance d'être précurseurs dans ce domaine.
+    </p>
+    <p>
+        Voilà pourquoi chaque jour est un nouveau défi et renouvelle<br>
+        les missions et compétences des collaborateurs de Geolid.
+    </p>
+</div>
+</div>
+
+<div class="separator">
+</div>
+
+<div class="row text-center">
+<div class="small-12 medium-6 large-3 columns backstage-job fx-item">
+    <h3 class="text-center">Attaché commercial</h3>
+    <div id="HediKacemModal" class="reveal-modal medium" data-reveal>
+        <div class="flex-video">
+            <iframe width="640" height="360" src="//www.youtube.com/embed/6zDmkGa8D20?vq=hd1080&rel=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <a class="close-reveal-modal">&#215;</a>
+    </div>
+    <a href="#" data-reveal-id="HediKacemModal">
+        <img class="play-hover" src="{{ asset('bundles/geolidjob/img/common/play-dark-gray.png')}}">
+        <img class="play" src="{{ asset('bundles/geolidjob/img/common/play-white.png')}}">
+        <img class="job-photo" src="{{ asset('bundles/geolidjob/img/fr/youtube/Hédi-Kacem_mini.png') }}">
+    </a>
+</div>
+<div class="small-12 medium-6 large-3 columns backstage-job fx-item">
+    <h3 class="text-center">Développeur web</h3>
+    <div id="SamuelBapstModal" class="reveal-modal medium" data-reveal>
+        <div class="flex-video">
+            <iframe width="640" height="360" src="//www.youtube.com/embed/NZJaHnaziPQ?vq=hd1080&rel=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <a class="close-reveal-modal">&#215;</a>
+    </div>
+    <a href="#" data-reveal-id="SamuelBapstModal">
+        <img class="play-hover" src="{{ asset('bundles/geolidjob/img/common/play-dark-gray.png')}}">
+        <img class="play" src="{{ asset('bundles/geolidjob/img/common/play-white.png')}}">
+        <img class="job-photo" src="{{ asset('bundles/geolidjob/img/fr/youtube/Samuel-Bapst_mini.png') }}">
+    </a>
+</div>
+<div class="small-12 medium-6 large-3 columns backstage-job fx-item">
+    <h3 class="text-center">Traffic manager</h3>
+    <div id="AliGuihiaModal" class="reveal-modal medium" data-reveal>
+        <div class="flex-video">
+            <iframe width="640" height="360" src="//www.youtube.com/embed/ANAFz4j3-Gk?vq=hd1080&rel=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <a class="close-reveal-modal">&#215;</a>
+    </div>
+    <a href="#" data-reveal-id="AliGuihiaModal">
+        <img class="play-hover" src="{{ asset('bundles/geolidjob/img/common/play-dark-gray.png')}}">
+        <img class="play" src="{{ asset('bundles/geolidjob/img/common/play-white.png')}}">
+        <img class="job-photo" src="{{ asset('bundles/geolidjob/img/fr/youtube/Ali-Guihia_mini.png') }}">
+    </a>
+</div>
+<div class="small-12 medium-6 large-3 columns backstage-job fx-item">
+    <h3 class="text-center">Directeur de Région Sud</h3>
+    <div id="AlexandreMicheauxModal" class="reveal-modal medium" data-reveal>
+        <div class="flex-video">
+            <iframe width="640" height="360" src="//www.youtube.com/embed/ssK0tFC9P44?vq=hd1080&rel=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <a class="close-reveal-modal">&#215;</a>
+    </div>
+    <a href="#" data-reveal-id="AlexandreMicheauxModal">
+        <img class="play-hover" src="{{ asset('bundles/geolidjob/img/common/play-dark-gray.png')}}">
+        <img class="play" src="{{ asset('bundles/geolidjob/img/common/play-white.png')}}">
+        <img class="job-photo" src="{{ asset('bundles/geolidjob/img/fr/youtube/Alexandre-Micheaux_mini.png') }}">
+    </a>
+</div>
+</div><!-- row -->
+
+<div class="separator">
+</div>
+
+</section><!-- home-backstage -->
+
+<div class="salience absolute">
+    <div class="triangle triangle-primary"></div>
+</div>
+
+<section id="home-testimonials" class="section-white testimonials">
+    {% for testimonial in testimonials %}
+        {% if loop.first == true %}
+            {% include('GeolidJobBundle:Testimonial:testimonial.html.twig')
+            with { 'testimonial': testimonial, 'title': 'Ceux qui en parlent le mieux…'} %}
+        {% else %}
+            {% include('GeolidJobBundle:Testimonial:testimonial.html.twig')
+            with { 'testimonial': testimonial} %}
+        {% endif %}
+    {% endfor %}
+</section><!-- home-testimonials -->
+{% endblock content %}

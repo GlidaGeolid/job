@@ -1,0 +1,24 @@
+<div id="customers-cards" class="text-center">
+<ul>
+{% for customer in [
+    'amazonia.png',
+    'axa.png',
+    'axeo-services.png',
+    'body-minute.png',
+    'cuisines-schmidt.png',
+    'estheticecenter.png',
+    'fitness-park.png',
+    'garden-gym.png',
+    'illico-travaux.png',
+    'joue-club.png',
+    'lady-fitness.png',
+    'lady-moving.png',
+    'laforet.png',
+    'midas.png',
+    'orange-bleue.png',
+    'physiomins.png',
+] %}
+<li><img src="{{ asset('bundles/geolidjob/img/fr/references/' ~ customer) }}"></li>
+{% endfor %}
+</ul>
+</div>

@@ -1,0 +1,131 @@
+{% extends 'GeolidJobBundle::layout.fr.html.twig' %}
+
+{% block title %}{{ parent() }} - {{ job.title }}{% endblock %}
+
+{% block content %}
+
+<section class="section-title notch-padding">
+    <h1>{{ job.title }}</h1>
+</section>
+
+<div class="notch">
+    <div class="trapeze-right-white"></div>
+    <div class="trapeze-left-white"></div>
+</div>
+
+<section id="job" class="section-white">
+
+    <div class="row">
+        <div class="small-12 columns">
+            {{ cnerta_breadcrumb_render('breadcrumb') }}
+        </div>
+    </div>
+
+    <div class="separator">
+    </div>
+
+    <header class="row">
+        <div class="small-12 columns">
+            <p>
+                Labelisée Google Premier Partner,
+                Geolid est devenu en 6 ans un acteur incontournable de la communication
+                web locale et web to store des commerçants, artisans et PME.
+                Le professionnalisme que nous accompagnons, la simplicité et le plaisir au travail
+                que nous cultivons ont fait notre réussite et restent nos meilleurs atouts.
+                Ces 3 mots vous parlent, rejoignez-nous !
+            </p>
+        </div>
+    </header>
+
+    <div class="separator">
+    </div>
+
+    <div id="job-baseline">
+        <div class="row">
+            <div class="small-12 columns">
+                <div class="vertical-align">
+                    <div class="align-middle">
+                        <div id="job-pin"></div>
+                    </div>
+                    <div>
+                        <h2 id="job-baseline">{{ job.baseline }}</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- job-baseline -->
+
+    <div class="separator">
+    </div>
+
+    <div class="separator">
+    </div>
+
+    <div class="row" data-equalizer>
+
+        <div id="job-description" class="small-12 large-8 columns user-content" data-equalizer-watch>
+            {{ job.content|raw }}
+            <div class="separator hide-for-large-up">
+            </div>
+        </div>
+
+        <div id="job-more" class="small-12 large-4 columns" data-equalizer-watch>
+            <div class="separator">
+            </div>
+            <h3>Les autres métiers</h3>
+            <div class="separator">
+            </div>
+            <ul>
+            {% for job2 in starred %}
+                {% if job2.id != job.id %}
+                <li>
+                    <a href="{{ path('job_job', {'slug': job2.slug}) }}">{{ job2.title }}</a>
+                </li>
+                {% endif %}
+            {% endfor %}
+            </ul>
+            <div class="separator">
+            </div>
+            <div class="separator hide-for-small">
+            </div>
+            <div class="separator hide-for-small hide-for-medium">
+            </div>
+            <div id="job-more-links">
+                <a href="{{ path('job_jobs') }}">S'informer sur nos métiers</a> >>
+                <br>
+                <br>
+                <a href="{{ path('job_offers') }}">Voir toutes nos offres d'emploi</a> >>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="separator">
+    </div>
+    <div class="separator">
+    </div>
+
+</section><!-- job -->
+
+{% if job.testimonial1 or job.testimonial2 or job.testimonial3 %}
+    <div class="salience absolute">
+        <div class="triangle triangle-white"></div>
+    </div>
+{% endif %}
+
+<section id="job-testimonials" class="section-white testimonials">
+{% if job.testimonial1 %}
+    {% include('GeolidJobBundle:Testimonial:testimonial.html.twig')
+    with { 'testimonial': job.testimonial1 } %}
+{% endif %}
+{% if job.testimonial2 %}
+    {% include('GeolidJobBundle:Testimonial:testimonial.html.twig')
+    with { 'testimonial': job.testimonial2 } %}
+{% endif %}
+{% if job.testimonial3 %}
+    {% include('GeolidJobBundle:Testimonial:testimonial.html.twig')
+    with { 'testimonial': job.testimonial3 } %}
+{% endif %}
+</section><!-- job-testimonials -->
+
+{% endblock %}

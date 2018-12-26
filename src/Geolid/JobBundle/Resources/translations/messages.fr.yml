@@ -1,0 +1,131 @@
+apply:
+    intro: |
+        <p>Vous cherchez un emploi dans une entreprise en
+        croissance ? Vous désirez participer au succès de Geolid ?
+        <br>Nous vous attendons !</p>
+    form:
+        email: Email
+        certificates: Certificats
+        cl: Lettre de motivation
+        cv: Votre CV
+        empty:
+            job: Fonction
+            offer: Offre
+        firstname: Prénom
+        gender:
+            female: Madame
+            label: Civilité
+            male: Monsieur
+        help:
+            certificates: |
+                Téléverser une archive zip
+        job: Métier
+        lastname: Nom
+        offer: Offre
+        phone: Téléphone
+        privacy: Consentement à la Politique de confidentialité
+        source:
+            title: Type
+            geolid: Offre
+            spontaneous: Candidature spontanée
+    title: Je candidate
+    submit: Je candidate
+
+apply_email:
+    confirmation:
+        subject: "[Geolid Jobs] Candidature"
+        body: |
+            <p><b>Nous vous remercions de votre candidature.</b></p>
+            <p>Nous l'examinons rapidement et reviendrons vers vous dans
+            les jours qui viennent si elle nous semble en ligne avec nos besoins.
+            <br/>Vous souhaitant bonne chance dans l'ensemble de vos recherches.</p>
+            <p>L'équipe Geolid</p>
+    notification:
+        subject: "[Jobs] Nouvelle candidature"
+        intro: |
+            <p>Bonjour,<br><br>Un nouveau candidat a postulé pour
+            l'offre : %title%.</p>
+            <p>Vous trouverez ci-dessous quelques informations le
+            concernant :</p>
+        spontaneous: spontanée
+        certificates: Voir les certificats
+        cover_letter: Voir la lettre de motivation
+        curriculum_vitae: Voir le curriculum vitae
+        ending: |
+            <p>Vous pouvez dès à présent gérer ce candidat sur
+            l'<a href="%rh_manager_url%" target='_blank'>interface
+            dédiée</a>.</p>
+
+apply_thanks:
+    text: |
+        <p>Votre candidature a bien été enregistrée et un accusé
+        de réception vous à été adressé à %email%.</p>
+    title: Merci pour votre candidature
+
+contract:
+    empty: Type de contrat
+    cdi: CDI
+    cdd: CDD
+    stage: Stage
+    alternance: Alternance
+
+customers:
+    revenues:
+        generated: Nous avons généré
+        revenues: "€ de chiffre d'affaires pour nos"
+        customers: clients
+
+exception:
+    title: Erreur
+    error404:
+        title: Oups, il semble que la page que vous recherchez ne soit plus là.
+        description: |
+            <p>Il est possible qu'elle ait évolué rapidement,
+            comme beaucoup de pages talentueuses et ambitieuses
+            chez Geolid.</p>
+    error: Oups, une erreur est survenue.
+
+jobs:
+    title: Geolid recrute
+
+menu:
+    advice: Conseils aux candidats
+    apply: Candidater
+    apply_thanks: Merci
+    enterprise: Entreprise
+    home: Accueil
+    job: Métier
+    jobs: Métiers
+    offer: "Offre d'emploi"
+    offers: "Offres d'emploi"
+    privacy: Vie privée
+    trainee: Stagiaires
+
+offer:
+    apply: Candidater !
+    back: Revenir aux offres
+    invalid: "L'offre est invalide"
+    email: Email
+    list:
+        agency: Région
+        zone: Zone
+        contract: Contrat
+        date: Date
+        job: Fonction
+        sector: Domaine
+    print: Imprimer
+    sector:
+        administratif_et_finance: Administratif et Finance
+        rh: RH
+        commercial: Commercial
+        relation_clients: Relation Clients
+        marketing: Marketing
+        production_et_innovation: Production et Innovation
+    title: Nous prenons plaisir à réussir et travailler ensemble
+
+offers:
+    empty:
+        agency: Région
+        job: Fonction
+        offer: Offre
+        sector: Domaine

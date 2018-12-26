@@ -1,0 +1,134 @@
+/**
+ * Testimonials.
+ */
+
+$testimonials-bg-color: #f3eee8;
+$testimonial-height: rem-calc(360);
+
+.testimonials {
+    background-color: $testimonials-bg-color;
+}
+
+.testimonial {
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: $testimonial-height;
+    overflow: hidden;
+}
+
+.testimonial:last-of-type .row {
+    background-origin: content-box;
+    padding-bottom: $notch-height;
+}
+
+.testimonial .testimonial-table {
+    display: table;
+    text-align: center;
+    width: 100%;
+}
+
+.testimonial .testimonial-cell {
+    display: table-cell;
+    vertical-align: middle;
+    height: $testimonial-height;
+}
+
+.testimonial.with-title .testimonial-title > .columns {
+    height: rem-calc(140);
+}
+
+.testitomial-title h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.testimonial.with-title .testimonial-cell {
+    height: $testimonial-height - rem-calc(32) - rem-calc(106);
+}
+
+.testimonial .user-content h2,
+.testimonial .user-content p {
+    max-width: rem-calc(400);
+}
+
+.testimonial-left .testimonial-words {
+    padding-right: rem-calc(0);
+    text-align: left;
+}
+
+.testimonial-right .testimonial-words {
+    padding-right: rem-calc(0);
+    text-align: right;
+}
+
+@media #{$small-only} {
+    .testimonial-left .testimonial-words > * {
+        margin: auto;
+    }
+    .testimonial-right .testimonial-words > * {
+        margin: auto;
+    }
+}
+
+@media #{$medium-up} {
+    .testimonial-left .testimonial-words > * {
+        clear: both;
+        float: left;
+    }
+    .testimonial-right .testimonial-words > * {
+        clear: both;
+        float: right;
+    }
+}
+
+@media #{$xlarge-up} {
+    .testimonial-left .testimonial-words {
+        padding-left: rem-calc(30);
+    }
+    .testimonial-right .testimonial-words {
+        padding-right: rem-calc(30);
+    }
+}
+
+/**
+ * Position the person's face on the right.
+ */
+
+@media #{$small-only} {
+    .testimonial .row {
+        background: rgba(255,255,255,0.7);
+    }
+    .testimonial-left {
+        background-position: 20% center;
+    }
+    .testimonial-right {
+        background-position: 80% center;
+    }
+}
+
+@media #{$medium-only} {
+    .testimonial-left {
+        background-position: 35% center;
+    }
+    .testimonial-right {
+        background-position: 65% center;
+    }
+}
+
+@media #{$large-only} {
+    .testimonial-left {
+        background-position: 50% center;
+    }
+    .testimonial-right {
+        background-position: 50% center;
+    }
+}
+
+@media #{$xlarge-up} {
+    .testimonial-left {
+        background-position: 90% center;
+    }
+    .testimonial-right {
+        background-position: 10% center;
+    }
+}

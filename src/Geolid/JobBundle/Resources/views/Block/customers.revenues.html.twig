@@ -1,0 +1,33 @@
+<div id="customers-revenues">
+{% trans %}customers.revenues.generated{% endtrans %}
+&nbsp;<span id="customers-revenues-count"></span>
+{% trans %}customers.revenues.revenues{% endtrans %}
+&nbsp;3000
+{% trans %}customers.revenues.customers{% endtrans %}
+.
+<script>
+var count = (new Date().getTime() / 1000 - 1325372400) * 0.8 + 15000000;
+function formatageNombre(nStr)
+{
+    nStr += '';
+    var x = nStr.split('.');
+    var x1 = x[0];
+    var x2 = x.length > 1 ? '.' + x[1] : '';
+    var rgx = /(\d+)(\d{3})/;
+    while (rgx.test(x1)) {
+        x1 = x1.replace(rgx, '$1' + '&nbsp;' + '$2');
+    }
+    return x1 + x2;
+}
+function display(autoupdate)
+{
+    count = Math.round((count + 0.008) * 100) / 100;
+    document.getElementById('customers-revenues-count').innerHTML = formatageNombre(count);
+    if (autoupdate) {
+        setTimeout(display, 10);
+    }
+}
+//console.log('compteur désactivé');
+display();
+</script>
+</div>

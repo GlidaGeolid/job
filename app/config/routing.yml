@@ -1,0 +1,2 @@
+geolid_job:
+    resource: "@GeolidJobBundle/Resources/config/routing.yml"

@@ -1,0 +1,153 @@
+{% extends 'GeolidJobBundle::layout.fr.html.twig' %}
+
+{% block title %}{{ parent() }} - Nos offres d'emploi{% endblock %}
+
+{% block content %}
+
+<section class="section-title notch-padding">
+    <h1>Nos offres d'emploi</h1>
+</section>
+
+<div class="notch">
+    <div class="trapeze-left-white"></div>
+    <div class="trapeze-right-white"></div>
+</div>
+
+<section id="offers" class="section-white notch-padding">
+
+    <div class="row">
+        <div class="small-12 columns">
+        {{ cnerta_breadcrumb_render('breadcrumb') }}
+        </div>
+    </div>
+
+    <div class="separator">
+    </div>
+
+    <div class="row">
+        <div class="small-12 columns">
+            <p>
+                Geolid poursuit sa croissance et recrute un peu partout en France.
+            </p>
+            <p>
+                Vous êtes jeunes diplômés ou plus expérimentés, vous recherchez un emploi motivant
+                dans votre métier et une ambiance de travail professionnelle, simple et conviviale.
+                Consultez nos offres d'emploi et de stages et candidatez si elles correspondent à
+                votre projet professionnel.
+            </p>
+            <p>
+                Cliquez sur le poste qui vous intéresse pour découvrir l'offre en détail.
+            </p>
+        </div>
+    </div>
+
+    <div class="separator">
+    </div>
+
+    {{ form_start(form, {'attr': {'data-abide': ''}}) }}
+
+    <div class="row">
+        <div class="small-12 columns">
+            {% if not form.vars.valid and form.vars.errors|length %}
+                <div class="error">
+                    <small class="error">
+                        {{ form_errors(form) }}
+                    </small>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="small-6 medium-3 columns">
+            <div class="{% if not form.sector.vars.valid %}error{% endif %}">
+                {{ form_label(form.sector)}}
+                {{ form_widget(form.sector, {'attr': {'class': 'autosubmit'}}) }}
+                <small class="error">
+                    {% trans from "validators" %}field.invalid{% endtrans%}
+                     form_errors(form.sector)
+                </small>
+            </div>
+        </div>
+        <div class="small-6 medium-3 columns">
+            <div class="{% if not form.job.vars.valid %}error{% endif %}">
+                 {{ form_label(form.job) }}
+                {{ form_widget(form.job, {'attr': {'class': 'autosubmit'}}) }}
+                <small class="error">
+                    {% trans from "validators" %}field.invalid{% endtrans%}
+                     form_errors(form.job)
+                </small>
+            </div>
+        </div>
+        <div class="small-6 medium-3 columns">
+            <div class="{% if not form.agency.vars.valid %}error{% endif %}">
+                 {{ form_label(form.agency) }}
+                {{ form_widget(form.agency, {'attr': {'class': 'autosubmit'}}) }}
+                <small class="error">
+                    {% trans from "validators" %}field.invalid{% endtrans%}
+                     form_errors(form.agency)
+                </small>
+            </div>
+        </div>
+        <div class="small-6 medium-3 columns">
+
+            <div class="{% if not form.contract.vars.valid %}error{% endif %}">
+                 {{ form_label(form.contract) }}
+                {{ form_widget(form.contract, {'attr': {'class': 'autosubmit'}}) }}
+                <small class="error">
+                    {% trans from "validators" %}field.invalid{% endtrans%}
+                     form_errors(form.contract)
+                </small>
+            </div>
+        </div>
+    </div>
+
+    {{ form_end(form) }}
+
+    <div class="row">
+        <div class="small-12 columns">
+            <table id="offers-table">
+                <thead>
+                    <tr>
+                        <th class="hide-for-small">{% trans %}offer.list.sector{% endtrans %}</th>
+                        <th>{% trans %}offer.list.job{% endtrans %}</th>
+                        <th>{% trans %}offer.list.agency{% endtrans %}</th>
+                        <th class="hide-for-small">{% trans %}offer.list.zone{% endtrans %}</th>
+                        <th class="hide-for-small">{% trans %}offer.list.contract{% endtrans %}</th>
+                        <th class="hide-for-small">{% trans %}offer.list.date{% endtrans %}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% if offers %}
+                    {% for offer in offers %}
+                        <tr>
+                            <td class="hide-for-small">{{ offer.sector.name|trans }}</td>
+                            <td>
+                                <a href="{{ path('job_offer', {'agency': offer.agency.slug, 'slug': offer.slug}) }}">
+                                    {{ offer.title }}
+                                </a>
+                            </td>
+                            <td>{{ offer.agency.name }}</td>
+                            <td class="hide-for-small">{{ offer.zone }}</td>
+                            <td class="hide-for-small">{{ offer.contract|contract|trans }}</td>
+                            <td class="hide-for-small">{{ offer.date|date("d/m/Y") }}</td>
+                        </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr><td colspan="5">Aucune offre ne correspond à votre recherche.</td></tr>
+                {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <div class="separator">
+    </div>
+
+    <div class="separator">
+    </div>
+
+</section><!-- offers -->
+
+{% endblock %}

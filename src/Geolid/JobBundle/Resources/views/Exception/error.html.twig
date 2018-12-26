@@ -1,0 +1,55 @@
+{% extends 'GeolidJobBundle::layout.' ~ country ~ '.html.twig' %}
+
+{% block title %}{{ parent() }} - {{ 'exception.title'|trans }}{% endblock %}
+
+{% block content %}
+<section class="section-title notch-padding">
+    <h1>{{ 'exception.title'|trans }} {{ status_code }}</h1>
+</section>
+
+<div class="notch">
+    <div class="trapeze-right-white"></div>
+    <div class="trapeze-left-white"></div>
+</div>
+
+<section id="error-overview" class="section-white notch-padding">
+    <div class="row text-center">
+        <div class="small-12 columns">
+        {% if status_code == '404' %}
+            <h1>{{ 'exception.error404.title'|trans }}</h1>
+            {{ 'exception.error404.description'|trans|raw }}
+        {% else %}
+            <h1>{{ 'exception.error'|trans }}</h1>
+        {% endif %}
+        </div>
+    </div>
+    <div class="separator">
+    </div>
+    <div class="separator">
+    </div>
+    <div class="row text-center">
+        <div class="small-12 medium-4 columns">
+            <a href="{{ path('job_enterprise') }}">
+                <img src="{{ asset('bundles/geolidjob/img/common/icone-entreprise.png')}}"><br><br>
+                En savoir plus sur Geolid
+            </a>
+        </div>
+        <div class="small-12 medium-4 columns">
+            <a href="{{ path('job_jobs') }}">
+                <img src="{{ asset('bundles/geolidjob/img/common/icone-metiers.png')}}"><br><br>
+                Découvrir nos différents métiers
+            </a>
+        </div>
+        <div class="small-12 medium-4 columns">
+            <a href="{{ path('job_offers') }}">
+                <img src="{{ asset('bundles/geolidjob/img/common/icone-offres.png')}}"><br><br>
+                Consulter nos offres d'emploi
+            </a>
+        </div>
+    </div>
+    <div class="separator">
+    </div>
+    <div class="separator">
+    </div>
+</section><!--error-overview -->
+{% endblock content %}

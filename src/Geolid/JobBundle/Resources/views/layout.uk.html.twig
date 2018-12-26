@@ -1,0 +1,121 @@
+{% extends 'GeolidJobBundle::layout.html.twig' %}
+
+{% block title %}{{ 'jobs.title'|trans }}{% endblock title %}
+
+{% block site_nav %}
+<ul class="title-area text-left">
+    <li class="name">
+        <a href="{{ path('job_home', {country: 'uk'}) }}">
+            <img id="site-logo" src="{{ asset('bundles/geolidjob/img/uk/geolid-careers.png')}}">
+        </a>
+    </li>
+    <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+</ul>
+<div class="top-bar-section">
+    <b>Geolid is a great European company.</b> Be part of its journey!
+</div>
+<div class="top-bar-section right">
+    {{ knp_menu_render('main', {'currentClass': 'active', 'ancestorClass': 'active','depth': '1'}) }}
+</div>
+{% endblock site_nav%}
+
+{% block site_nav_mobile %}
+<ul class="off-canvas-list text-center">
+    <li><label class="first">Geolid</label></li>
+</ul>
+{{ knp_menu_render('mobile', {'currentClass': 'active', 'ancestorClass': 'active','depth': '1'}) }}
+{% endblock site_nav_mobile %}
+
+{% block print %}
+<div class="row print-only">
+    <div class="small-12 text-center">
+        <img src="{{ asset('bundles/geolidjob/img/uk/geolid-carreers.png') }}">
+    </div>
+</div>
+{% endblock print %}
+
+{% block content %}
+{% endblock content %}
+
+{% block footer %}
+<div class="notch">
+    <div class="trapeze-left-gray"></div>
+    <div class="trapeze-right-gray"></div>
+</div>
+
+<section id="footer-uk" class="section-middle-gray notch-padding hide-for-print">
+    <div class="separator">
+    </div>
+    <div class="vertical-separators row" data-equalizer>
+        <div id="footer-uk-adwords" class="small-12 medium-4 large-3 columns" data-equalizer-watch>
+            <h3>Google premier smb partner</h3>
+            <div>
+                <img class="right" src="{{ asset('bundles/geolidjob/img/uk/google-premier-smb.png') }}">
+                <p>
+                    Since March 2014, GEOLID is the only french Internet focused company to be recognized
+                    as a Google Premier SMB Partner.
+                </p>
+            </div>
+            <div class="separator hide-for-medium-up">
+            </div>
+        </div>
+        <div id="footer-uk-social" class="small-12 medium-4 large-6 columns" data-equalizer-watch>
+            <h3>Get in touch with us!</h3>
+            <div class="row text-center">
+                <div class="small-4 medium-6 large-4 columns">
+                    <a href="{{ geolid_facebook }}">
+                        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                            <div class="flipper">
+                                <div class="front">
+                                    <img src="{{ asset('bundles/geolidjob/img/common/facebook-alt.png')}}">
+                                </div>
+                                <div class="back">
+                                    <img src="{{ asset('bundles/geolidjob/img/common/facebook.png')}}">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="small-4 medium-6 large-4 columns">
+                    <a href="{{ geolid_twitter }}">
+                        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                            <div class="flipper">
+                                <div class="front">
+                                    <img src="{{ asset('bundles/geolidjob/img/common/twitter-alt.png')}}">
+                                </div>
+                                <div class="back">
+                                    <img src="{{ asset('bundles/geolidjob/img/common/twitter.png')}}">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="small-4 medium-12 large-4 columns">
+                    <a href="{{ geolid_googleplus }}">
+                        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                            <div class="flipper">
+                                <div class="front">
+                                    <img src="{{ asset('bundles/geolidjob/img/common/googleplus-alt.png')}}">
+                                </div>
+                                <div class="back">
+                                    <img src="{{ asset('bundles/geolidjob/img/common/googleplus.png')}}">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="separator hide-for-medium-up">
+            </div>
+        </div>
+        <div id="footer-uk-apply" class="small-12 medium-4 large-3 columns" data-equalizer-watch>
+            <h3>Want a job?</h3>
+            <a class="button" href="{{ apply_uk_pdf_url }}">Apply</a>
+            <br>
+            <a href="{{ path('job_home', {'country': 'fr'}) }}">Learn more about Geolid</a>
+        </div>
+    </div>
+    <div class="separator">
+    </div>
+</section>
+{% endblock footer %}

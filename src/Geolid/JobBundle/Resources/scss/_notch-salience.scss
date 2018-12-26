@@ -1,0 +1,153 @@
+/**
+ * Notch and salience.
+ */
+
+$salience-height: rem-calc(25);
+$notch-height: rem-calc(25);
+$notch-half-width: rem-calc(50);
+
+.salience {
+    height: 0;
+    margin-top: -1px; /* Try to solve a display bug on safari. */
+    width: 100%;
+    z-index: 1;
+}
+
+.salience-padding {
+    padding-top: $salience-height;
+}
+
+.triangle {
+    margin: 0 auto;
+    width: 1.8em;
+}
+
+.triangle-white {
+    border-left: 3em solid rgba(255, 255, 255, 0);
+    border-right: 3em solid rgba(255, 255, 255, 0);
+    border-top: 1.8em solid #ffffff;
+}
+
+.triangle-primary {
+    border-left: 3em solid rgba($primary-color-r, $primary-color-g, $primary-color-b, 0);
+    border-right: 3em solid rgba($primary-color-r, $primary-color-g, $primary-color-b, 0);
+    border-top: 1.8em solid $primary-color;
+}
+
+.triangle-secondary {
+    border-left: 3em solid rgba($secondary-color-r, $secondary-color-g, $secondary-color-b, 0);
+    border-right: 3em solid rgba($secondary-color-r, $secondary-color-g, $secondary-color-b, 0);
+    border-top: 1.8em solid $secondary-color;
+}
+
+.notch {
+    position: relative;
+    height: $notch-height;
+    margin-top: -1 * $notch-height;
+}
+
+.notch-padding {
+    padding-bottom: $notch-height;
+}
+
+@media print {
+
+    .notch {
+        display: none !important;
+    }
+
+    .notch-padding {
+        padding-bottom: 0;
+    }
+
+}
+
+.notch .trapeze-left-black {
+    border-bottom: $notch-height solid $black;
+    border-right: $notch-half-width solid rgba($black-r, $black-g, $black-b, 0);
+    height: 0;
+    left: 0;
+    position: absolute;
+    width: 50%;
+}
+
+.notch .trapeze-right-black {
+    border-bottom: $notch-height solid $black;
+    border-left: $notch-half-width solid rgba($black-r, $black-g, $black-b, 0);
+    height: 0;
+    position: absolute;
+    right: 0;
+    width: 50%;
+}
+
+.notch .trapeze-left-primary {
+    border-bottom: $notch-height solid $primary-color;
+    border-right: $notch-half-width solid rgba($primary-color-r, $primary-color-g, $primary-color-b, 0);
+    height: 0;
+    left: 0;
+    position: absolute;
+    width: 50%;
+}
+
+.notch .trapeze-right-primary {
+    border-bottom: $notch-height solid $primary-color;
+    border-left: $notch-half-width solid rgba($primary-color-r, $primary-color-g, $primary-color-b, 0);
+    height: 0;
+    position: absolute;
+    right: 0;
+    width: 50%;
+}
+
+.notch .trapeze-left-secondary {
+    border-bottom: $notch-height solid $secondary-color;
+    border-right: $notch-half-width solid rgba($secondary-color-r, $secondary-color-g, $secondary-color-b, 0);
+    height: 0;
+    left: 0;
+    position: absolute;
+    width: 50%;
+}
+
+.notch .trapeze-right-secondary {
+    border-bottom: $notch-height solid $secondary-color;
+    border-left: $notch-half-width solid rgba($secondary-color-r, $secondary-color-g, $secondary-color-b, 0);
+    height: 0;
+    position: absolute;
+    right: 0;
+    width: 50%;
+}
+
+.notch .trapeze-left-gray {
+    border-bottom: $notch-height solid #505050;
+    border-right: $notch-half-width solid rgba(80, 80, 80, 0);
+    height: 0;
+    left: 0;
+    position: absolute;
+    width: 50%;
+}
+
+.notch .trapeze-right-gray {
+    border-bottom: $notch-height solid #505050;
+    border-left: $notch-half-width solid rgba(80, 80, 80, 0);
+    height: 0;
+    position: absolute;
+    right: 0;
+    width: 50%;
+}
+
+.notch .trapeze-left-white {
+    border-bottom: $notch-height solid #ffffff;
+    border-right: $notch-half-width solid rgba(255, 255, 255, 0);
+    height: 0;
+    left: 0;
+    position: absolute;
+    width: 50%;
+}
+
+.notch .trapeze-right-white {
+    border-bottom: $notch-height solid #ffffff;
+    border-left: $notch-half-width solid rgba(255, 255, 255, 0);
+    height: 0;
+    position: absolute;
+    right: 0;
+    width: 50%;
+}

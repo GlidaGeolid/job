@@ -1,0 +1,41 @@
+/**
+ * Help.
+ */
+
+#help {
+}
+
+#help h2 {
+    margin-top: rem-calc(12);
+    margin-bottom: rem-calc(12);
+    text-align: center;
+}
+
+#help h2 + span {
+    display: block;
+    text-align: center;
+    margin: rem-calc(12) auto;
+}
+
+#help img {
+    display: block;
+    margin: rem-calc(5) auto rem-calc(25);
+}
+
+#help h3 {
+    font-size: rem-calc(16);
+    margin: rem-calc(16) auto;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#help h3 + p {
+    margin: rem-calc(18) auto;
+    max-width: rem-calc(320);
+}
+
+#help h3 + p + a {
+    display: block;
+    margin: rem-calc(18) auto;
+    width: rem-calc(320);
+}

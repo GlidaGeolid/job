@@ -1,0 +1,29 @@
+# Desc: /conseils
+job_advice: /conseils   # FIXME
+
+# Desc: /candidater/
+job_apply: /candidater/   # FIXME
+
+# Desc: /candidater/merci
+job_apply_thanks: /candidater/merci   # FIXME
+
+# Desc: /entreprise
+job_enterprise: /entreprise   # FIXME
+
+# Desc: /
+job_home: /   # FIXME
+
+# Desc: /metiers/{slug}
+job_job: '/metiers/{slug}'   # FIXME
+
+# Desc: /metiers/
+job_jobs: /metiers/   # FIXME
+
+# Desc: /offres-emplois/{agency}/{slug}
+job_offer: '/offres-emplois/{agency}/{slug}'   # FIXME
+
+# Desc: /offres-emplois/
+job_offers: /offres-emplois/   # FIXME
+
+# Desc: /stagiaires
+job_trainee: /stagiaires   # FIXME

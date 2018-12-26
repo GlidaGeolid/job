@@ -1,0 +1,137 @@
+{% extends 'GeolidJobBundle::layout.de.html.twig' %}
+
+{% block title %}{{ parent() }} - Tipps{% endblock %}
+
+{% block content %}
+
+<section class="section-title notch-padding">
+    <h1>Tipps</h1>
+</section>
+
+<div class="notch">
+    <div class="trapeze-right-white"></div>
+    <div class="trapeze-left-white"></div>
+</div>
+
+<section id="advice-overview" class="section-white notch-padding">
+
+    <div class="row">
+        <div class="small-12 columns">
+            {{ cnerta_breadcrumb_render('breadcrumb') }}
+        </div>
+    </div>
+
+    <div class="separator">
+    </div>
+
+    <div class="row">
+        <div class="small-12 columns text-center">
+            <h2>Tipps für eine Bewerbung bei Geolid</h2>
+        </div>
+    </div>
+
+    <div class="row" data-equalizer>
+        <div class="small-12 medium-8 columns user-content" data-equalizer-watch>
+            {{ config.advice.overview|default('')|raw }}
+        </div>
+        <div class="small-12 medium-4 columns" data-equalizer-watch>
+            <div class="vertical-align horizontal-align">
+                <div class="align-middle text-right">
+                    <a class="button" href="{{ path('job_apply') }}">{{ 'menu.apply'|trans }}</a>
+                    <br>
+                    <!--br>
+                    <a href="{{ path('job_offers') }}">Zur Jobbörse</a>
+                    <br/-->
+                    <br>
+                    <a href="http://de.geolid.com">Über Geolid</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="separator">
+    </div>
+
+</section><!-- advice-overview -->
+
+<div class="notch">
+    <div class="trapeze-right-primary"></div>
+    <div class="trapeze-left-primary"></div>
+</div>
+
+<section id="advice-process" class="section-primary notch-padding">
+
+    <div class="row">
+        <div class="small-12 columns text-right">
+            <h2>Wie verläuft das Bewerbungsverfahren bei Geolid?</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="small-12 medium-4 columns">
+            <div class="separator hide-for-medium-up">
+            </div>
+            <img src="{{ asset('bundles/geolidjob/img/advice/ressources-humaines-deroulement.png')}}">
+            <br>
+            <!--br>
+            <a href="{{ path('job_offers') }}">Zur Jobbörse</a>
+            <br/-->
+            <br>
+            <a href="http://de.geolid.com">Über Geolid</a>
+            <div class="separator hide-for-medium-up">
+            </div>
+            <div class="separator hide-for-medium-up">
+            </div>
+        </div>
+        <div class="small-12 medium-8 columns padding-left user-content">
+            {{ config.advice.process|default('')|raw }}
+        </div>
+    </div>
+
+    <div class="separator">
+    </div>
+
+    <div class="separator">
+    </div>
+
+</section><!-- advice-process -->
+
+<div class="notch">
+    <div class="trapeze-right-white"></div>
+    <div class="trapeze-left-white"></div>
+</div>
+
+<section id="advice-advice" class="section-white notch-padding">
+
+    <div class="row">
+        <div class="small-12 columns text-left">
+            <h2>Unsere Tipps für Deine Bewerbung bei Geolid</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="small-12 medium-8 columns padding-right user-content">
+            {{ config.advice.advice|default('')|raw }}
+            <div class="separator hide-for-medium-up">
+            </div>
+        </div>
+        <div class="small-12 medium-4 columns">
+            <img src="{{ asset('bundles/geolidjob/img/advice/ressources-humaines-conseils.png')}}">
+            <br>
+            <!--br>
+            <a href="{{ path('job_offers') }}">Zur Jobbörse</a>
+            <br/-->
+            <br>
+            <a href="http://de.geolid.com">Über Geolid</a>
+        </div>
+    </div>
+
+    <div class="separator">
+    </div>
+
+    <div class="separator">
+    </div>
+
+</section><!-- advice-advice -->
+
+{% endblock content %}

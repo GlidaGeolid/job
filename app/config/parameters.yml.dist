@@ -1,0 +1,26 @@
+parameters:
+    geolid_job.domain: localhost
+    geolid_job.geolid: http://localhost
+    geolid_job.notifications.de: ['t.mayerhoffer@geolid.com']
+    database_driver: pdo_mysql
+    database_host: db
+    database_port: null
+    database_name: mysql
+    database_user: root
+    database_password: root
+    mailer_transport: smtp
+    mailer_encryption: null
+    mailer_auth_mode: null
+    mailer_host: localhost
+    mailer_port: null
+    mailer_user: null
+    mailer_password: null
+    sendgrid_transport: smtp
+    sendgrid_encryption: tls
+    sendgrid_auth_mode: login
+    sendgrid_host: smtp.sendgrid.net
+    sendgrid_port: 587
+    sendgrid_user: null
+    sendgrid_password: null
+    locale: fr
+    secret: 4ba5e24196f637b86ad99ef124841611b1ae7855

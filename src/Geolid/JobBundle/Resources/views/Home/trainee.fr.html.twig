@@ -1,0 +1,89 @@
+{% extends 'GeolidJobBundle::layout.fr.html.twig' %}
+
+{% block title %}{{ parent() }} - Stagiaires{% endblock %}
+
+{% block content %}
+
+<section class="section-title notch-padding">
+    <h1>Faire un stage chez Geolid</h1>
+</section>
+
+<div class="notch">
+    <div class="trapeze-right-white"></div>
+    <div class="trapeze-left-white"></div>
+</div>
+
+<section id="trainee-overview" class="section-white">
+
+    <div class="row">
+        <div class="small-12 columns">
+            {{ cnerta_breadcrumb_render('breadcrumb') }}
+        </div>
+    </div>
+
+    <div class="separator">
+    </div>
+
+    <div class="row">
+        <div class="small-12 medium-8 columns padding-right">
+            <p>
+                Geolid est une entreprise en croissance sur un marché en pleine évolution,
+                le marché de la communication web locale et du web to store. Chaque jour est
+                un nouveau défi et une source d'apprentissages pour tous les collaborateurs et
+                tous les stagiaires.
+            </p>
+            <p>
+                Faire un stage chez Geolid, c'est être pleinement engagé dans ses missions et
+                engranger une expérience réellement formatrice.
+            </p>
+            <p>
+                Nous vous confions des objectifs concrets sur 6 mois, en lien avec nos activités,
+                nos clients et vos talents. Nous vous transférons nos compétences,
+                nos méthodologies, nos outils et nos tours de mains.
+            </p>
+            <p>
+                Vous recherchez un vrai stage dans une ambiance professionnelle, entrepreneuriale et
+                conviviale, candidatez à l'une de nos offres.
+            </p>
+        </div>
+        <div id="trainee-offers" class="small-12 medium-4 columns">
+            <h3>Offres de stage</h3>
+            <div class="margin-left">
+                <span>Nos dernières offres :</span>
+                <br>
+                <br>
+                <ul>
+                    {% for offer in offers %}
+                    <li>
+                        <a href="{{ path('job_offer', {'agency': offer.agency.name, 'slug': offer.slug}) }}">
+                            {{ offer.title }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="text-right">
+                <a href="{{ path('job_offers', {'contrat': 'stage'}) }}">
+                    Voir toutes nos offres de stage
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="separator">
+    </div>
+
+</section><!-- trainee-overview -->
+
+<div class="salience absolute">
+    <div class="triangle triangle-white"></div>
+</div>
+
+<section id="trainee-testimonials" class="section-white testimonials">
+{% for testimonial in testimonials %}
+    {% include('GeolidJobBundle:Testimonial:testimonial.html.twig')
+    with { 'testimonial': testimonial } %}
+{% endfor %}
+</section><!-- trainee-testimonials -->
+
+{% endblock content %}

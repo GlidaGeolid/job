@@ -1,0 +1,10 @@
+html[lang="de"] #help h3 + p {
+    margin: rem-calc(18) auto;
+    max-width: rem-calc(440);
+}
+
+html[lang="de"] #help h3 + p + a {
+    display: block;
+    margin: rem-calc(18) auto;
+    width: rem-calc(440);
+}

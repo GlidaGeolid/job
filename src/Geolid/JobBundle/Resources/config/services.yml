@@ -1,0 +1,217 @@
+services:
+
+    job.apply.form.type:
+        class: Geolid\JobBundle\Form\Type\ApplyType
+        arguments:
+            - '@job.form.type.job_job_er'
+            - '@service_container'
+        tags:
+            - { name: form.type, alias: job_apply }
+
+    job.offre_filter.form.type:
+        class: Geolid\JobBundle\Form\Type\OfferFilterType
+        arguments:
+            - '@job.form.type.job_job_er'
+        tags:
+            - { name: form.type, alias: job_offer_filter }
+
+    job.block.customers.revenues:
+        class: Geolid\JobBundle\Block\CustomersRevenuesBlockService
+        arguments:
+            - 'job.block.customers.revenues'
+            - '@templating'
+        tags:
+            - { name: sonata.block }
+
+    job.block.customers.cards:
+        class: Geolid\JobBundle\Block\CustomersCardsBlockService
+        arguments:
+            - 'job.block.customers.cards'
+            - '@templating'
+        tags:
+            - { name: sonata.block }
+
+    job.block.international:
+        class: Geolid\JobBundle\Block\InternationalBlockService
+        arguments:
+            - 'job.block.international'
+            - '@templating'
+        tags:
+            - { name: sonata.block }
+
+    job.block.news:
+        class: Geolid\JobBundle\Block\NewsBlockService
+        arguments:
+            - 'job.block.news'
+            - '@doctrine.orm.entity_manager'
+            - '@templating'
+            - '%geolid_job.news_base_url%'
+            - '%geolid_job.news_end_url%'
+        tags:
+            - { name: sonata.block }
+
+
+    job.block.stack.cards:
+        class: Geolid\JobBundle\Block\StackCardsBlockService
+        arguments:
+            - 'job.block.stack.cards'
+            - '@templating'
+        tags:
+            - { name: sonata.block }
+
+
+    job.controller.exception:
+        class: Geolid\JobBundle\Controller\ExceptionController
+        arguments:
+            - '@service_container'
+            - '@twig'
+            - '%kernel.debug%'
+
+    job.form.type.contract:
+        class: Geolid\JobBundle\Form\Type\ContractType
+        tags:
+            - { name: form.type, alias: job_contract }
+
+    job.form.type.gender:
+        class: Geolid\JobBundle\Form\Type\GenderType
+        tags:
+            - { name: form.type, alias: job_gender }
+
+    job.form.type.job_job_er:
+        class: Geolid\JobBundle\Repository\JobRepository
+        arguments: [Geolid\JobBundle\Entity\Job]
+        factory:
+                - "@doctrine.orm.entity_manager"
+                - getRepository
+        tags:
+            - { name: form.type, alias: job_job_er }
+
+    job.listener.apply.confirmation:
+        class: Geolid\JobBundle\EventListener\ApplyConfirmationListener
+        arguments:
+            - '@job.mailer'
+            - '@session'
+        tags:
+            - { name: kernel.event_subscriber }
+
+    job.listener.apply.notification:
+        class: Geolid\JobBundle\EventListener\ApplyNotificationListener
+        arguments:
+            - '@service_container'
+            - '@doctrine.orm.entity_manager'
+            - '@job.mailer'
+            - '%geolid_job.applications_url%'
+            - '%geolid_job.notifications%'
+            - '%geolid_job.rh_manager_url%'
+            - '%geolid_job.legacy_api_base_url%'
+        tags:
+            - { name: kernel.event_subscriber }
+
+    job.listener.apply.uploaded_files:
+        class: Geolid\JobBundle\EventListener\ApplyUploadedFilesListener
+        arguments:
+            - '@doctrine.orm.entity_manager'
+            - '%geolid_job.legacy_api_base_url%'
+            - '%kernel.root_dir%'
+        tags:
+            - { name: kernel.event_subscriber }
+
+    job.listener.apply.referer:
+        class: Geolid\JobBundle\EventListener\RefererListener
+        arguments:
+            - '@doctrine.orm.entity_manager'
+            - '@session'
+        tags:
+            - { name: kernel.event_subscriber }
+
+    job.listener.country:
+        class: Geolid\JobBundle\EventListener\CountryListener
+        arguments:
+            - '%geolid_job.domain%'
+            - '%geolid_job.countries%'
+            - '@service_container'
+        tags:
+            - { name: kernel.event_subscriber }
+
+    job.listener.domain:
+        class: Geolid\JobBundle\EventListener\DomainListener
+        arguments:
+            - '%geolid_job.domain%'
+            - '%geolid_job.countries%'
+            - '@router'
+        tags:
+            - { name: kernel.event_subscriber }
+
+    job.listener.locale:
+        class: Geolid\JobBundle\EventListener\LocaleListener
+        arguments:
+            - '%geolid_job.domain%'
+            - '%geolid_job.countries%'
+        tags:
+            - { name: kernel.event_subscriber }
+
+    job.mailer:
+        class: Geolid\JobBundle\Mailer\Mailer
+        arguments:
+            - '@swiftmailer.mailer.default'
+            - '@swiftmailer.mailer.sendgrid'
+            - '@twig'
+            - { from_email: '%geolid_job.from_email%', from_name: '%geolid_job.from_name%' }
+
+    job.menu.breadcrumb:
+        class: Knp\Menu\MenuItem
+        factory: ["@job.menu.factory", breadcrumb]
+#        factory_service: job.menu.factory
+#        factory_method: breadcrumb
+        arguments: ['@request_stack']
+        tags:
+            - { name: knp_menu.menu, alias: breadcrumb }
+
+    job.menu.breadcrumb2:
+        class: Knp\Menu\MenuItem
+        factory: ["@job.menu.factory", breadcrumb2]
+#        factory_service: job.menu.factory
+#        factory_method: breadcrumb2
+        arguments: ['@request_stack']
+        tags:
+            - { name: knp_menu.menu, alias: breadcrumb2 }
+
+    job.menu.factory:
+        class: Geolid\JobBundle\Menu\JobMenu
+        arguments: ['@knp_menu.factory', '@service_container']
+
+    job.menu.international:
+        class: Knp\Menu\MenuItem
+        factory: ["@job.menu.factory", international]
+#        factory_service: job.menu.factory
+#        factory_method: international
+        arguments: ['@doctrine.orm.entity_manager', '@request_stack', '@knp_menu.matcher']
+        shared: request
+        tags:
+            - { name: knp_menu.menu, alias: international }
+
+    job.menu.main:
+        class: Knp\Menu\MenuItem
+        factory: ["@job.menu.factory", main]
+        arguments: ["@request_stack"]
+        tags:
+            - { name: knp_menu.menu, alias: main }
+
+    job.menu.mobile:
+        class: Knp\Menu\MenuItem
+        factory: ["@job.menu.factory", mobile]
+#        factory_service: job.menu.factory
+#        factory_method: mobile
+        arguments: ["@request_stack"]
+        tags:
+            - { name: knp_menu.menu, alias: mobile }
+
+    job.namer.cv:
+        class: Geolid\JobBundle\Namer\CvNamer
+        tags:
+            - { name: namer }
+
+    job.twig.contract:
+        class: Geolid\JobBundle\Twig\Extension\ContractExtension
+        tags:
+            - { name: twig.extension}

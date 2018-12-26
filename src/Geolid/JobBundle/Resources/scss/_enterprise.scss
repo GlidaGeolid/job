@@ -1,0 +1,149 @@
+/**
+ * Enterprise.
+ */
+
+#enterprise-overview {
+}
+
+.talent a {
+    border-radius: 50%;
+    display: block;
+    height: 283px;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 283px;
+}
+
+.talent .person-photo {
+    transition: 0.3s ease;
+    height: 283px;
+    width: 283px;
+}
+
+.talent a:hover .person-photo {
+    -ms-transform: scale(1.1); /* IE 9 */
+    /* Bug https://code.google.com/p/chromium/issues/detail?id=157218
+    -webkit-transform: scale(1.1); /* Chrome, Safari, Opera */
+    transform: scale(1.1);
+}
+
+.talent a .play {
+    left: 50%;
+    position: absolute;
+    top: 18%;
+    z-index: 2;
+}
+
+.talent a:hover .play {
+    z-index: -1;
+}
+
+.talent a .play-hover {
+    left: 50%;
+    position: absolute;
+    top: 18%;
+    z-index: -1;
+}
+
+.talent a:hover .play-hover {
+    z-index: 2;
+}
+
+.talent .person-name {
+    display: block;
+    margin: rem-calc(25) auto rem-calc(5) auto;
+}
+
+.talent .person-title {
+    color: $light-gray;
+    display: block;
+    margin: rem-calc(5) auto rem-calc(25) auto;
+}
+
+/**
+ * Coverage.
+ */
+
+#enterprise-coverage {
+    background-attachment: fixed;
+    background-image: url('../img/enterprise/bg-couverture-nationale.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: rem-calc(400);
+}
+
+#enterprise-coverage h2 {
+    font-weight: normal;
+}
+
+#enterprise-coverage a {
+    font-size: rem-calc(24);
+}
+
+#enterprise-coverage-map {
+    margin: rem-calc(20);
+    max-width: none;
+}
+
+/**
+ * Ambassadors.
+ */
+
+#enterprise-ambassadors {
+}
+
+.ambassador {
+    margin: 0 auto;
+    max-width: 370px;
+}
+
+.ambassador a .play {
+    left: 65%;
+    position: absolute;
+    top: 15%;
+    z-index: 2;
+}
+
+.ambassador a:hover .play {
+    z-index: -1;
+}
+
+.ambassador a .play-hover {
+    left: 65%;
+    position: absolute;
+    top: 15%;
+    z-index: -1;
+}
+
+.ambassador a:hover .play-hover {
+    z-index: 2;
+}
+
+.ambassador a {
+    display: block;
+    margin-bottom: rem-calc(20);
+    max-height: 194px;
+    max-width: 370px;
+    overflow: hidden;
+}
+
+.ambassador .person-photo {
+    transition: 0.3s ease;
+}
+
+.ambassador a:hover .person-photo {
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Chrome, Safari, Opera */
+    transform: scale(1.1);
+}
+
+.ambassador .person-name {
+    display: block;
+    margin: rem-calc(5) auto;
+}
+
+.ambassador .person-title {
+    color: $light-gray;
+    display: block;
+    margin: rem-calc(5) auto rem-calc(20) auto;
+}

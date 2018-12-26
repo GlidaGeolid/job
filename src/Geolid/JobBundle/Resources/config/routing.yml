@@ -1,0 +1,19 @@
+apply:
+    resource: "@GeolidJobBundle/Controller/ApplyController.php"
+    type: annotation
+    prefix: /
+
+home:
+    resource: "@GeolidJobBundle/Controller/HomeController.php"
+    type: annotation
+    prefix: /
+
+job:
+    resource: "@GeolidJobBundle/Controller/JobController.php"
+    type: annotation
+    prefix: /
+
+offer:
+    resource: "@GeolidJobBundle/Controller/OfferController.php"
+    type: annotation
+    prefix: /

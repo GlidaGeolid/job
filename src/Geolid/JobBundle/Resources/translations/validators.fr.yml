@@ -1,0 +1,66 @@
+agency:
+
+contract:
+    blank: Le contrat est requis.
+
+certificates:
+    blank: Des certificats sonts requis.
+    big: Le fichier est trop volumineux (5Mo maximum).
+    invalid: Nous avons besoin de vos certificats.
+    mime: Les formats acceptés sont .pdf, .odt, .doc, .zip, .jpeg, .png.
+
+cl:
+    blank: La lettre de motivation est requise.
+    big: Le fichier est trop volumineux (2Mo maximum).
+    invalid: La lettre de motivation est invalide.
+    mime: Les formats acceptés sont .pdf, .odt, .doc, .zip, .jpeg, .png.
+
+cv:
+    blank: Le CV est requis.
+    big: Le fichier est trop volumineux (2Mo maximum).
+    invalid: Nous avons besoin de votre CV.
+    mime: Les formats acceptés sont .pdf, .odt, .doc, .zip, .jpeg, .png.
+
+email:
+    blank: "L'email est requis."
+    email: "Entrez une adresse email valide."
+    invalid: Chez Geolid, vous aurez toujours de nos nouvelles quelle que soit la suite donnée…
+    long: "[-Inf,Inf]L'email est trop long."
+    short: "[-Inf,Inf]L'email est trop court."
+
+field:
+    invalid: Champ invalide.
+
+firstname:
+    blank: Le prénom est requis.
+    chars: Le prénom ne doit pas contenir de caractères spéciaux.
+    invalid: "S'appeler par nos prénoms, c'est quand même plus sympa…"
+    long: "[-Inf,Inf]Le prénom est trop long."
+    short: "[-Inf,Inf]Le prénom est trop court."
+
+gender:
+
+job:
+    invalid: Sélectionnez un métier.
+
+lastname:
+    blank: Le nom est requis.
+    chars: Le nom ne doit pas contenir de caractères spéciaux.
+    invalid: Incontournable pour un accueil personnalisé de votre candidature…
+    long: "[-Inf,Inf]Le nom est trop long."
+    short: "[-Inf,Inf]Le nom est trop court."
+
+offer:
+    invalid: Sélectionnez une offre.
+
+phone:
+    blank: Le numéro de téléphone est requis.
+    invalid: "Un coup de fil, c'est simple comme bonjour… Et chez Geolid, nous aimons la simplicité."
+    long: "[-Inf,Inf]Le numéro de téléphone est trop long."
+    short: "[-Inf,Inf]Le numéro de téléphone est trop court."
+
+privacy:
+    invalid: Bitte gib uns Dein Okay.
+    "true": Bitte gib uns Dein Okay.
+
+sector:

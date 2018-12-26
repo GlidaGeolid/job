@@ -1,0 +1,234 @@
+{% extends 'GeolidJobBundle::layout.html.twig' %}
+
+{% block title %}{{ 'jobs.title'|trans }}{% endblock title %}
+{% block body %}
+{% block site_nav %}
+<ul class="title-area text-left">
+    <li class="name">
+        <a href="{{ path('job_home') }}">
+            <img style="width: auto; height: 62px;" id="site-logo" src="{{ asset('bundles/geolidjob/img/fr/geolid-recrute.png') }}">
+        </a>
+    </li>
+    <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+</ul>
+<div class="top-bar-section right">
+    {{ knp_menu_render('main', {'currentClass': 'active', 'ancestorClass': 'active','depth': '1'}) }}
+</div>
+{% endblock site_nav%}
+
+{% block site_nav_mobile %}
+<ul class="off-canvas-list text-center">
+    <li><label class="first">Geolid</label></li>
+</ul>
+{{ knp_menu_render('mobile', {'currentClass': 'active', 'ancestorClass': 'active','depth': '1'}) }}
+<div id="site-nav-mobile-social" class="text-center">
+<a href="{{ geolid_facebook }}" target="_blank">
+    <img id="site-logo" src="{{ asset('bundles/geolidjob/img/common/facebook.png') }}">
+</a>
+<a href="{{ geolid_twitter }}" target="_blank">
+    <img id="site-logo" src="{{ asset('bundles/geolidjob/img/common/twitter.png') }}">
+</a>
+<a href="{{ geolid_googleplus }}" target="_blank">
+    <img id="site-logo" src="{{ asset('bundles/geolidjob/img/common/googleplus.png') }}">
+</a>
+</div>
+{% endblock site_nav_mobile %}
+
+{% block print %}
+<div class="row print-only">
+    <div class="small-12 text-center">
+        <img src="{{ asset('bundles/geolidjob/img/fr/geolid-recrute.png') }}">
+    </div>
+</div>
+{% endblock print %}
+
+{% block content %}
+{% endblock content %}
+
+{% block footer %}
+<div id="help-notch" class="notch">
+    <div class="trapeze-left-secondary"></div>
+    <div class="trapeze-right-secondary"></div>
+</div>
+
+<section id="help" class="section-secondary notch-padding hide-for-print">
+    <div class="row">
+        <div class="small-12 columns">
+            <h2>Besoin d'un peu d'aide ?</h2>
+            <span>Pas de panique, nous sommes là !</span>
+        </div>
+    </div>
+    <div class="separator">
+    </div>
+    <div class="row">
+        <div class="small-12 medium-4 columns">
+            <img src="{{ asset('bundles/geolidjob/img/common/nos-conseils-aux-candidats.png') }}">
+            <h3>Nos conseils aux candidats</h3>
+            <p>
+                Notre responsable recrutement vous explique comment
+                se déroule un recrutement chez Geolid et vous conseille.
+            </p>
+            <a href="{{ path('job_advice') }}">En savoir plus</a>
+            <div class="separator hide-for-medium-up">
+            </div>
+        </div>
+        <div class="small-12 medium-4 columns">
+            <img src="{{ asset('bundles/geolidjob/img/fr/contact-live-chat.png') }}">
+            <h3>Nous contacter</h3>
+            <p>
+                Retrouvez notre Responsable Recrutement en live chat
+                le lundi et le vendredi de 9H30 à 11H,
+                le mardi et le jeudi de 16H30 à 18H00 et le mercredi de 10H30 à 12H.
+            </p>
+            <div class="separator hide-for-medium-up">
+            </div>
+        </div>
+        <div class="small-12 medium-4 columns">
+            <img src="{{ asset('bundles/geolidjob/img/fr/metiers-et-competences-geolid.png') }}">
+            <h3>Métiers et compétences</h3>
+            <p>
+                Informez-vous sur les compétences recherchées par Geolid.
+            </p>
+            <a href="{{ path('job_jobs') }}">En savoir plus</a>
+        </div>
+    </div>
+    <div class="separator">
+    </div>
+</section>
+
+<div id="customers-notch" class="notch">
+    <div class="trapeze-left-white"></div>
+    <div class="trapeze-right-white"></div>
+</div>
+
+<section id="customers" class="section-white notch-padding hide-for-print">
+    <div class="separator">
+    </div>
+    <div class="row">
+        <div class="small-12 columns">
+            {{ sonata_block_render({ 'type': 'job.block.customers.revenues'}, {}) }}
+        </div>
+    </div>
+    <div class="separator">
+    </div>
+    <div class="row">
+        <div class="small-12 columns">
+            {{ sonata_block_render({ 'type': 'job.block.customers.cards'}, {}) }}
+        </div>
+    </div>
+    <div class="separator">
+    </div>
+</section>
+
+<div class="notch">
+    <div class="trapeze-left-gray"></div>
+    <div class="trapeze-right-gray"></div>
+</div>
+
+<section id="footer" class="section-middle-gray notch-padding hide-for-print">
+
+    <div class="vertical-separators row" data-equalizer>
+        <div id="footer-coverage" class="small-12 medium-6 large-3 columns" data-equalizer-watch>
+            <h3>Couverture nationale</h3>
+            <img class="right" src="{{ asset('bundles/geolidjob/img/fr/couverture-nationale.png') }}">
+            <p>
+            Nous sommes aujourd'hui plus de 150 salariés répartis sur 6 directions régionales.
+            </p>
+        </div>
+        <div id="footer-regie" class="small-12 medium-6 large-3 columns" data-equalizer-watch>
+            <h3>Google Premier Partner</h3>
+            <p>
+            En Mars 2014, <b>GEOLID</b> est devenu le premier pure player français labellisé "Google Premier Partner".​
+            </p>
+            <div id="badge-google">
+                <div class="g-partnersbadge" data-agency-id="1264189947"></div>
+            </div>
+        </div>
+        <div class="small-12 medium-6 large-3 columns" data-equalizer-watch>
+            <h3>Dernières nouvelles</h3>
+            {{ sonata_block_render({ 'type': 'job.block.news'}, {}) }}
+        </div>
+        <div id="footer-sitemap" class="small-12 medium-6 large-3 columns" data-equalizer-watch>
+            <h3>Plan du site</h3>
+            <ul>
+                <li><a href="{{ path('job_home') }}">Accueil</a></li>
+                <li><a href="{{ path('job_enterprise') }}">Entreprise</a></li>
+                <li><a href="{{ path('job_offers') }}">Offres</a></li>
+                <li><a href="{{ path('job_jobs') }}">Métiers</a></li>
+            </ul>
+            <ul>
+                <li><a href="{{ path('job_apply') }}">Je candidate !</a></li>
+                <li>&nbsp;</li>
+                <li><a href="{{ path('job_advice') }}">Conseils</a></li>
+                <li><a href="{{ path('job_trainee') }}">Stagiaires</a></li>
+            </ul>
+            Nous recrutons dans toute l'Europe !
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="small-12 columns text-center">
+            <hr id="footer-separator">
+        </div>
+    </div>
+
+    <div id="footer-fr-social" class="row text-center">
+        <div class="small-4 columns">
+            <a href="{{ geolid_facebook }}" target="_blank">
+                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        <div class="front">
+                            <img src="{{ asset('bundles/geolidjob/img/common/facebook.png')}}">
+                        </div>
+                        <div class="back">
+                            <img src="{{ asset('bundles/geolidjob/img/common/facebook-alt.png')}}">
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="small-4 columns">
+            <a href="{{ geolid_twitter }}" target="_blank">
+                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        <div class="front">
+                            <img src="{{ asset('bundles/geolidjob/img/common/twitter.png')}}">
+                        </div>
+                        <div class="back">
+                            <img src="{{ asset('bundles/geolidjob/img/common/twitter-alt.png')}}">
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="small-4 columns">
+            <a href="{{ geolid_googleplus }}" target="_blank">
+                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        <div class="front">
+                            <img src="{{ asset('bundles/geolidjob/img/common/googleplus.png')}}">
+                        </div>
+                        <div class="back">
+                            <img src="{{ asset('bundles/geolidjob/img/common/googleplus-alt.png')}}">
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="footer-bottom__copyright">
+        <div style="margin:16px 100px 0 0;float:right;color:#ffffff">
+            <span>geolid</span> - © Copyright 2018 - <a href="{{ path('mentions_legales') }}" target="_blank" title="Mentions Légales Geolid">Mentions Légales</a>
+        </div>
+    </div>
+    <div class="separator">
+    </div>
+</section>
+{% endblock footer %}
+
+{% block livechat %}
+<!-- live support rhino button --><div class="jrc_chatbox cb_default" id="jrc_chat_window"><div class="header header_bg_default"><p class="jrc_chat_title">Geolid LiveChat</p><a href="javascript:;" class="minimize_chatbox" title="Reduire la fenetre">_</a><a href="javascript:;" class="maximize_chatbox" title="Agrandir la fenetre">+</a><div id="jrc_chat_now"></div></div><div id="jrc_main_area" class="main-area"></div><img src="http://www.geolid.com/livechat/index.php?p=b&amp;i=blue&amp;lang=fr&amp;dep=3" width="0" height="0" alt="img" ></div><script src="http://www.geolid.com/livechat/js/slide_up_cross.js" type="text/javascript"></script><script type="text/javascript">ls.main_url="http://www.geolid.com/livechat/";jrc_lang="fr";ls.did=3;ls.chi=1;ls.pact=0;</script><a class="jrc_chatlink" href="http://www.geolid.com/livechat/index.php?p=start&amp;lang=fr&amp;slide=0&amp;dep=3" target="_blank"><div class="header header_bg_default"><p class="jrc_chat_title">Geolid LiveChat</p></div></a><div id="proactivePopUp"></div><!--[if lt IE 10]><script type="text/javascript">ie10rLower = true;</script><![endif]--><!-- end live support rhino button -->
+{% endblock livechat %}
+{% endblock %}

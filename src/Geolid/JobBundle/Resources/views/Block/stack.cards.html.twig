@@ -1,0 +1,18 @@
+<div id="customers-cards" class="text-center">
+    <ul>
+        {% for stack in [
+        'symfony.png',
+        'angular.png',
+        'github.png',
+        'cordova.png',
+        'sendgrid.png',
+        'sentry.png',
+        'checkmk.png',
+        'redmine.png',
+        'php.png',
+        'mysql.png',
+        ] %}
+            <li><img src="{{ asset('bundles/geolidjob/img/stack/' ~ stack) }}"></li>
+        {% endfor %}
+    </ul>
+</div>

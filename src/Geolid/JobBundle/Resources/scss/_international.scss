@@ -1,0 +1,55 @@
+#international-alert {
+    background-color: $middle-gray;
+    padding: rem-calc(10) 0;
+    position: relative;
+    z-index: 101;
+}
+
+#international-alert-close {
+    border: 1px solid #ffffff;
+    color: white;
+    display: inline-block;
+    font-weight: bold;
+    margin-left: 1em;
+    padding: rem-calc(2);
+    padding-top: rem-calc(3);
+    text-decoration: none;
+}
+
+#international-notch {
+}
+
+#international {
+    font-size: rem-calc(20);
+    padding-bottom: rem-calc(20);
+}
+
+.international-menu {
+    display: inline;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.international-menu li {
+    display: inline;
+}
+
+.international-menu li:not(:last-child):after {
+    content: "|";
+    margin: 0 0.4rem;
+}
+
+.international-menu li a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.international-menu li a:hover {
+    text-decoration: underline;
+}
+
+.international-menu li.current a {
+    text-decoration: underline;
+}

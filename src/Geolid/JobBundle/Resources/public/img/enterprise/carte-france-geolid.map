@@ -1,0 +1,26 @@
+<img src="carte-france-geolid.png" width="337" height="346" border="0" usemap="#Carte France Geolid" />
+
+<map name="Carte France Geolid">
+<!-- #$-:Image map file created by GIMP Image Map plug-in -->
+<!-- #$-:GIMP Image Map plug-in by Maurits Rijk -->
+<!-- #$-:Please do not edit lines starting with "#$" -->
+<!-- #$VERSION:2.3 -->
+<!-- #$AUTHOR:Geolid -->
+<area shape="circle" coords="193,20,15" href="lille" />
+<area shape="circle" coords="317,100,15" href="strasbourg" />
+<area shape="circle" coords="76,143,14" href="nantes" />
+<area shape="circle" coords="108,232,16" href="bordeaux" />
+<area shape="circle" coords="87,300,8" href="pau" />
+<area shape="circle" coords="180,92,22" onmouseover="coverage-map-display(&apos;paris&apos;)" href="paris" />
+<area shape="circle" coords="153,290,14" href="toulouse" />
+<area shape="circle" coords="198,204,7" href="clermont-ferrand" />
+<area shape="circle" coords="254,175,7" href="dijon" />
+<area shape="circle" coords="248,217,22" href="lyon" />
+<area shape="circle" coords="297,212,8" href="grenoble" />
+<area shape="circle" coords="282,300,15" href="marseille" />
+<area shape="circle" coords="213,320,7" href="perpignan" />
+<area shape="circle" coords="242,304,7" href="montpellier" />
+<area shape="circle" coords="255,279,7" href="nimes" />
+<area shape="circle" coords="311,292,8" href="toulon" />
+<area shape="circle" coords="325,279,8" href="nice" />
+</map>

@@ -1,0 +1,114 @@
+<!doctype html>
+<html class="no-js" lang="{{ app.request.locale }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if noindex is defined %}
+        <meta name="robots" content="noindex">
+    {% endif %}
+<title>{% block title %}Geolid{% endblock title %}</title>
+<meta name="description" content="{% block description %}Geolid expert en publicité et référencement local recrute de nouveaux talents. Découvrez toutes nos offres d'emplois sur ce site.{% endblock description %}" />
+<link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
+<link rel="apple-touch-icon" type="image/png" href="{{ asset('favicon.png') }}">
+{% block head_extra %}{% endblock head_extra %}
+{% block stylesheets %}
+{% stylesheets
+    'bundles/geolidjob/vendor/select2-3.4.8/select2.css'
+    'bundles/geolidjob/css/jobs.css'
+    'bundles/geolidjob/css/jobs_debug.css'
+    'bundles/geolidjob/css/font-awesome.min.css'
+    filter='cssrewrite'
+%}
+<link rel="stylesheet" href="{{ asset_url }}">
+{% endstylesheets %}
+{% endblock stylesheets %}
+</head>
+
+<body>
+<div class="off-canvas-wrap">
+<div class="inner-wrap">
+
+{#<section id="international-alert" class="hide-for-print" style="display: none;">
+<div class="row">
+<div class="small-12 columns text-right">
+{{ sonata_block_render({ 'type': 'job.block.international'}, {}) }}
+<a href="#" id="international-alert-close">X</a>
+</div>
+</div>
+</section>#}
+
+<div id="site-nav-container" class="contain-to-grid hide-for-print hide-for-small">
+<nav id="site-nav" class="top-bar text-center">
+{% block site_nav %}
+{% endblock site_nav %}
+</nav>
+</div>
+
+<nav class="tab-bar show-for-small hide-for-print">
+    <a class="left-off-canvas-toggle menu-icon">
+        <span>Geolid</span>
+    </a>
+</nav>
+
+<aside class="left-off-canvas-menu">
+{% block site_nav_mobile %}
+{% endblock site_nav_mobile %}
+</aside>
+<a class="exit-off-canvas"></a>
+
+<section id="main" class="scroll-container" role="main">
+
+{% block print %}
+{% endblock print %}
+{% block content %}
+{% endblock content %}
+{% block footer %}
+{% endblock footer %}
+
+<div id="cookie-notice" role="banner" class="cn-bottom bootstrap" style="color: #ffffff; background-color: #000000; display: block;">
+    <div class="cookie-notice-container">
+        <span id="cn-notice-text">En continuant, vous acceptez l'utilisation des cookies pour disposer de services et d'offres adaptés à vos centres d'intérêts. </span><a href="#" id="cn-accept-cookie" data-cookie-set="accept" class="cn-set-cookie button bootstrap">Ok</a>
+    </div>
+</div>
+</section>
+
+</div><!-- off-canvas-wrap -->
+</div><!-- inner-wrap -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-7956210-4', 'auto');
+  ga('send', 'pageview');
+</script>
+
+{% block scripts %}
+{#
+    'bundles/geolidjob/vendor/jquery.scrollmagic.debug.js'
+    'bundles/geolidjob/vendor/iscroll.js'
+#}
+{% javascripts
+    'bundles/geolidjob/vendor/modernizr.js'
+    'bundles/geolidjob/vendor/jquery-2.1.1.min.js'
+    'bundles/geolidjob/vendor/greensock/TweenMax.min.js'
+    'bundles/geolidjob/vendor/greensock/plugins/ScrollToPlugin.min.js'
+    'bundles/geolidjob/vendor/jquery.scrollmagic.min.js'
+    'bundles/geolidjob/vendor/foundation.min.js'
+    'bundles/geolidjob/vendor/jquery.hc-sticky.min.js'
+    'bundles/geolidjob/vendor/unslider.min.js'
+    'bundles/geolidjob/vendor/select2-3.4.8/select2.js'
+    'bundles/geolidjob/js/geolid.js'
+    'bundles/geolidjob/js/geolid-fx.js'
+%}
+<script src="{{ asset_url }}"></script>
+<script src="https://apis.google.com/js/platform.js"></script>
+{% endjavascripts %}
+{% endblock scripts %}
+
+{% block livechat %}
+{% endblock livechat %}
+
+</body>
+</html>

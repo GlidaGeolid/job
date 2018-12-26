@@ -1,0 +1,193 @@
+{% extends 'GeolidJobBundle::layout.html.twig' %}
+
+{% block title %}{{ 'jobs.title'|trans }}{% endblock title %}
+
+{% block site_nav %}
+<ul class="title-area text-left">
+    <li class="name">
+        <a href="{{ path('job_home', {country: 'de'}) }}">
+            <img id="site-logo" src="{{ asset('bundles/geolidjob/img/de/geolid-karriere.png')}}">
+        </a>
+    </li>
+    <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+</ul>
+<div class="top-bar-section">
+    <b>Ein Team. Ein Ziel.</b> Gemeinsam erfolgreich!
+</div>
+<div class="top-bar-section right">
+    {{ knp_menu_render('main', {'currentClass': 'active', 'ancestorClass': 'active','depth': '1'}) }}
+</div>
+{% endblock site_nav%}
+
+{% block site_nav_mobile %}
+<ul class="off-canvas-list text-center">
+    <li><label class="first">Geolid</label></li>
+</ul>
+{{ knp_menu_render('mobile', {'currentClass': 'active', 'ancestorClass': 'active','depth': '1'}) }}
+{% endblock site_nav_mobile %}
+
+{% block print %}
+<div class="row print-only">
+    <div class="small-12 text-center">
+        <img src="{{ asset('bundles/geolidjob/img/de/geolid-karriere.png') }}">
+    </div>
+</div>
+{% endblock print %}
+
+{% block content %}
+{% endblock content %}
+
+{% block footer %}
+<div id="help-notch" class="notch">
+    <div class="trapeze-left-secondary"></div>
+    <div class="trapeze-right-secondary"></div>
+</div>
+
+<section id="help" class="help-de section-secondary notch-padding hide-for-print">
+    <div class="row">
+        <div class="small-12 columns">
+            <h2>Du hast Fragen oder benötigst Hilfe?</h2>
+            <span>Keine Panik, wir stehen Dir mit Tipps zur Seite!</span>
+        </div>
+    </div>
+    <div class="separator">
+    </div>
+    <div class="row">
+        <div class="small-12 medium-6 columns">
+            <img src="{{ asset('bundles/geolidjob/img/common/nos-conseils-aux-candidats.png') }}">
+            <h3>WIR GEBEN RAT</h3>
+            <p>
+                Unser Recruiting-Team erklärt Dir das Bewerbungsverfahren
+                bei Geolid und gibt Tipps für Deine Bewerbung.
+            </p>
+            <a href="{{ path('job_advice', {'country': 'de'}) }}">Mehr dazu</a>
+            <div class="separator hide-for-medium-up">
+            </div>
+        </div>
+        <div class="small-12 medium-6 columns">
+            <img src="{{ asset('bundles/geolidjob/img/fr/contact-live-chat.png') }}">
+            <h3>KONTAKTIERE UNS</h3>
+            <p>
+                Wir sind gerne für Dich da! Schreibe uns eine E-Mail
+                an <a href="mailto:recruiting@geolid.com">recruiting@geolid.com</a>
+                oder ruf einfach an unter <nobr>030-886 145 14</nobr>.
+            </p>
+            <div class="separator hide-for-medium-up">
+            </div>
+        </div>
+    </div>
+    <div class="separator">
+    </div>
+</section>
+
+<div class="notch">
+    <div class="trapeze-left-white"></div>
+    <div class="trapeze-right-white"></div>
+</div>
+
+<section id="footer-de-stats" class="section-white notch-padding">
+    <div class="separator">
+    </div>
+    <div class="row">
+        <div class="small-12 medium-6 large-4 columns text-center">
+        <img src="{{ asset('bundles/geolidjob/img/stats/thumb-up.png')}}">
+          <p><span class="data">96%</span>unserer Kunden verlängern<br>monatlich Ihr Abonnement</p>
+      </div>
+      <div class="small-12 medium-6 large-4 columns text-center">
+        <img src="{{ asset('bundles/geolidjob/img/stats/smile.png')}}">
+          <p><span class="data">150</span>Mitarbeiter bilden das<br>Spezialistenteam von Geolid</p>
+      </div>
+      <div class="small-12 medium-6 large-4 columns text-center">
+        <img src="{{ asset('bundles/geolidjob/img/stats/jobs.png')}}">
+          <p><span class="data">73</span>neue Stellen hat Geolid<br>allein im Jahr 2014 geschaffen</p>
+      </div>
+    </div>
+    <div class="separator">
+    </div>
+</section><!-- footer-de-stats -->
+
+<div class="notch">
+    <div class="trapeze-left-gray"></div>
+    <div class="trapeze-right-gray"></div>
+</div>
+
+<section id="footer-de" class="section-middle-gray notch-padding hide-for-print">
+    <div class="separator">
+    </div>
+    <div class="vertical-separators row" data-equalizer>
+        <div id="footer-de-adwords" class="small-12 medium-4 columns" data-equalizer-watch>
+            <h3>Geolid ist zertifizierter Google-Partner</h3>
+            <div>
+                <img class="right" src="{{ asset('bundles/geolidjob/img/de/google-zertifierter-partner.png') }}">
+                <p>
+                    2010 wurde Geolid für seine Expertise und Fachkenntnis mit der "Google AdWords-Zertifizierung"
+                    ausgezeichnet und ist seit 2014 "Premium-KMU Partner" von Google in Frankreich.
+                </p>
+            </div>
+            <div class="separator hide-for-medium-up">
+            </div>
+        </div>
+        <div id="footer-de-kontakt" class="small-12 medium-4 columns" data-equalizer-watch>
+            <h3>Kontakt</h3>
+            <div>
+                <p>
+            Wir sind gerne für Dich da!<br>Schreib uns eine E-Mail an
+            <a href="mailto:recruiting@geolid.com">recruiting@geolid.com</a>
+            oder ruf einfach unter <nobr>030-886 145 14</nobr> an!
+                </p>
+            </div>
+            <div class="separator hide-for-medium-up">
+            </div>
+        </div>
+        <div id="footer-de-apply" class="small-12 medium-4 columns end" data-equalizer-watch>
+            <h3>Du suchst einen Job?</h3>
+            <a class="button" href="{{ path('job_apply', {'country': 'de'}) }}">Jetzt bewerben!</a>
+            <br>
+            <a href="http://de.geolid.com">Über Geolid</a>
+            <br>
+            <a href="http://de.geolid.com/impressum.html">Impressum</a>
+        </div>
+    </div>
+    <div class="separator">
+    </div>
+
+    <div class="row">
+        <div class="small-12 columns text-center">
+            <hr id="footer-separator">
+        </div>
+    </div>
+
+    <div id="footer-social" class="row text-center">
+        <div class="small-6 columns">
+            <a href="{{ geolid_facebook_de }}" target="_blank">
+                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        <div class="front">
+                            <img src="{{ asset('bundles/geolidjob/img/common/facebook.png')}}">
+                        </div>
+                        <div class="back">
+                            <img src="{{ asset('bundles/geolidjob/img/common/facebook-alt.png')}}">
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="small-6 columns">
+            <a href="{{ geolid_googleplus_de }}" target="_blank">
+                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        <div class="front">
+                            <img src="{{ asset('bundles/geolidjob/img/common/googleplus.png')}}">
+                        </div>
+                        <div class="back">
+                            <img src="{{ asset('bundles/geolidjob/img/common/googleplus-alt.png')}}">
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="separator">
+    </div>
+</section>
+{% endblock footer %}

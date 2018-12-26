@@ -1,0 +1,248 @@
+{% extends 'GeolidJobBundle::layout.' ~ country ~ '.html.twig' %}
+
+{% block title %}{{ parent() }} - {{ 'apply.title'|trans }}{% endblock %}
+
+{% block content %}
+<section id="apply-title" class="section-title notch-padding">
+    <h1>{{ 'apply.title'|trans }}</h1>
+</section>
+
+<div class="notch">
+    <div class="trapeze-right-white"></div>
+    <div class="trapeze-left-white"></div>
+</div>
+
+<section id="apply-form" class="section-white notch-padding">
+
+    <div class="row">
+        <div class="small-12 columns">
+        {{ cnerta_breadcrumb_render('breadcrumb') }}
+        </div>
+    </div>
+
+    <div class="separator">
+    </div>
+
+    <div class="row">
+        <div class="small-12 columns">
+        {{ 'apply.intro'|trans|raw }}
+        </div>
+    </div>
+
+    <div class="separator">
+    </div>
+    <div class="separator">
+    </div>
+
+    <div id="apply-form" class="row">
+        <div class="small-centered small-12 large-8 columns">
+
+            {{ form_start(form, {'attr': {'data-abide': ''}}) }}
+
+            {% if not form.vars.valid and form.vars.errors|length %}
+                <div class="row">
+                    <div class="small-12 medium-3 columns">
+                    </div>
+                    <div class="error small-12 medium-9 columns text-left">
+                        <small class="error">
+                            {{ form_errors(form) }}
+                        </small>
+                    </div>
+                </div>
+            {% endif %}
+
+            <div class="row">
+                <div class="small-12 medium-3 columns medium-text-right">
+                    {{ form_label(form.gender) }}{% if form.gender.vars['required'] %} *{% endif %} :
+                </div>
+                <div class="small-12 medium-9 columns text-left{% if not form.gender.vars.valid %} error{% endif %}">
+                    {{ form_widget(form.gender) }}
+                    <small class="error">
+                        {% trans from "validators" %}field.invalid{% endtrans%}
+                        {{ form_errors(form.gender) }}
+                    </small>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="small-12 medium-3 columns medium-text-right">
+                    {{ form_label(form.firstname) }}{% if form.firstname.vars['required'] %} *{% endif %} :
+                </div>
+                <div class="small-12 medium-9 columns text-left{% if not form.firstname.vars.valid %} error{% endif %}">
+                    {{ form_widget(form.firstname) }}
+                    <small class="error">
+                        {#% trans from "validators" %}field.invalid{% endtrans%#}
+                        {% trans from "validators" %}firstname.invalid{% endtrans%}
+                        {{ form_errors(form.firstname) }}
+                    </small>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="small-12 medium-3 columns medium-text-right">
+                    {{ form_label(form.lastname) }}{% if form.lastname.vars['required'] %} *{% endif %} :
+                </div>
+                <div class="small-12 medium-9 columns text-left{% if not form.lastname.vars.valid %} error{% endif %}">
+                    {{ form_widget(form.lastname) }}
+                    <small class="error">
+                        {#% trans from "validators" %}field.invalid{% endtrans%#}
+                        {% trans from "validators" %}lastname.invalid{% endtrans%}
+                        {{ form_errors(form.lastname) }}
+                    </small>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="small-12 medium-3 columns medium-text-right">
+                    {{ form_label(form.source) }}{% if form.source.vars['required'] %} *{% endif %} :
+                </div>
+                <div class="small-12 medium-9 columns text-left{% if not form.source.vars.valid %} error{% endif %}">
+                    {{ form_widget(form.source) }}
+                    <small class="error">
+                        {% trans from "validators" %}field.invalid{% endtrans%}
+                        {{ form_errors(form.source) }}
+                    </small>
+                </div>
+            </div>
+
+            <div class="row" style="{% if form.source.vars.value[0] is defined %}display: none{% endif %}">
+                 <div class="small-12 medium-3 columns medium-text-right">
+                     {{ form_label(form.offer) }}{% if form.offer.vars['required'] %} *{% endif %} :
+                 </div>
+                 <div class="small-12 medium-9 columns text-left{% if not form.offer.vars.valid %} error{% endif %}">
+                     {{ form_widget(form.offer) }}
+                     <small class="error">
+                         {#% trans from "validators" %}field.invalid{% endtrans%#}
+                         {% trans from "validators" %}offer.invalid{% endtrans%}
+                         {{ form_errors(form.offer) }}
+                     </small>
+                 </div>
+            </div>
+
+            <div class="row" style="{% if form.source.vars.value[1] is defined  %}display: none{% endif %}">
+                 <div class="small-12 medium-3 columns medium-text-right">
+                     {{ form_label(form.job) }}{% if form.job.vars['required'] %} *{% endif %} :
+                 </div>
+                 <div class="small-12 medium-9 columns text-left{% if not form.job.vars.valid %} error{% endif %}">
+                     {{ form_widget(form.job) }}
+                     <small class="error">
+                         {#% trans from "validators" %}field.invalid{% endtrans%#}
+                         {% trans from "validators" %}job.invalid{% endtrans%}
+                         {{ form_errors(form.job) }}
+                     </small>
+                 </div>
+            </div>
+
+            <div class="row">
+                <div class="small-12 medium-3 columns medium-text-right">
+                    {{ form_label(form.email) }}{% if form.email.vars['required'] %} *{% endif %} :
+                </div>
+                <div class="small-12 medium-9 columns text-left {% if not form.email.vars.valid %}error{% endif %}">
+                    {{ form_widget(form.email) }}
+                    <small class="error">
+                        {#% trans from "validators" %}field.invalid{% endtrans%#}
+                        {% trans from "validators" %}email.invalid{% endtrans%}
+                        {{ form_errors(form.email) }}
+                    </small>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="small-12 medium-3 columns medium-text-right">
+                    {{ form_label(form.phone) }}{% if form.phone.vars['required'] %} *{% endif %} :
+                </div>
+                <div class="small-12 medium-9 columns text-left{% if not form.phone.vars.valid %} error{% endif %}">
+                    {{ form_widget(form.phone) }}
+                    <small class="error">
+                        {#% trans from "validators" %}field.invalid{% endtrans%#}
+                        {% trans from "validators" %}phone.invalid{% endtrans%}
+                        {{ form_errors(form.phone) }}
+                    </small>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="small-12 medium-3 columns medium-text-right">
+                    {{ form_label(form.cv) }}{% if form.cv.vars['required'] %} *{% endif %} :
+                </div>
+                <div class="small-12 medium-9 columns text-left{% if not form.cv.vars.valid %} error{% endif %}">
+                    {{ form_widget(form.cv) }}
+                    <small class="error">
+                        {#% trans from "validators" %}field.invalid{% endtrans%#}
+                        {% trans from "validators" %}cv.invalid{% endtrans%}
+                        {{ form_errors(form.cv) }}
+                    </small>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="small-12 medium-3 columns medium-text-right">
+                    {{ form_label(form.cl) }}{% if form.cl.vars['required'] %} *{% endif %} :
+                </div>
+                <div class="small-12 medium-9 columns text-left{% if not form.cl.vars.valid %} error{% endif %}">
+                    {{ form_widget(form.cl) }}
+                    <small class="error">
+                        {#% trans from "validators" %}field.invalid{% endtrans%#}
+                        {% trans from "validators" %}cl.invalid{% endtrans%}
+                        {{ form_errors(form.cl) }}
+                    </small>
+                </div>
+            </div>
+
+            {% if country in ('de') %}
+            <div class="row">
+                <div class="small-12 medium-3 columns medium-text-right">
+                    {{ form_label(form.certificates) }}{% if form.certificates.vars['required'] %} *{% endif %} :
+                </div>
+                <div class="small-12 medium-9 columns text-left{% if not form.certificates.vars.valid %} error{% endif %}">
+                    {{ form_widget(form.certificates) }}
+                    <small class="help">{{ 'apply.form.help.certificates'|trans }}</small>
+                    <small class="error">
+                        {#% trans from "validators" %}field.invalid{% endtrans%#}
+                        {% trans from "validators" %}certificates.invalid{% endtrans%}
+                        {{ form_errors(form.certificates) }}
+                    </small>
+                </div>
+            </div>
+
+             <div class="row">
+                <div class="small-12 medium-3 columns medium-text-right">
+                </div>
+                <div class="small-12 medium-9 columns text-left{% if not form.privacy.vars.valid %} error{% endif %}">
+                    {{ form_widget(form.privacy, {'attr': {'class': 'privacy-accept'}}) }}
+                    {#{ form_label(form.privacy) }#}
+                    {{ 'apply.form.privacy'|trans({'%link%': path('job_privacy', {'country': 'de'})})|raw }}
+                    <small class="error">
+                        {#% trans from "validators" %}field.invalid{% endtrans%#}
+                        {% trans from "validators" %}privacy.invalid{% endtrans%}
+                        {{ form_errors(form.privacy) }}
+                    </small>
+                </div>
+            </div>
+            {% endif %}
+            <div class="row">
+                <div class="small-12 medium-3 columns">
+                </div>
+                <div class="small-12 medium-9 columns text-left">
+                    <input type="submit" id="apply-submit" class="button" name="submit" value="{% trans %}apply.submit{% endtrans%}">
+                </div>
+            </div>
+            <div class="row">
+                <div class="small-12 medium-3 columns">
+                </div>
+                <div class="small-12 medium-9 columns text-left">
+                    <a href="{{ path('privacy_and_confidentiality') }}" target="_blank" title="Données personnelles et confidentialité">Données personnelles et confidentialité</a>
+                </div>
+            </div>
+            {{ form_end(form) }}
+
+        </div>
+    </div>
+
+    <div class="separator">
+    </div>
+    <div class="separator">
+    </div>
+
+</section><!-- apply-form -->
+{% endblock %}

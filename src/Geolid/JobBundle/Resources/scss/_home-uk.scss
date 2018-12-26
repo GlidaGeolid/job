@@ -1,0 +1,105 @@
+/**
+ * Home uk.
+ */
+
+/**
+ * Overview.
+ */
+
+#home-uk-overview {
+}
+
+#home-uk-overview h2 {
+    color: $dark-gray;
+    font-size: rem-calc(30);
+    font-weight: normal;
+}
+
+#home-uk-overview h3 {
+    color: white;
+    font-weight: bold;
+    padding: rem-calc(8) rem-calc(16);
+    text-transform: uppercase;
+}
+
+#home-uk-overview h3.bg-primary {
+    background-color: $primary-color;
+}
+
+#home-uk-overview h3.bg-secondary {
+    background-color: $secondary-color;
+}
+
+#home-uk-overview ul {
+    list-style: none;
+}
+
+#home-uk-overview a.button {
+    background-color: white;
+    border: rem-calc(1) solid $dark-gray;
+    font-size: rem-calc(18);
+    color: $dark-gray;
+    font-size: rem-calc(20);
+    padding: rem-calc(10) rem-calc(32);
+    transition: $button-transition-speed;
+}
+
+#home-uk-overview a.button:hover,
+#home-uk-overview a.button:focus {
+    background-color: $dark-gray;
+    color: white;
+}
+
+
+#home-uk-opportunities table,
+#home-uk-opportunities th,
+#home-uk-opportunities tr,
+#home-uk-opportunities td {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+#home-uk-opportunities table {
+    width: 100%;
+}
+
+/**
+ * Backstage.
+ */
+
+#home-uk-backstage {
+}
+
+/**
+ * Help.
+ */
+
+#home-uk-help {
+}
+
+#home-uk-help h2 {
+    font-weight: bold;
+    margin: rem-calc(6) auto;
+}
+
+/**
+ * Customers.
+ */
+
+#home-uk-customers {
+}
+
+/**
+ * Stats.
+ */
+
+#home-uk-stats {
+}
+
+#home-uk-stats .data {
+    display: block;
+    font-size: rem-calc(32);
+    margin: rem-calc(20) auto;
+    text-transform: uppercase;
+}

@@ -1,0 +1,115 @@
+{% extends 'GeolidJobBundle::layout.' ~ country ~ '.html.twig' %}
+
+{% block title %}{{ parent() }} - {{ offer.title }}{% endblock %}
+
+{% block content %}
+
+<section class="section-title notch-padding hide-for-print">
+    <h1>{{ 'offer.title'|trans }}</h1>
+</section>
+
+<div class="notch hide-for-print">
+    <div class="trapeze-right-white"></div>
+    <div class="trapeze-left-white"></div>
+</div>
+
+<section id="offer" class="section-white notch-padding">
+
+    <div class="row">
+        <div class="small-12 columns">
+            {{ cnerta_breadcrumb_render('breadcrumb') }}
+        </div>
+    </div>
+
+    <div class="separator">
+    </div>
+
+    <div class="separator">
+    </div>
+
+    <div class="row">
+
+        <div id="offer-main" class="small-12 large-7 xlarge-6 columns padding-right">
+
+            <h1 class="text-left">{{ offer.title }}</h1>
+
+            <ul id="offer-meta">
+                <li>
+                    <img src="{{ asset('bundles/geolidjob/img/offer-fr/localisation-de-l-offre.png')}}">
+                    {{ offer.zone }}
+                </li>
+                <li>
+                    <img src="{{ asset('bundles/geolidjob/img/offer-fr/service-de-l-offre.png')}}">
+                    {{ ('offer.sector.' ~ offer.sector.name)|lower|replace({' ': '_'})|trans }}
+                </li>
+            </ul>
+
+            <div class="separator">
+            </div>
+
+            <div class="separator">
+            </div>
+
+            <div id="offer-content" class="user-content">
+                {{ offer.content|raw }}
+            </div>
+
+            <div class="separator">
+            </div>
+
+            <div class="separator">
+            </div>
+
+            <div class="text-center hide-for-print">
+                <form method="POST" action="{{ path('job_apply', {country: country})}}">
+                    <input type="hidden" name="slug" value="{{ offer.slug }}">
+                    <input type="submit" class="button" name="submit" value="{{ 'offer.apply'|trans }}">
+                </form>
+            </div>
+        </div>
+
+        {# Adding hide-for-small hide-for-medium causes some bug with hcSticky #}
+        <div id="offer-nav" class="large-5 xlarge-4 columns hide-for-print">
+
+            <img id="offer-nav-woman" src="{{ asset('bundles/geolidjob/img/offer-fr/rejoignez-nous-fille.jpg')}}">
+
+            <form method="POST" action="{{ path('job_apply', {country: country}) }}">
+                <input type="hidden" name="slug" value="{{ offer.slug }}">
+                <input type="submit" id="offer-nav-apply" class="button" name="submit" value="{{ 'offer.apply'|trans }}">
+            </form>
+
+            <div id="offer-nav-share">
+                <a href="javascript:window.print()" class="picto_print" title="{{ 'offer.print'|trans }}">
+                    <img src="{{ asset('bundles/geolidjob/img/offer-fr/imprimer-cette-offre.png')}}">
+                </a>
+                <!-- AddThis Button BEGIN -->
+                <a class="addthis_button_email" title="{{ 'offer.email'|trans }}">
+                    <img src="{{ asset('bundles/geolidjob/img/offer-fr/envoyer-par-mail.png')}}">
+                </a>
+                <a class="addthis_button_compact">
+                    <img src="{{ asset('bundles/geolidjob/img/offer-fr/partager-cette-offre.png')}}">
+                </a>
+                <script type="text/javascript">
+                    var addthis_config = {
+                    services_compact: 'viadeo,linkedin,facebook,twitter,google,pinterest_share'
+                    };
+                </script>
+                <script src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4db1398c75804d59"></script>
+                <!-- AddThis Button END -->
+            </div>
+
+            <div id="offer-nav-back">
+                &lt;
+                <a href="{{ backlink }}">{{ 'offer.back'|trans }}</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="separator">
+    </div>
+
+</section><!-- offer -->
+
+{% endblock %}

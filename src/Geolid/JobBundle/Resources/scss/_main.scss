@@ -1,0 +1,89 @@
+/**
+ * Main.
+ */
+
+html {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100%;
+}
+
+:focus {
+    outline: 0;
+}
+
+::selection {
+    background: $primary-color;
+    color: white;
+}
+
+::-moz-selection {
+    background: $primary-color;
+    color: white;
+}
+
+h1 {
+    font-weight: bold;
+    margin-top: rem-calc(10);
+    text-align: center;
+}
+
+h2 {
+    font-weight: bold;
+    margin: rem-calc(16) 0;
+}
+
+h3 {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+table thead tr th {
+    background-color: $primary-color;
+    /* background-color: scale-color($lighter-gray, $lightness: -3%); */
+    color: white;
+}
+
+table tr:nth-of-type(2n) {
+    background-color: $secondary-color;
+    /* background-color: scale-color($primary-color, $lightness: +90%); */
+}
+
+.reveal-modal .close-reveal-modal {
+    font-size: rem-calc(24);
+    text-decoration: none;
+}
+
+@media print {
+    .breadcrumbs {
+        display: none !important;
+    }
+}
+
+.breadcrumbs {
+    background-color: white;
+    border: none;
+    overflow: visible; // Do not cut lowercase letters like g j p
+    margin: rem-calc(16) 0;
+}
+
+/**
+ * Use the class user-content with raw HTML.
+ */
+.user-content ul,
+.user-content ol,
+.user-content dl {
+    margin-left: rem-calc(40);
+}
+
+/* For the symfony form errors. */
+[data-abide] small.error ul {
+    font-size: 0.75rem;
+    list-style-type: none;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-top: rem-calc(5);
+}
