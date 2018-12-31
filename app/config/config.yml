@@ -166,3 +166,10 @@ services:
         tags:
             - { name: twig.extension }
 
+# doctrine_migrations Configuration
+#doctrine_migrations:
+#    dir_name: "%kernel.root_dir%/DoctrineMigrations"
+#    namespace: geolid.job\Migrations
+#    table_name: migration_versions
+#    name: geolidjob Migrations
+#    organize_migrations: false # Version >=1.2 Possible values are: "BY_YEAR", "BY_YEAR_AND_MONTH", false

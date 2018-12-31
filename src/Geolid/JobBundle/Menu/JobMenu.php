@@ -55,7 +55,7 @@ class JobMenu
         }
         else {
             $home = $menu->addChild('menu.home', array(
-                'route' => 'job_home',
+                'route' => 'job_offers',
                 'routeParameters' => array('country' => $country)
             ));
         }
@@ -92,7 +92,7 @@ class JobMenu
         $em = $this->container->get('doctrine')->getManager();
 
         $menu = $this->factory->createItem('root');
-        $menu->addChild('menu.home', array('route' => 'job_home'));
+        $menu->addChild('menu.home', array('route' => 'job_offers'));
         $menu->addChild('menu.job', array('route' => 'job_jobs'));
         switch ($request->get('_route')) {
 
@@ -165,20 +165,21 @@ class JobMenu
         $menu = $this->factory->createItem('root');
         $menu->setChildrenAttribute('class', '');
 
-        $home = $menu->addChild('menu.home', array(
-            'route' => 'job_home',
-            'routeParameters' => array('country' => $country)
-        ));
-
-        $enterprise = $menu->addChild('menu.enterprise', array(
-            'route' => 'job_enterprise',
-            'routeParameters' => array('country' => $country)
-        ));
-
+//        $home = $menu->addChild('menu.home', array(
+//            'route' => 'job_home',
+//            'routeParameters' => array('country' => $country)
+//        ));
         $offers = $menu->addChild('menu.offers', array(
             'route' => 'job_offers',
             'routeParameters' => array('country' => $country)
         ));
+        
+        $enterprise = $menu->addChild('menu.enterprise', array(
+            'uri' => 'https://geolid.com/societe-geolid',
+            'routeParameters' => array('country' => $country)
+        ))->setLinkAttributes(array('target' => '_blank'));
+
+
         if ($route == 'job_offer') {
             $agency = $request->get('agency');
             $slug = $request->get('slug');

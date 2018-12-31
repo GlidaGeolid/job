@@ -65,113 +65,113 @@ class HomeController extends Controller
         ));
     }
 
-    /**
-     * @Route(
-     *     "/",
-     *     name="job_home",
-     *     host="{country}.{domain}",
-     *     requirements={"country": "de|es|fr|it|uk", "domain":"%geolid_job.domain%"},
-     *     defaults={"country": "fr", "domain":"%geolid_job.domain%"}
-     * )
-     */
-    public function homeAction($country)
-    {
-        $em = $this->getDoctrine()->getManager();
-        $offerRepository = $em->getRepository('GeolidJobBundle:Offer');
-        $internationalRepository = $em->getRepository('GeolidJobBundle:International');
-        $testimonialRepository = $em->getRepository('GeolidJobBundle:Testimonial');
-
-        if ($country == 'fr') {
-            $fr = $internationalRepository->findOneByCountry('fr');
-            $config = $fr->getConfig();
-
-            $offers = $offerRepository->lastn($country, 3);
-
-            $testimonials_ids = array(
-                $config->home->testimonial1_id,
-                $config->home->testimonial2_id,
-                $config->home->testimonial3_id,
-            );
-            $testimonials_ids = array_filter($testimonials_ids, 'strlen');
-            $testimonials = $testimonialRepository->loadOrder($testimonials_ids);
-
-            $testimonialBaseUrl = $this->container->getParameter('geolid_job.testimonial_base_url');
-
-            return $this->render('GeolidJobBundle:Home:home.'.$country.'.html.twig', array(
-                'config' => $config,
-                'offers' => $offers,
-                'testimonials' => $testimonials,
-                'testimonial_base_url' => $testimonialBaseUrl,
-            ));
-        }
-
-        else if ($country == 'de') {
-            $de = $internationalRepository->findOneByCountry('de');
-            $config = $de->getConfig();
-
-            $offers = $offerRepository->findByCountry('de');
-
-            $testimonials_ids = array(
-                $config->home->testimonial1_id,
-                $config->home->testimonial2_id,
-                $config->home->testimonial3_id,
-            );
-            $testimonials_ids = array_filter($testimonials_ids, 'strlen');
-            $testimonials = $testimonialRepository->loadOrder($testimonials_ids);
-
-            $testimonialBaseUrl = $this->container->getParameter('geolid_job.testimonial_base_url');
-
-            return $this->render('GeolidJobBundle:Home:home.'.$country.'.html.twig', array(
-                'config' => $config,
-                'offers' => $offers,
-                'testimonials' => $testimonials,
-                'testimonial_base_url' => $testimonialBaseUrl,
-            ));
-        }
-
-        else if ($country == 'uk') {
-            $uk = $internationalRepository->findOneByCountry('uk');
-            $config = $uk->getConfig();
-
-            $testimonials_ids = array(
-                $config->home->testimonial1_id,
-            );
-            $testimonials_ids = array_filter($testimonials_ids, 'strlen');
-            $testimonials = $testimonialRepository->loadOrder($testimonials_ids);
-
-            $applyUkPdfUrl = $this->container->getParameter('geolid_job.apply_uk_pdf_url');
-
-            $testimonialBaseUrl = $this->container->getParameter('geolid_job.testimonial_base_url');
-
-            return $this->render('GeolidJobBundle:Home:home.'.$country.'.html.twig', array(
-                'apply_uk_pdf_url' => $applyUkPdfUrl,
-                'config' => $config,
-                'testimonials' => $testimonials,
-                'testimonial_base_url' => $testimonialBaseUrl,
-            ));
-        }
-    }
-
-    /**
-     * @Route("/")
-     */
-    public function quickFixAction()
-    {
-    }
-
-    /**
-     * @Route(
-     *     "/vie-privee",
-     *     name="job_privacy",
-     *     host="{country}.{domain}",
-     *     requirements={"country": "de", "domain":"%geolid_job.domain%"},
-     *     defaults={"country": "fr", "domain":"%geolid_job.domain%"}
-     * )
-     */
-    public function privacyAction($country)
-    {
-        return $this->render('GeolidJobBundle:Home:privacy.'.$country.'.html.twig', array());
-    }
+//    /**
+//     * @Route(
+//     *     "/",
+//     *     name="job_home",
+//     *     host="{country}.{domain}",
+//     *     requirements={"country": "de|es|fr|it|uk", "domain":"%geolid_job.domain%"},
+//     *     defaults={"country": "fr", "domain":"%geolid_job.domain%"}
+//     * )
+//     */
+//    public function homeAction($country)
+//    {
+//        $em = $this->getDoctrine()->getManager();
+//        $offerRepository = $em->getRepository('GeolidJobBundle:Offer');
+//        $internationalRepository = $em->getRepository('GeolidJobBundle:International');
+//        $testimonialRepository = $em->getRepository('GeolidJobBundle:Testimonial');
+//
+//        if ($country == 'fr') {
+//            $fr = $internationalRepository->findOneByCountry('fr');
+//            $config = $fr->getConfig();
+//
+//            $offers = $offerRepository->lastn($country, 3);
+//
+//            $testimonials_ids = array(
+//                $config->home->testimonial1_id,
+//                $config->home->testimonial2_id,
+//                $config->home->testimonial3_id,
+//            );
+//            $testimonials_ids = array_filter($testimonials_ids, 'strlen');
+//            $testimonials = $testimonialRepository->loadOrder($testimonials_ids);
+//
+//            $testimonialBaseUrl = $this->container->getParameter('geolid_job.testimonial_base_url');
+//
+//            return $this->render('GeolidJobBundle:Home:home.'.$country.'.html.twig', array(
+//                'config' => $config,
+//                'offers' => $offers,
+//                'testimonials' => $testimonials,
+//                'testimonial_base_url' => $testimonialBaseUrl,
+//            ));
+//        }
+//
+//        else if ($country == 'de') {
+//            $de = $internationalRepository->findOneByCountry('de');
+//            $config = $de->getConfig();
+//
+//            $offers = $offerRepository->findByCountry('de');
+//
+//            $testimonials_ids = array(
+//                $config->home->testimonial1_id,
+//                $config->home->testimonial2_id,
+//                $config->home->testimonial3_id,
+//            );
+//            $testimonials_ids = array_filter($testimonials_ids, 'strlen');
+//            $testimonials = $testimonialRepository->loadOrder($testimonials_ids);
+//
+//            $testimonialBaseUrl = $this->container->getParameter('geolid_job.testimonial_base_url');
+//
+//            return $this->render('GeolidJobBundle:Home:home.'.$country.'.html.twig', array(
+//                'config' => $config,
+//                'offers' => $offers,
+//                'testimonials' => $testimonials,
+//                'testimonial_base_url' => $testimonialBaseUrl,
+//            ));
+//        }
+//
+//        else if ($country == 'uk') {
+//            $uk = $internationalRepository->findOneByCountry('uk');
+//            $config = $uk->getConfig();
+//
+//            $testimonials_ids = array(
+//                $config->home->testimonial1_id,
+//            );
+//            $testimonials_ids = array_filter($testimonials_ids, 'strlen');
+//            $testimonials = $testimonialRepository->loadOrder($testimonials_ids);
+//
+//            $applyUkPdfUrl = $this->container->getParameter('geolid_job.apply_uk_pdf_url');
+//
+//            $testimonialBaseUrl = $this->container->getParameter('geolid_job.testimonial_base_url');
+//
+//            return $this->render('GeolidJobBundle:Home:home.'.$country.'.html.twig', array(
+//                'apply_uk_pdf_url' => $applyUkPdfUrl,
+//                'config' => $config,
+//                'testimonials' => $testimonials,
+//                'testimonial_base_url' => $testimonialBaseUrl,
+//            ));
+//        }
+//    }
+//
+//    /**
+//     * @Route("/")
+//     */
+//    public function quickFixAction()
+//    {
+//    }
+//
+//    /**
+//     * @Route(
+//     *     "/vie-privee",
+//     *     name="job_privacy",
+//     *     host="{country}.{domain}",
+//     *     requirements={"country": "de", "domain":"%geolid_job.domain%"},
+//     *     defaults={"country": "fr", "domain":"%geolid_job.domain%"}
+//     * )
+//     */
+//    public function privacyAction($country)
+//    {
+//        return $this->render('GeolidJobBundle:Home:privacy.'.$country.'.html.twig', array());
+//    }
 
     /**
      * @Route(

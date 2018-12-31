@@ -2,18 +2,19 @@ apply:
     resource: "@GeolidJobBundle/Controller/ApplyController.php"
     type: annotation
     prefix: /
-
+    methods:  [GET, POST]
 home:
     resource: "@GeolidJobBundle/Controller/HomeController.php"
     type: annotation
     prefix: /
-
+    methods:  [GET, POST]
 job:
     resource: "@GeolidJobBundle/Controller/JobController.php"
     type: annotation
     prefix: /
-
+    methods:  [GET, POST]
 offer:
     resource: "@GeolidJobBundle/Controller/OfferController.php"
     type: annotation
     prefix: /
+    methods:  [GET, POST]

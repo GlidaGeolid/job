@@ -32,6 +32,8 @@ class AppKernel extends Kernel
             new Geolid\CoreBundle\GeolidCoreBundle(),
             new Geolid\JobBundle\GeolidJobBundle(),
 
+            new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
+
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

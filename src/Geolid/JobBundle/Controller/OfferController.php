@@ -11,7 +11,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
- * @Route("/offres-emplois")
+ * @Route("/")
  */
 class OfferController extends Controller
 {
@@ -30,11 +30,9 @@ class OfferController extends Controller
     {
 
         $request = $this->container->get('request_stack')->getCurrentRequest();
-//        $request = $this->getRequest();
         $params = array();
 
         $filter = new OfferFilter();
-//        if ($request->query->get('contrat') == 'stage') {
         if ($request->query->get(ContractType::class) == 'stage') {
             $filter->contract = Offer::CONTRACT_STAGE;
             $params['contract'] = Offer::CONTRACT_STAGE;
@@ -79,19 +77,12 @@ class OfferController extends Controller
         // TODO:
         // http://api.symfony.com/2.0/Symfony/Component/Form/Form.html
         // Clear the select fields, keep only meaningful filters.
-
-//        return array(
-//            'country' => $country,
-//            'form' => $form->createView(),
-//            'offers' => $offers,
-//        );
+        
         return $this->render('GeolidJobBundle:Offer:offers.html.twig', array(
             'form' => $form->createView(),
             'offers' => $offers,
             'country' => $country,
         ));
-
-
     }
 
     /**
@@ -101,6 +92,8 @@ class OfferController extends Controller
      *     host="{country}.{domain}",
      *     requirements={"country": "de|fr", "domain":"%geolid_job.domain%"},
      *     defaults={"country": "fr", "domain":"%geolid_job.domain%"}
+     *     , methods={"GET"}
+     *
      * )
      * @Template()
      */
@@ -119,11 +112,11 @@ class OfferController extends Controller
             $backlink = $this->generateUrl('job_home', array('country' => 'de'));
         }
 
-        return array(
+        return $this->render('GeolidJobBundle:Offer:offer.html.twig', array(
             'backlink' => $backlink,
             'country' => $country,
             'offer' => $offer,
-        );
+        ));
 
     }
 }

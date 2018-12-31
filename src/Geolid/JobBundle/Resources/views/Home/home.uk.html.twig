@@ -1,230 +1,230 @@
-{% extends 'GeolidJobBundle::layout.uk.html.twig' %}
+{#{% extends 'GeolidJobBundle::layout.uk.html.twig' %}#}
 
-{% block title %}{{ parent() }} - Home{% endblock %}
+{#{% block title %}{{ parent() }} - Home{% endblock %}#}
 
-{% block content %}
+{#{% block content %}#}
 
-<section id="home-title">
-    <div id="home-slider">
-        <ul>
-            <li style="background-image: url({{ asset('bundles/geolidjob/img/home-slider/photobooth.jpg')}})">
-            </li>
-            <li style="background-image: url({{ asset('bundles/geolidjob/img/home-slider/salle-de-reunion.jpg')}})">
-            </li>
-            <li style="background-image: url({{ asset('bundles/geolidjob/img/home-slider/univers-A.jpg')}})">
-            </li>
-        </ul>
-    </div>
-</section>
+{#<section id="home-title">#}
+    {#<div id="home-slider">#}
+        {#<ul>#}
+            {#<li style="background-image: url({{ asset('bundles/geolidjob/img/home-slider/photobooth.jpg')}})">#}
+            {#</li>#}
+            {#<li style="background-image: url({{ asset('bundles/geolidjob/img/home-slider/salle-de-reunion.jpg')}})">#}
+            {#</li>#}
+            {#<li style="background-image: url({{ asset('bundles/geolidjob/img/home-slider/univers-A.jpg')}})">#}
+            {#</li>#}
+        {#</ul>#}
+    {#</div>#}
+{#</section>#}
 
-<div class="notch">
-    <div class="trapeze-right-white"></div>
-    <div class="trapeze-left-white"></div>
-</div>
+{#<div class="notch">#}
+    {#<div class="trapeze-right-white"></div>#}
+    {#<div class="trapeze-left-white"></div>#}
+{#</div>#}
 
-<section id="home-uk-overview" class="section-white">
-    <div class="separator">
-    </div>
-    <div class="row">
-        <div class="small-12 medium-4 columns text-center">
-            <img src="{{ asset('bundles/geolidjob/img/uk/map-europe-uk.jpg')}}">
-            <div class="separator">
-            </div>
-        </div>
-        <div class="small-12 medium-8 columns user-content">
-            {{ config.home.content|default('')|raw }}
-            <div class="separator">
-            </div>
-            <img src="{{ asset('bundles/geolidjob/img/uk/learn-more-download.jpg')}}">
-            <a href="http://geolid.com">Learn more about Geolid</a>
-        </div>
-    </div>
-    <div class="separator">
-    </div>
-    <div class="row">
-        <div class="small-12 medium-4 columns text-center">
-            <h2>Your dream job isn't here?</h2>
-            <a class="button" href="{{ apply_uk_pdf_url }}">Submit a spontaneous application!</a>
-            <div class="separator">
-            </div>
-        </div>
-        <div id="home-uk-opportunities" class="small-12 medium-5 columns small-padding">
-            <h3 class="bg-secondary">Job opportunities in united kingdom</h3>
-            <div class="normal-padding user-content">
-                {{ config.home.jobs|default('')|raw }}
-            </div>
-        </div>
-        <div class="small-12 medium-3 columns small-padding">
-            <h3 class="bg-primary">Other countries</h3>
-            <div class="normal-padding">
-                <p>
+{#<section id="home-uk-overview" class="section-white">#}
+    {#<div class="separator">#}
+    {#</div>#}
+    {#<div class="row">#}
+        {#<div class="small-12 medium-4 columns text-center">#}
+            {#<img src="{{ asset('bundles/geolidjob/img/uk/map-europe-uk.jpg')}}">#}
+            {#<div class="separator">#}
+            {#</div>#}
+        {#</div>#}
+        {#<div class="small-12 medium-8 columns user-content">#}
+            {#{{ config.home.content|default('')|raw }}#}
+            {#<div class="separator">#}
+            {#</div>#}
+            {#<img src="{{ asset('bundles/geolidjob/img/uk/learn-more-download.jpg')}}">#}
+            {#<a href="http://geolid.com">Learn more about Geolid</a>#}
+        {#</div>#}
+    {#</div>#}
+    {#<div class="separator">#}
+    {#</div>#}
+    {#<div class="row">#}
+        {#<div class="small-12 medium-4 columns text-center">#}
+            {#<h2>Your dream job isn't here?</h2>#}
+            {#<a class="button" href="{{ apply_uk_pdf_url }}">Submit a spontaneous application!</a>#}
+            {#<div class="separator">#}
+            {#</div>#}
+        {#</div>#}
+        {#<div id="home-uk-opportunities" class="small-12 medium-5 columns small-padding">#}
+            {#<h3 class="bg-secondary">Job opportunities in united kingdom</h3>#}
+            {#<div class="normal-padding user-content">#}
+                {#{{ config.home.jobs|default('')|raw }}#}
+            {#</div>#}
+        {#</div>#}
+        {#<div class="small-12 medium-3 columns small-padding">#}
+            {#<h3 class="bg-primary">Other countries</h3>#}
+            {#<div class="normal-padding">#}
+                {#<p>#}
                     {# Should do a knp menu but I have no time atm #}
-                    <a href="{{ path('job_home', {country: 'fr'}) }}">France</a><br>
-                </p>
-            </div>
-        </div>
-    </div>
-    <div class="separator">
-    </div>
-</section><!-- home-uk-overview -->
+                    {#<a href="{{ path('job_home', {country: 'fr'}) }}">France</a><br>#}
+                {#</p>#}
+            {#</div>#}
+        {#</div>#}
+    {#</div>#}
+    {#<div class="separator">#}
+    {#</div>#}
+{#</section><!-- home-uk-overview -->#}
 
-<div class="salience absolute">
-    <div class="triangle triangle-white"></div>
-</div>
+{#<div class="salience absolute">#}
+    {#<div class="triangle triangle-white"></div>#}
+{#</div>#}
 
-<section id="home-testimonials" class="section-white testimonials">
-    {% for testimonial in testimonials %}
-        {% include('GeolidJobBundle:Testimonial:testimonial.html.twig')
-        with { 'testimonial': testimonial } %}
-    {% endfor %}
-</section><!-- home-testimonials -->
+{#<section id="home-testimonials" class="section-white testimonials">#}
+    {#{% for testimonial in testimonials %}#}
+        {#{% include('GeolidJobBundle:Testimonial:testimonial.html.twig')#}
+        {#with { 'testimonial': testimonial } %}#}
+    {#{% endfor %}#}
+{#</section><!-- home-testimonials -->#}
 
-<div class="notch">
-    <div class="trapeze-left-primary"></div>
-    <div class="trapeze-right-primary"></div>
-</div>
+{#<div class="notch">#}
+    {#<div class="trapeze-left-primary"></div>#}
+    {#<div class="trapeze-right-primary"></div>#}
+{#</div>#}
 
-<section id="home-uk-backstage" class="section-primary notch-padding">
-    <div class="separator">
-    </div>
-    <div class="row">
-        <div class="small-12 columns text-center">
-            <h2>We want to succeed together</h2>
-        </div>
-    </div>
-    <div class="row">
-        <div class="small-12 columns text-center">
-            <ul id="backstage-diaporama" class="small-block-grid-1 medium-block-grid-3 large-block-grid-4">
-                <li>
-                    <div>
-                        <img src="{{ asset('bundles/geolidjob/img/backstage/lucie-responsable-traffic-management.jpg')}}">
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <img src="{{ asset('bundles/geolidjob/img/backstage/gautier-seminaire.jpg')}}">
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <img src="{{ asset('bundles/geolidjob/img/backstage/terrasse-lyon-geolid.jpg')}}">
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <img src="{{ asset('bundles/geolidjob/img/backstage/gautier-julie-reunion.jpg')}}">
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <img src="{{ asset('bundles/geolidjob/img/backstage/vivien-melissa-chefs-de-projet.jpg')}}">
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <img src="{{ asset('bundles/geolidjob/img/backstage/guillaume-leila-seminaire-geolid.jpg')}}">
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <img src="{{ asset('bundles/geolidjob/img/backstage/seminaire-geolid-google.jpg')}}">
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <img src="{{ asset('bundles/geolidjob/img/backstage/benjamin-chef-de-projet.jpg')}}">
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="separator">
-    </div>
-    <div class="separator">
-    </div>
-</section><!-- home-uk-backstage -->
+{#<section id="home-uk-backstage" class="section-primary notch-padding">#}
+    {#<div class="separator">#}
+    {#</div>#}
+    {#<div class="row">#}
+        {#<div class="small-12 columns text-center">#}
+            {#<h2>We want to succeed together</h2>#}
+        {#</div>#}
+    {#</div>#}
+    {#<div class="row">#}
+        {#<div class="small-12 columns text-center">#}
+            {#<ul id="backstage-diaporama" class="small-block-grid-1 medium-block-grid-3 large-block-grid-4">#}
+                {#<li>#}
+                    {#<div>#}
+                        {#<img src="{{ asset('bundles/geolidjob/img/backstage/lucie-responsable-traffic-management.jpg')}}">#}
+                    {#</div>#}
+                {#</li>#}
+                {#<li>#}
+                    {#<div>#}
+                        {#<img src="{{ asset('bundles/geolidjob/img/backstage/gautier-seminaire.jpg')}}">#}
+                    {#</div>#}
+                {#</li>#}
+                {#<li>#}
+                    {#<div>#}
+                        {#<img src="{{ asset('bundles/geolidjob/img/backstage/terrasse-lyon-geolid.jpg')}}">#}
+                    {#</div>#}
+                {#</li>#}
+                {#<li>#}
+                    {#<div>#}
+                        {#<img src="{{ asset('bundles/geolidjob/img/backstage/gautier-julie-reunion.jpg')}}">#}
+                    {#</div>#}
+                {#</li>#}
+                {#<li>#}
+                    {#<div>#}
+                        {#<img src="{{ asset('bundles/geolidjob/img/backstage/vivien-melissa-chefs-de-projet.jpg')}}">#}
+                    {#</div>#}
+                {#</li>#}
+                {#<li>#}
+                    {#<div>#}
+                        {#<img src="{{ asset('bundles/geolidjob/img/backstage/guillaume-leila-seminaire-geolid.jpg')}}">#}
+                    {#</div>#}
+                {#</li>#}
+                {#<li>#}
+                    {#<div>#}
+                        {#<img src="{{ asset('bundles/geolidjob/img/backstage/seminaire-geolid-google.jpg')}}">#}
+                    {#</div>#}
+                {#</li>#}
+                {#<li>#}
+                    {#<div>#}
+                        {#<img src="{{ asset('bundles/geolidjob/img/backstage/benjamin-chef-de-projet.jpg')}}">#}
+                    {#</div>#}
+                {#</li>#}
+            {#</ul>#}
+        {#</div>#}
+    {#</div>#}
+    {#<div class="separator">#}
+    {#</div>#}
+    {#<div class="separator">#}
+    {#</div>#}
+{#</section><!-- home-uk-backstage -->#}
 
-<div id="home-uk-help-notch" class="notch">
-    <div class="trapeze-left-white"></div>
-    <div class="trapeze-right-white"></div>
-</div>
+{#<div id="home-uk-help-notch" class="notch">#}
+    {#<div class="trapeze-left-white"></div>#}
+    {#<div class="trapeze-right-white"></div>#}
+{#</div>#}
 
-<section id="home-uk-help" class="section-white notch-padding">
-    <div class="separator">
-    </div>
-    <div class="row">
-        <div class="small-12 medium-2 columns text-center">
-            <img src="{{ asset('bundles/geolidjob/img/common/nos-conseils-aux-candidats.png') }}">
-            <div class="separator hide-for-medium-up">
-            </div>
-        </div>
-        <div class="small-12 medium-10 columns">
-            <h2>Need some help?</h2>
-            <p>
-                We want to help you, just send us an email to
-                <a href="mailto:uk@geolid.com?Subject=Help%20with%20geolid%20jobs">uk@geolid.com</a>
-                or phone to <span class="no-wrap">+33 6 75 99 05 98</span>
-            </p>
-        </div>
-    </div>
-    <div class="separator">
-    </div>
-</section><!-- home-uk-help -->
+{#<section id="home-uk-help" class="section-white notch-padding">#}
+    {#<div class="separator">#}
+    {#</div>#}
+    {#<div class="row">#}
+        {#<div class="small-12 medium-2 columns text-center">#}
+            {#<img src="{{ asset('bundles/geolidjob/img/common/nos-conseils-aux-candidats.png') }}">#}
+            {#<div class="separator hide-for-medium-up">#}
+            {#</div>#}
+        {#</div>#}
+        {#<div class="small-12 medium-10 columns">#}
+            {#<h2>Need some help?</h2>#}
+            {#<p>#}
+                {#We want to help you, just send us an email to#}
+                {#<a href="mailto:uk@geolid.com?Subject=Help%20with%20geolid%20jobs">uk@geolid.com</a>#}
+                {#or phone to <span class="no-wrap">+33 6 75 99 05 98</span>#}
+            {#</p>#}
+        {#</div>#}
+    {#</div>#}
+    {#<div class="separator">#}
+    {#</div>#}
+{#</section><!-- home-uk-help -->#}
 
-<div class="notch">
-    <div class="trapeze-left-secondary"></div>
-    <div class="trapeze-right-secondary"></div>
-</div>
+{#<div class="notch">#}
+    {#<div class="trapeze-left-secondary"></div>#}
+    {#<div class="trapeze-right-secondary"></div>#}
+{#</div>#}
 
-<section id="home-uk-customers" class="section-secondary notch-padding text-center">
-    <div class="separator">
-    </div>
-    <div class="row">
-        <div class="small-12 columns">
-            {{ sonata_block_render({ 'type': 'job.block.customers.revenues'}, {}) }}
-        </div>
-    </div>
-    <div class="separator">
-    </div>
-    <div class="row">
-        <div class="small-12 columns">
-            <img src="{{ asset('bundles/geolidjob/img/uk/honda.jpg')}}">
-            <img src="{{ asset('bundles/geolidjob/img/uk/ikea.jpg')}}">
-            <img src="{{ asset('bundles/geolidjob/img/uk/mcdo.jpg')}}">
-        </div>
-    </div>
-    <div class="separator">
-    </div>
-</section><!-- home-uk-customers -->
+{#<section id="home-uk-customers" class="section-secondary notch-padding text-center">#}
+    {#<div class="separator">#}
+    {#</div>#}
+    {#<div class="row">#}
+        {#<div class="small-12 columns">#}
+            {#{{ sonata_block_render({ 'type': 'job.block.customers.revenues'}, {}) }}#}
+        {#</div>#}
+    {#</div>#}
+    {#<div class="separator">#}
+    {#</div>#}
+    {#<div class="row">#}
+        {#<div class="small-12 columns">#}
+            {#<img src="{{ asset('bundles/geolidjob/img/uk/honda.jpg')}}">#}
+            {#<img src="{{ asset('bundles/geolidjob/img/uk/ikea.jpg')}}">#}
+            {#<img src="{{ asset('bundles/geolidjob/img/uk/mcdo.jpg')}}">#}
+        {#</div>#}
+    {#</div>#}
+    {#<div class="separator">#}
+    {#</div>#}
+{#</section><!-- home-uk-customers -->#}
 
-<div class="notch">
-    <div class="trapeze-left-white"></div>
-    <div class="trapeze-right-white"></div>
-</div>
+{#<div class="notch">#}
+    {#<div class="trapeze-left-white"></div>#}
+    {#<div class="trapeze-right-white"></div>#}
+{#</div>#}
 
-<section id="home-uk-stats" class="section-white notch-padding">
-    <div class="separator">
-    </div>
-    <div class="row">
-        <div class="small-12 medium-6 large-3 columns text-center">
-            <img src="{{ asset('bundles/geolidjob/img/stats/thumb-up.png')}}">
-            <p><span class="data">96%</span>of our clients<br>renew each month</p>
-        </div>
-        <div class="small-12 medium-6 large-3 columns text-center">
-            <img src="{{ asset('bundles/geolidjob/img/stats/phone.png')}}">
-            <p><span class="data">+ 1 million</span>call generated<br>for clients</p>
-        </div>
-        <div class="small-12 medium-6 large-3 columns text-center">
-            <img src="{{ asset('bundles/geolidjob/img/stats/smile.png')}}">
-            <p><span class="data">150</span>european happy<br>employees</p>
-        </div>
-        <div class="small-12 medium-6 large-3 columns text-center">
-            <img src="{{ asset('bundles/geolidjob/img/stats/euro.png')}}">
-            <p><span class="data">+1 billion</span>generated revenues<br></p>
-        </div>
-    </div>
-    <div class="separator">
-    </div>
-</section><!-- home-uk-stats -->
+{#<section id="home-uk-stats" class="section-white notch-padding">#}
+    {#<div class="separator">#}
+    {#</div>#}
+    {#<div class="row">#}
+        {#<div class="small-12 medium-6 large-3 columns text-center">#}
+            {#<img src="{{ asset('bundles/geolidjob/img/stats/thumb-up.png')}}">#}
+            {#<p><span class="data">96%</span>of our clients<br>renew each month</p>#}
+        {#</div>#}
+        {#<div class="small-12 medium-6 large-3 columns text-center">#}
+            {#<img src="{{ asset('bundles/geolidjob/img/stats/phone.png')}}">#}
+            {#<p><span class="data">+ 1 million</span>call generated<br>for clients</p>#}
+        {#</div>#}
+        {#<div class="small-12 medium-6 large-3 columns text-center">#}
+            {#<img src="{{ asset('bundles/geolidjob/img/stats/smile.png')}}">#}
+            {#<p><span class="data">150</span>european happy<br>employees</p>#}
+        {#</div>#}
+        {#<div class="small-12 medium-6 large-3 columns text-center">#}
+            {#<img src="{{ asset('bundles/geolidjob/img/stats/euro.png')}}">#}
+            {#<p><span class="data">+1 billion</span>generated revenues<br></p>#}
+        {#</div>#}
+    {#</div>#}
+    {#<div class="separator">#}
+    {#</div>#}
+{#</section><!-- home-uk-stats -->#}
 
-{% endblock content %}
+{#{% endblock content %}#}

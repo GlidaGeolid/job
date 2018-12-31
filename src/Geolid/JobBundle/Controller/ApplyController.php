@@ -83,7 +83,6 @@ class ApplyController extends Controller
             $form->get('source')->setData(Application::SOURCE_GEOLID);
             $form->get('offer')->setData($offer);
         }
-
         return $this->render('GeolidJobBundle:Apply:apply.html.twig', array(
             'country' => $country,
             'form' => $form->createView()
@@ -109,7 +108,7 @@ class ApplyController extends Controller
         $this->get('session')->remove('job_apply/success');
         $email = $this->get('session')->get('job_apply/email');
         $this->get('session')->remove('job_apply/email');
-        return array(
+        return  array(
             'country' => $country,
             'email' => $email
         );

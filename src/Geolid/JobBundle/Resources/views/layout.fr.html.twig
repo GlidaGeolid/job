@@ -5,7 +5,7 @@
 {% block site_nav %}
 <ul class="title-area text-left">
     <li class="name">
-        <a href="{{ path('job_home') }}">
+        <a href="{{ path('job_offers') }}">
             <img style="width: auto; height: 62px;" id="site-logo" src="{{ asset('bundles/geolidjob/img/fr/geolid-recrute.png') }}">
         </a>
     </li>
@@ -55,7 +55,7 @@
     <div class="row">
         <div class="small-12 columns">
             <h2>Besoin d'un peu d'aide ?</h2>
-            <span>Pas de panique, nous sommes là !</span>
+            <span>Pas de panique, nos valeurs !</span>
         </div>
     </div>
     <div class="separator">
@@ -63,7 +63,7 @@
     <div class="row">
         <div class="small-12 medium-4 columns">
             <img src="{{ asset('bundles/geolidjob/img/common/nos-conseils-aux-candidats.png') }}">
-            <h3>Nos conseils aux candidats</h3>
+            <h3>En dessous de Simplicité</h3>
             <p>
                 Notre responsable recrutement vous explique comment
                 se déroule un recrutement chez Geolid et vous conseille.
@@ -74,18 +74,18 @@
         </div>
         <div class="small-12 medium-4 columns">
             <img src="{{ asset('bundles/geolidjob/img/fr/contact-live-chat.png') }}">
-            <h3>Nous contacter</h3>
+            <h3>En dessous d’Engagement</h3>
             <p>
-                Retrouvez notre Responsable Recrutement en live chat
-                le lundi et le vendredi de 9H30 à 11H,
-                le mardi et le jeudi de 16H30 à 18H00 et le mercredi de 10H30 à 12H.
+                fervents défenseurs de la proximité,
+                nous nous investissons à vos côtés avec détermination,
+                prêts à changer la donne !
             </p>
             <div class="separator hide-for-medium-up">
             </div>
         </div>
         <div class="small-12 medium-4 columns">
             <img src="{{ asset('bundles/geolidjob/img/fr/metiers-et-competences-geolid.png') }}">
-            <h3>Métiers et compétences</h3>
+            <h3>En dessous d’Audace</h3>
             <p>
                 Informez-vous sur les compétences recherchées par Geolid.
             </p>
@@ -101,25 +101,6 @@
     <div class="trapeze-right-white"></div>
 </div>
 
-<section id="customers" class="section-white notch-padding hide-for-print">
-    <div class="separator">
-    </div>
-    <div class="row">
-        <div class="small-12 columns">
-            {{ sonata_block_render({ 'type': 'job.block.customers.revenues'}, {}) }}
-        </div>
-    </div>
-    <div class="separator">
-    </div>
-    <div class="row">
-        <div class="small-12 columns">
-            {{ sonata_block_render({ 'type': 'job.block.customers.cards'}, {}) }}
-        </div>
-    </div>
-    <div class="separator">
-    </div>
-</section>
-
 <div class="notch">
     <div class="trapeze-left-gray"></div>
     <div class="trapeze-right-gray"></div>
@@ -128,13 +109,7 @@
 <section id="footer" class="section-middle-gray notch-padding hide-for-print">
 
     <div class="vertical-separators row" data-equalizer>
-        <div id="footer-coverage" class="small-12 medium-6 large-3 columns" data-equalizer-watch>
-            <h3>Couverture nationale</h3>
-            <img class="right" src="{{ asset('bundles/geolidjob/img/fr/couverture-nationale.png') }}">
-            <p>
-            Nous sommes aujourd'hui plus de 150 salariés répartis sur 6 directions régionales.
-            </p>
-        </div>
+
         <div id="footer-regie" class="small-12 medium-6 large-3 columns" data-equalizer-watch>
             <h3>Google Premier Partner</h3>
             <p>
@@ -151,7 +126,7 @@
         <div id="footer-sitemap" class="small-12 medium-6 large-3 columns" data-equalizer-watch>
             <h3>Plan du site</h3>
             <ul>
-                <li><a href="{{ path('job_home') }}">Accueil</a></li>
+                <li><a href="{{ path('job_offers') }}">Accueil</a></li>
                 <li><a href="{{ path('job_enterprise') }}">Entreprise</a></li>
                 <li><a href="{{ path('job_offers') }}">Offres</a></li>
                 <li><a href="{{ path('job_jobs') }}">Métiers</a></li>
@@ -159,7 +134,7 @@
             <ul>
                 <li><a href="{{ path('job_apply') }}">Je candidate !</a></li>
                 <li>&nbsp;</li>
-                <li><a href="{{ path('job_advice') }}">Conseils</a></li>
+                {#<li><a>Conseils</a></li>#}
                 <li><a href="{{ path('job_trainee') }}">Stagiaires</a></li>
             </ul>
             Nous recrutons dans toute l'Europe !

@@ -5,10 +5,10 @@ use Doctrine\ORM\EntityRepository;
 use Geolid\JobBundle\Entity\Application;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Geolid\JobBundle\Entity\Offer;
+
 
 
 
@@ -29,12 +29,12 @@ class OfferFilterType extends AbstractType
         $builder
             ->add('sector', 'entity', array(
                 'class' => 'GeolidJobBundle:Sector',
-                'empty_data' => 'offers.empty.sector',
+                'empty_data' => '',
                 'required' => false,
             ))
             ->add("job", "entity", array(
                 'class' => 'GeolidJobBundle:Job',
-                'empty_data' => 'offers.empty.job',
+                'empty_data' => '',
                 'required' => false,
                 "choices" => $this->er->listJobsBySectorsOpt($options['country']),
              ))
@@ -44,7 +44,7 @@ class OfferFilterType extends AbstractType
              */
             ->add('agency', 'entity', array(
                 'class' => 'Geolid\JobBundle\Entity\Agency',
-                'empty_data' => 'offers.empty.agency',
+                'empty_data' => '',
                 'query_builder' => function(EntityRepository $er) {
                     return $er->createQueryBuilder('a')
                         ->andWhere('a.name NOT IN (\'Grands Comptes\', \'Mediapost\')')
@@ -53,23 +53,14 @@ class OfferFilterType extends AbstractType
                 'choice_label' => 'name',
                 'required' => false,
             ))
-//            ->add('contract', 'choice', array('choices' => array(
-//                'contract.cdi'=>Application::CONTRACT_CDI ,
-//                'contract.cdd'=>  Application::CONTRACT_CDD,
-//                'contract.stage'=> Application::CONTRACT_STAGE,
-//                'contract.alternance' => Application::CONTRACT_ALTERNANCE,
-//            ),
-//                'empty_data' => 'contract.empty',
-////                'required' => false,
-//            ))
-//            ;
+
             ->add('contract', 'choice',  array('choices' => array(
-                'contract.cdi'=>ContractType::CONTRACT_CDI ,
-                'contract.cdd'=>  ContractType::CONTRACT_CDD,
-                'contract.stage'=> ContractType::CONTRACT_STAGE,
-                'contract.alternance' =>ContractType::CONTRACT_ALTERNANCE,
+                'contract.cdi'=>1 ,
+                'contract.cdd'=>  2,
+                'contract.stage'=> 3,
+                'contract.alternance' =>4,
             ),
-                'empty_data' => 'contract.empty',
+                'empty_data' => '',
                 'required' => false,
             ))
         ;
@@ -80,8 +71,10 @@ class OfferFilterType extends AbstractType
         return 'job_offer_filter';
     }
 
+
     public function configureOptions(OptionsResolver $resolver)
     {
+
         $resolver
             ->setDefaults(array(
                 'country' => 'fr',
