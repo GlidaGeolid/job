@@ -2,25 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b6d0516-e473-4abc-b09a-b2d9518dfd7c" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Geolid/JobBundle/Resources/views/Home/home.de.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Geolid/JobBundle/Resources/views/Home/home.fr.html.twig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Geolid/JobBundle/Resources/views/Home/home.uk.html.twig" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Geolid/JobBundle/Controller/ApplyController.php" afterPath="$PROJECT_DIR$/src/Geolid/JobBundle/Controller/ApplyController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Geolid/JobBundle/Controller/HomeController.php" afterPath="$PROJECT_DIR$/src/Geolid/JobBundle/Controller/HomeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Geolid/JobBundle/Controller/OfferController.php" afterPath="$PROJECT_DIR$/src/Geolid/JobBundle/Controller/OfferController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Geolid/JobBundle/Form/Type/OfferFilterType.php" afterPath="$PROJECT_DIR$/src/Geolid/JobBundle/Form/Type/OfferFilterType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Geolid/JobBundle/Menu/JobMenu.php" afterPath="$PROJECT_DIR$/src/Geolid/JobBundle/Menu/JobMenu.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Geolid/JobBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/Geolid/JobBundle/Resources/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Geolid/JobBundle/Resources/translations/messages.fr.yml" afterPath="$PROJECT_DIR$/src/Geolid/JobBundle/Resources/translations/messages.fr.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Geolid/JobBundle/Resources/views/Home/home.de.html.twig" afterPath="$PROJECT_DIR$/src/Geolid/JobBundle/Resources/views/Home/home.de.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Geolid/JobBundle/Resources/views/Home/home.fr.html.twig" afterPath="$PROJECT_DIR$/src/Geolid/JobBundle/Resources/views/Home/home.fr.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Geolid/JobBundle/Resources/views/Home/home.uk.html.twig" afterPath="$PROJECT_DIR$/src/Geolid/JobBundle/Resources/views/Home/home.uk.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Geolid/JobBundle/Resources/views/Job/job.html.twig" afterPath="$PROJECT_DIR$/src/Geolid/JobBundle/Resources/views/Job/job.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Geolid/JobBundle/Resources/views/Offer/offers.html.twig" afterPath="$PROJECT_DIR$/src/Geolid/JobBundle/Resources/views/Offer/offers.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Geolid/JobBundle/Resources/views/layout.fr.html.twig" afterPath="$PROJECT_DIR$/src/Geolid/JobBundle/Resources/views/layout.fr.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/config.php" afterPath="$PROJECT_DIR$/web/config.php" />
     </list>
     <ignored path="geolid.job.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,8 +30,18 @@
       <file leaf-file-name="messages.fr.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Geolid/JobBundle/Resources/translations/messages.fr.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="94" column="23" selection-start-line="94" selection-start-column="23" selection-end-line="94" selection-end-column="23" />
+            <state relative-caret-position="257">
+              <caret line="80" column="13" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout.de.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Geolid/JobBundle/Resources/views/layout.de.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="56">
+              <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -55,42 +50,18 @@
       <file leaf-file-name="OfferController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Geolid/JobBundle/Controller/OfferController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2016">
+            <state relative-caret-position="-95">
               <caret line="79" column="8" selection-start-line="79" selection-start-column="8" selection-end-line="79" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HomeController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HomeController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Geolid/JobBundle/Controller/HomeController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4704">
+            <state relative-caret-position="717">
               <caret line="173" column="7" selection-start-line="67" selection-start-column="4" selection-end-line="173" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.de.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Geolid/JobBundle/Resources/views/Home/home.de.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
-              <folding>
-                <marker date="1546011620445" expanded="false" signature="244:329" ph="..." />
-                <marker date="1546011620445" expanded="false" signature="373:464" ph="..." />
-                <marker date="1546011620445" expanded="false" signature="508:592" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ApplyController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Geolid/JobBundle/Controller/ApplyController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="564">
-              <caret line="112" column="29" selection-start-line="112" selection-start-column="29" selection-end-line="112" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -99,7 +70,7 @@
       <file leaf-file-name="layout.fr.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Geolid/JobBundle/Resources/views/layout.fr.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="639">
+            <state relative-caret-position="731">
               <caret line="136" column="21" selection-start-line="136" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
               <folding />
             </state>
@@ -109,32 +80,9 @@
       <file leaf-file-name="job.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Geolid/JobBundle/Resources/views/Job/job.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="579">
-              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+            <state relative-caret-position="3052">
+              <caret line="109" column="35" selection-start-line="109" selection-start-column="35" selection-end-line="109" selection-end-column="35" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="174" column="106" selection-start-line="169" selection-start-column="1" selection-end-line="174" selection-end-column="106" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Version20181231133612.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/DoctrineMigrations/Version20181231133612.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="34" column="57" selection-start-line="34" selection-start-column="57" selection-end-line="34" selection-end-column="57" />
-              <folding>
-                <marker date="1546263391186" expanded="true" signature="503:1425" ph="DELETE from " />
-                <marker date="1546263391186" expanded="true" signature="1457:1552" ph="UPDATE geoli... " />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -176,21 +124,21 @@
         <option value="$PROJECT_DIR$/src/Geolid/JobBundle/Form/Type/OfferFilterType.php" />
         <option value="$PROJECT_DIR$/src/Geolid/JobBundle/Menu/JobMenu.php" />
         <option value="$PROJECT_DIR$/src/Geolid/JobBundle/Resources/translations/messages.fr.yml" />
-        <option value="$PROJECT_DIR$/src/Geolid/JobBundle/Resources/views/Home/home.de.html.twig" />
         <option value="$PROJECT_DIR$/src/Geolid/JobBundle/Resources/views/Home/home.uk.html.twig" />
-        <option value="$PROJECT_DIR$/src/Geolid/JobBundle/Resources/views/Home/home.fr.html.twig" />
         <option value="$PROJECT_DIR$/src/Geolid/JobBundle/Resources/views/Offer/offers.html.twig" />
         <option value="$PROJECT_DIR$/src/Geolid/JobBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/Geolid/JobBundle/Controller/OfferController.php" />
         <option value="$PROJECT_DIR$/src/Geolid/JobBundle/Controller/HomeController.php" />
-        <option value="$PROJECT_DIR$/app/config/parameters.yml" />
         <option value="$PROJECT_DIR$/src/Geolid/JobBundle/Resources/views/layout.fr.html.twig" />
         <option value="$PROJECT_DIR$/src/Geolid/JobBundle/Resources/views/Job/job.html.twig" />
         <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/app/DoctrineMigrations/Version20181231092435.php" />
-        <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/app/DoctrineMigrations/Version20181231094047.php" />
         <option value="$PROJECT_DIR$/app/DoctrineMigrations/Version20181231133612.php" />
+        <option value="$PROJECT_DIR$/app/config/config.yml" />
+        <option value="$PROJECT_DIR$/app/config/parameters.yml" />
+        <option value="$PROJECT_DIR$/src/Geolid/JobBundle/Resources/views/Home/home.de.html.twig" />
+        <option value="$PROJECT_DIR$/src/Geolid/JobBundle/Resources/views/Home/home.fr.html.twig" />
       </list>
     </option>
   </component>
@@ -235,8 +183,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -252,6 +198,60 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="geolid.job" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geolid.job" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geolid.job" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geolid.job" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geolid.job" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bundles" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geolid.job" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geolid.job" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bundles" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geolidjob" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -288,6 +288,96 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="JobBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geolid.job" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geolid.job" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Geolid" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JobBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geolid.job" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geolid.job" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Geolid" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JobBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Home" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geolid.job" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geolid.job" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Geolid" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JobBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -361,6 +451,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -440,24 +532,26 @@
       <workItem from="1545829810748" duration="12009000" />
       <workItem from="1545899145394" duration="12900000" />
       <workItem from="1545991151515" duration="15334000" />
-      <workItem from="1546242914151" duration="14942000" />
+      <workItem from="1546242914151" duration="16922000" />
+      <workItem from="1546416219222" duration="2500000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="172868000" />
+    <option name="totallyTimeSpent" value="177348000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="27" width="1853" height="1053" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21804096" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22080797" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50941306" sideWeight="0.5019369" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32890365" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.7297896" sideWeight="0.4980631" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0786268" sideWeight="0.4980631" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -467,7 +561,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -511,13 +604,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Geolid/JobBundle/Entity/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Geolid/JobBundle/Entity/Sector.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-420">
@@ -702,13 +788,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Geolid/JobBundle/Resources/views/Home/home.fr.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="22" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="188" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Geolid/JobBundle/Resources/translations/routes.de.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-336">
@@ -755,43 +834,43 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1064">
           <caret line="38" column="90" selection-start-line="38" selection-start-column="90" selection-end-line="38" selection-end-column="90" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Geolid/JobBundle/Controller/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4704">
-          <caret line="173" column="7" selection-start-line="67" selection-start-column="4" selection-end-line="173" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Geolid/JobBundle/Controller/OfferController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2016">
-          <caret line="79" column="8" selection-start-line="79" selection-start-column="8" selection-end-line="79" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Geolid/JobBundle/Resources/translations/messages.fr.yml">
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml.dist">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="94" column="23" selection-start-line="94" selection-start-column="23" selection-end-line="94" selection-end-column="23" />
-          <folding />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Geolid/JobBundle/Resources/views/Home/home.de.html.twig">
+    <entry file="file://$PROJECT_DIR$/web/app.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
-          <folding>
-            <marker date="1546011620445" expanded="false" signature="244:329" ph="..." />
-            <marker date="1546011620445" expanded="false" signature="373:464" ph="..." />
-            <marker date="1546011620445" expanded="false" signature="508:592" ph="..." />
-          </folding>
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="34" column="76" selection-start-line="34" selection-start-column="76" selection-end-line="34" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/DoctrineMigrations/Version20181231092435.php" />
+    <entry file="file://$PROJECT_DIR$/app/DoctrineMigrations/Version20181231094047.php" />
+    <entry file="file://$PROJECT_DIR$/app/DoctrineMigrations/Version20181231133612.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="34" column="57" selection-start-line="34" selection-start-column="57" selection-end-line="34" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="746">
+          <caret line="174" column="106" selection-start-line="169" selection-start-column="1" selection-end-line="174" selection-end-column="106" />
         </state>
       </provider>
     </entry>
@@ -803,31 +882,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml.dist">
+    <entry file="file://$PROJECT_DIR$/src/Geolid/JobBundle/Resources/views/Job/job.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Geolid/JobBundle/Controller/ApplyController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="564">
-          <caret line="112" column="29" selection-start-line="112" selection-start-column="29" selection-end-line="112" selection-end-column="29" />
+        <state relative-caret-position="3052">
+          <caret line="109" column="35" selection-start-line="109" selection-start-column="35" selection-end-line="109" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Geolid/JobBundle/Resources/views/layout.fr.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="639">
+        <state relative-caret-position="731">
           <caret line="136" column="21" selection-start-line="136" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/app.php">
+    <entry file="file://$PROJECT_DIR$/src/Geolid/JobBundle/Controller/ApplyController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2884">
+          <caret line="112" column="29" selection-start-line="112" selection-start-column="29" selection-end-line="112" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Geolid/JobBundle/Controller/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="717">
+          <caret line="173" column="7" selection-start-line="67" selection-start-column="4" selection-end-line="173" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Geolid/JobBundle/Controller/OfferController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-95">
+          <caret line="79" column="8" selection-start-line="79" selection-start-column="8" selection-end-line="79" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="30" column="31" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Geolid/JobBundle/Resources/translations/messages.fr.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="80" column="13" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Geolid/JobBundle/Resources/views/layout.de.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Geolid/JobBundle/Resources/views/Home/home.de.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -835,62 +954,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
+    <entry file="file://$PROJECT_DIR$/src/Geolid/JobBundle/Resources/views/Home/home.fr.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-420">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="34" column="76" selection-start-line="34" selection-start-column="76" selection-end-line="34" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Geolid/JobBundle/Resources/views/Job/job.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="579">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/DoctrineMigrations/Version20181231092435.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="32" column="106" selection-start-line="18" selection-start-column="8" selection-end-line="32" selection-end-column="106" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="174" column="106" selection-start-line="169" selection-start-column="1" selection-end-line="174" selection-end-column="106" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/DoctrineMigrations/Version20181231094047.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/DoctrineMigrations/Version20181231133612.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="34" column="57" selection-start-line="34" selection-start-column="57" selection-end-line="34" selection-end-column="57" />
-          <folding>
-            <marker date="1546263391186" expanded="true" signature="503:1425" ph="DELETE from " />
-            <marker date="1546263391186" expanded="true" signature="1457:1552" ph="UPDATE geoli... " />
-          </folding>
         </state>
       </provider>
     </entry>
