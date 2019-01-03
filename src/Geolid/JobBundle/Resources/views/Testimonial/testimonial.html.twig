@@ -1,6 +1,6 @@
 {% if title is defined %}
 <div class="testimonial testimonial-{{ testimonial.orientation }} with-title"
-     style="background-image: url({{ testimonial_base_url ~ testimonial.photo }})">
+     style="background-image: url({{ asset('images/Job-Asset/testimonials/') ~ testimonial.photo }})">
      <div class="row testimonial-title">
          {% if testimonial.orientation == 'left' %}
          <div class="small-12 columns text-right">
@@ -16,7 +16,7 @@
      </div>
 {% else %}
 <div class="testimonial testimonial-{{ testimonial.orientation }}"
-     style="background-image: url({{ testimonial_base_url ~ testimonial.photo }})">
+     style="background-image: url({{ asset('images/Job-Asset/testimonials/') ~ testimonial.photo }})">
 {% endif %}
     <div class="row">
         {% if testimonial.orientation == 'right' %}
