@@ -2,8 +2,10 @@
 namespace Geolid\JobBundle\Controller;
 
 use Geolid\JobBundle\Entity\Application;
+use Geolid\JobBundle\Entity\Offer;
 use Geolid\JobBundle\Event\FormEvent;
 use Geolid\JobBundle\Form\Type\ApplyType;
+use Geolid\JobBundle\Form\Type\JobType;
 use Geolid\JobBundle\GeolidJobEvents;
 use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
@@ -36,10 +38,10 @@ class ApplyController extends Controller
         $em = $this->getDoctrine()->getManager();
         $offerRepository = $em->getRepository('GeolidJobBundle:Offer');
         $refererRepository = $em->getRepository('GeolidJobBundle:Referer');
-        $application = new Application(); 
+        $application = new Application();
         $form = $this->createForm(ApplyType::class);
         $form->handleRequest($request);
-
+         //dump($offer = $form->get('offer')->getData());die('ook');
         if ($form->isValid()) {
 
             if ($application->getSource() == Application::SOURCE_GEOLID) {
@@ -58,15 +60,17 @@ class ApplyController extends Controller
             $referer = $refererRepository->find($refererId);
             $application->setReferer($referer->getId());
 
-            $em->persist($application);
-            $em->flush();
-
-            $event = new FormEvent($form, $request);
-            $dispatcher->dispatch(GeolidJobEvents::APPLICATION_CREATE, $event);
-
+            //Assausation Errer String MAnyToOne And uploade file
+//            $em->persist($application);
+//            $em->flush();
+//            $event = new FormEvent($form, $request);
+//            $dispatcher->dispatch(GeolidJobEvents::APPLICATION_CREATE, $event);
             $this->get('session')->set('job_apply/success', true);
+//            return new RedirectResponse($this->generateUrl('GeolidJobBundle:Apply:thanks.html.twig', array('country' => $country)));
+            return $this->render('GeolidJobBundle:Apply:thanks.html.twig', array(
+                'country' => $country,
 
-            return new RedirectResponse($this->generateUrl('job_apply_thanks', array('country' => $country)));
+            ));
         }
 
         /**
@@ -83,6 +87,7 @@ class ApplyController extends Controller
             $form->get('source')->setData(Application::SOURCE_GEOLID);
             $form->get('offer')->setData($offer);
         }
+//        dump($form);die('ooooooook');
         return $this->render('GeolidJobBundle:Apply:apply.html.twig', array(
             'country' => $country,
             'form' => $form->createView()
@@ -106,9 +111,10 @@ class ApplyController extends Controller
             throw new NotFoundHttpException('No new application');
         }
         $this->get('session')->remove('job_apply/success');
+
         $email = $this->get('session')->get('job_apply/email');
         $this->get('session')->remove('job_apply/email');
-        return  array(
+        return array(
             'country' => $country,
             'email' => $email
         );

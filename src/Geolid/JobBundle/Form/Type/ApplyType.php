@@ -2,7 +2,9 @@
 
 namespace Geolid\JobBundle\Form\Type;
 
+use Doctrine\DBAL\Types\TextType;
 use Doctrine\ORM\EntityRepository;
+use Geolid\CoreBundle\Helpers\String\String;
 use Geolid\JobBundle\Entity\Application;
 use Geolid\JobBundle\Form\Type\JobType;
 use Symfony\Component\Form\AbstractType;
@@ -11,6 +13,9 @@ use Symfony\Component\Form\FormInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\OptionsResolver\ResolverInterface;
 use Symfony\Component\Validator\Constraints\True;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+
+
 
 /**
  * Apply Form Type.
@@ -43,7 +48,13 @@ class ApplyType extends AbstractType
         if (in_array($country, array('de'))) {
             $isClRequired = true;
         }
-
+//            dump($builder->add('job','entity', array(
+//             //   'choices' => $this->jobsBySectorsOpt($country),
+//                'class' => 'GeolidJobBundle:Job',
+//                'empty_data' => '',
+//                'label' => 'apply.form.job',
+//                'required' => false,
+//            )));die('oook');
         $builder
             ->add('gender', 'choice', array(
                 'choices' => array(
@@ -52,7 +63,7 @@ class ApplyType extends AbstractType
                 ),
                 'expanded' => true,
                 'label' => 'apply.form.gender.label',
-                'multiple' => false,
+               // 'multiple' => false,
             ))
             ->add('firstname', 'text', array(
                 'label' => 'apply.form.firstname',
@@ -68,7 +79,7 @@ class ApplyType extends AbstractType
                 ),
                 'expanded' => true,
                 'label' => 'apply.form.source.title',
-                'multiple' => false,
+               // 'multiple' => false,
             ))
             ->add('offer', 'entity', array(
                 'attr' => array(
@@ -76,7 +87,7 @@ class ApplyType extends AbstractType
                     'data-abide-validator' => 'requiredBySource',
                 ),
                 'class' => 'GeolidJobBundle:Offer',
-                'empty_data' => 'apply.form.empty.offer',
+                'empty_data' => '',
                 'label' => 'apply.form.offer',
                 'mapped' => false,
                 'query_builder' => function(EntityRepository $er) use ($country) {
@@ -91,14 +102,14 @@ class ApplyType extends AbstractType
                 },
                 'required' => false,
             ))
-            ->add("job", "entity", array(
+            ->add('job','entity', array(
                 'attr' => array(
                     'data-source' => Application::SOURCE_SPONTANEOUS,
                     'data-abide-validator' => 'requiredBySource',
                 ),
                 'choices' => $this->jobsBySectorsOpt($country),
                 'class' => 'GeolidJobBundle:Job',
-                'empty_data' => 'apply.form.empty.job',
+                'empty_data' => '',
                 'label' => 'apply.form.job',
                 'required' => false,
             ))
@@ -202,8 +213,9 @@ class ApplyType extends AbstractType
     /**
      * @inherit
      */
-    public function setDefaultOptions(OptionsResolver $resolver)
-    {
+    public function configureOptions(OptionsResolver $resolver)
+    {//setDefaultOptions
+       // parent::configureOptions($resolver);
         $resolver
             ->setDefaults(array(
                 'csrf_protection' => false,
